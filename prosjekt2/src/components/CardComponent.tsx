@@ -3,23 +3,19 @@ import TypeComponent from "./TypeComponent";
 interface pokemonObjectType {
   id: string;
   name: string;
-  sprites: string
-  types: {
-    type: {
-      name: string;
-    };
-  }[];
+  image: string
+  types: string[];
 
 }
 
 function CardComponent(pokemonObject: pokemonObjectType) {
   return (
     <div className="pokemonCard">
-      <h1>{pokemonObject.name}</h1>
-      <img src={pokemonObject.sprites} alt="" />
+      <h1>#{pokemonObject.id} {pokemonObject.name}</h1>
+      <img src={pokemonObject.image} alt="" />
       <div className="pokeType">
         {pokemonObject.types.map((type) => (
-          <TypeComponent pokemonType={type.type.name} />
+          <TypeComponent pokemonType={type} />
         ))}
       </div>
     </div>
