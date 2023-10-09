@@ -1,24 +1,53 @@
 import CardComponent from "../components/CardComponent"
-import pokemons from "../assets/PokemonList"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { fetchPokemonList } from "../assets/PokemonList"
+
+interface PokemonData {
+  num: number;
+  sprite: string;
+  types: readonly PokemonType[];
+  key: string;
+  weight: number;
+  height: number;
+  baseStats: {
+    attack: number;
+    defense: number;
+    hp: number;
+    speed: number;
+    specialattack: number;
+    specialdefense: number;
+  };
+}
+
+interface PokemonType {
+  name: string;
+}
 
 function HomePage() {
-  
+  const [pokemonList, setPokemonList] = useState<PokemonData[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const fetchedPokemonList = await fetchPokemonList();
+      setPokemonList(fetchedPokemonList);
+    };
+    fetchData(); 
+  }, []); 
   const itemsPerPage = 15;
-  const totalItems = pokemons.length;
+  const totalItems = pokemonList.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-  const [pageNumber, setPageNumber] = useState(1)
+  const [pageNumber, setPageNumber] = useState(1);
 
   function changePage(newPage: number) {
-      if (newPage >= 1 && newPage <= totalPages) {
-        setPageNumber(newPage);
-      }
+    if (newPage >= 1 && newPage <= totalPages) {
+      setPageNumber(newPage);
+    }
   }
 
   function generatePageButtons() {
     const pageButtons = [];
-    const numToShow = 2; 
+    const numToShow = 2;
 
     for (let i = pageNumber - numToShow; i <= pageNumber + numToShow; i++) {
       if (i >= 1 && i <= totalPages) {
@@ -35,25 +64,26 @@ function HomePage() {
 
   const startItem = (pageNumber - 1) * itemsPerPage;
   const endItem = Math.min(startItem + itemsPerPage, totalItems);
-  
+
+
   return (
     <>
       <div>
-        {pokemons.slice(startItem, endItem).map((pokemon) => (
+        {pokemonList.slice(startItem, endItem).map((pokemon) => (
           <CardComponent
-            key={pokemon.id}
-            id={pokemon.id}
-            name={pokemon.name}
-            image={pokemon.image}
+            key={pokemon.num}
+            id={pokemon.num}
+            name={pokemon.key}
+            image={pokemon.sprite}
             types={pokemon.types}
           />
         ))}
-        <button  onClick={() => changePage(pageNumber-1)}>Previous page</button>
+        <button onClick={() => changePage(pageNumber - 1)}>Previous page</button>
         {generatePageButtons()}
-        <button onClick={() => changePage(pageNumber+1)}>Next page</button>
+        <button onClick={() => changePage(pageNumber + 1)}>Next page</button>
       </div>
     </>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;
