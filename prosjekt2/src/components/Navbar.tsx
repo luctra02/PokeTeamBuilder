@@ -1,0 +1,45 @@
+import { useState } from "react";
+import "../styles/Navbar.css"
+import { Link, useNavigate } from "react-router-dom";
+
+function Navbar () {
+    const [searchTerm, setSearchTerm] = useState('');
+    const navigate = useNavigate();
+    
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchTerm(e.target.value);
+      };
+
+    const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            navigate('/searchDisplay', { state: { searchTerm: searchTerm } });
+        }
+    };
+
+    return (
+        <nav className="navbar">
+            <div className="navbar-logo">
+                <Link to="/">
+                    <p>Pokemon</p>
+                </Link>
+            </div>
+
+            <ul className="navbar-list">
+                <Link to='/'><li className="navbar-item"><a href="/">Home</a></li></Link>
+                <div className="navbar-item">
+                    <input
+                        type="text"
+                        placeholder="Search Artist Name"
+                        value={searchTerm}
+                        onChange={handleInputChange}
+                        onKeyPress={handleSearch}
+                    />
+                </div>
+            </ul>
+            
+        </nav>
+
+        )
+    }
+
+export default Navbar
