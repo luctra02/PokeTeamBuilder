@@ -56,9 +56,9 @@ function DisplayCardComponents() {
   return (
     
     <>
-      <div>
+      <div className="pokemonDisplayBox">
         {pokemonArray.slice(startItem, endItem).map((pokemon) => (
-          <button key={pokemon.num} onClick={() => (changeToDetailPage(pokemon))}>
+          <button className="pokemonDisplayButton"key={pokemon.num} onClick={() => (changeToDetailPage(pokemon))}>
           <CardComponent
             id={pokemon.num}
             name={pokemon.key}
@@ -66,9 +66,11 @@ function DisplayCardComponents() {
             types={pokemon.types}
           /></button>
         ))}
+      </div>
+      <div className="pageSelector">
         <button onClick={() => changePage(pageNumber - 1)}>Previous page</button>
-        {generatePageButtons()}
-        <button onClick={() => changePage(pageNumber + 1)}>Next page</button>
+          {generatePageButtons()}
+          <button onClick={() => changePage(pageNumber + 1)}>Next page</button>
       </div>
     </>
   );

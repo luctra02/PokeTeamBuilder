@@ -66,8 +66,8 @@ function TypeComponent({ pokemonType }: TypeComponentProps) {
     return (
         <div>
           <div
-            className="pokeType"
-            style={{ backgroundColor: typeColor, padding: '10px', borderRadius: '5px' }}
+            className="pokeType PokeTypeBox"
+            style={{ backgroundColor: typeColor }}
           >
             {pokemonType}
           </div>

@@ -12,6 +12,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url(https://w.wallhaven.cc/full/4l/wallhaven-4lmey2.png);
+  /* background-image: url(https://w.wallhaven.cc/full/49/wallhaven-4963zx.jpg); */
 }
 
 body {

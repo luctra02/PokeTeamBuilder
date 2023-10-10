@@ -10,7 +10,7 @@ interface PokemonObjectType {
 function CardComponent(pokemonObject: PokemonObjectType ) {
   return (
     <div className="pokemonCard">
-      <h1>#{pokemonObject.id} {pokemonObject.name}</h1>
+      <h2>#{pokemonObject.id} {pokemonObject.name}</h2>
       <img src={pokemonObject.image} alt="" />
       <div className="pokeType">
         {pokemonObject.types.map((type, index) => (
