@@ -1,7 +1,17 @@
 import CardComponent from "./CardComponent"
 import { useEffect, useState } from "react"
 import pokemonArray  from "../assets/PokemonList"
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+
+interface PokemonObject {
+  num: number;
+  sprite: string;
+  types: string[];
+  key: string;
+  weight: number;
+  height: number;
+  baseStats: number[]
+}
 
 function DisplayCardComponents() {
   const itemsPerPage = 15;
@@ -10,6 +20,7 @@ function DisplayCardComponents() {
   const [searchedArray, setSearchedArray] = useState(pokemonArray);
   const [totalSearchedItems, setTotalSearchedItems] = useState(0)
   const location = useLocation();
+  const navigate = useNavigate();
   const searchTerm = location.state.searchTerm;
   const totalPages = Math.ceil(totalSearchedItems / itemsPerPage);
 
@@ -44,6 +55,10 @@ function DisplayCardComponents() {
     return pageButtons;
   }
 
+  function changeToDetailPage(pokemon: PokemonObject) {
+    navigate(`/pokemonInfo/${pokemon.num}`, { state: { pokemon } });
+  }
+
   const startItem = (pageNumber - 1) * itemsPerPage;
   const endItem = Math.min(startItem + itemsPerPage, totalSearchedItems);
 
@@ -52,13 +67,14 @@ function DisplayCardComponents() {
     <>
       <div>
         {searchedArray.slice(startItem, endItem).map((pokemon) => (
+          <button key={pokemon.num} onClick={() => (changeToDetailPage(pokemon))}>
           <CardComponent
             key={pokemon.num}
             id={pokemon.num}
             name={pokemon.key}
             image={pokemon.sprite}
             types={pokemon.types}
-          />
+          /></button>
         ))}
         <button onClick={() => changePage(pageNumber - 1)}>Previous page</button>
         {generatePageButtons()}

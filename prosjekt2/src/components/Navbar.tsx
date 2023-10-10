@@ -29,7 +29,7 @@ function Navbar () {
                 <div className="navbar-item">
                     <input
                         type="text"
-                        placeholder="Search Artist Name"
+                        placeholder="Search Pokemon Name"
                         value={searchTerm}
                         onChange={handleInputChange}
                         onKeyPress={handleSearch}
