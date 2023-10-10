@@ -1,0 +1,69 @@
+.pokemonInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.pokemonInfoWrapper {
+    display: flex;
+    color: black;
+
+}
+
+.pokeStats {
+    gap:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokeImage img{
+    height: 200px;
+}
+
+.stat-container {
+    margin-bottom: 10px; /* spacing between each stat bar */
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  .fill-bar-container {
+    width: 40px; 
+    height: 150px;  
+    position: relative; 
+    overflow: hidden; 
+    background: repeating-linear-gradient(
+        to top,
+        white,  /* Background color when there's no fill */
+        white 5px,  /* Start of the gap */
+        transparent 5px, /* End of the background color, start of the gap */
+        transparent 10px  /* End of the gap */
+      );
+  }
+  
+  .fill-bar {
+    width: 100%;
+    background-color: #3498db;
+    position: absolute;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        to top,
+        #3498db,  /* Filled color */
+        #3498db 5px,  /* Start of the gap */
+        transparent 5px, /* End of the background color, start of the gap */
+        transparent 10px  /* End of the gap */
+      );
+  }
+  
+  .baseStats {
+    display: flex;
+    gap:20px;
+
+  }
