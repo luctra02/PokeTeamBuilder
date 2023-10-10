@@ -1,14 +1,14 @@
-interface PokemonType {
-    name: string;
-  }
+interface TypeComponentProps {
+  pokemonType: string;
+}
 
-function TypeComponent({ pokemonType }: { pokemonType: PokemonType }) {
+function TypeComponent({ pokemonType }: TypeComponentProps) {
     let typeColor: string;
 
-    switch (pokemonType.name) {
+    switch (pokemonType) {
         case 'Normal':
-            typeColor = '#A8A878'; // Normal
-            break;
+        typeColor = '#A8A878'; // Normal
+        break;
         case 'Fire':
         typeColor = '#F08030'; // Fire
         break;
@@ -69,7 +69,7 @@ function TypeComponent({ pokemonType }: { pokemonType: PokemonType }) {
             className="pokeType"
             style={{ backgroundColor: typeColor, padding: '10px', borderRadius: '5px' }}
           >
-            {pokemonType.name}
+            {pokemonType}
           </div>
         </div>
       );

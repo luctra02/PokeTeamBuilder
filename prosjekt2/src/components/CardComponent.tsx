@@ -1,29 +1,24 @@
 import TypeComponent from "./TypeComponent";
 
-interface pokemonObjectType {
+interface PokemonObjectType {
   id: number;
   name: string;
-  image: string
-  types: readonly PokemonType[];
-
+  image: string;
+  types: string[];
 }
 
-interface PokemonType {
-  name: string;
-}
-
-function CardComponent(pokemonObject: pokemonObjectType) {
+function CardComponent(pokemonObject: PokemonObjectType ) {
   return (
     <div className="pokemonCard">
       <h1>#{pokemonObject.id} {pokemonObject.name}</h1>
       <img src={pokemonObject.image} alt="" />
       <div className="pokeType">
         {pokemonObject.types.map((type, index) => (
-          <TypeComponent  key={index} pokemonType={type} />
+          <TypeComponent key={index} pokemonType={type} />
         ))}
       </div>
     </div>
   );
 }
 
-export default CardComponent
+export default CardComponent;
