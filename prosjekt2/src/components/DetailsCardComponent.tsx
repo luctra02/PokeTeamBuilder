@@ -30,9 +30,9 @@ function DetailsCardComponent(pokemonObject: PokemonObject ) {
             <p>attack: {pokemonObject.baseStats[0]}</p>
             <p>defense: {pokemonObject.baseStats[1]}</p>
             <p>hp: {pokemonObject.baseStats[2]}</p>
-            <p>speed: {pokemonObject.baseStats[3]}</p>
-            <p>specialattack: {pokemonObject.baseStats[4]}</p>
-            <p>specialdefense: {pokemonObject.baseStats[5]}</p>
+            <p>speed: {pokemonObject.baseStats[5]}</p>
+            <p>specialattack: {pokemonObject.baseStats[3]}</p>
+            <p>specialdefense: {pokemonObject.baseStats[4]}</p>
       </div>
     </div>
   );
