@@ -1,38 +1,37 @@
 import TypeComponent from "./TypeComponent";
 
+interface Pokemon {
+  num: number;
+  sprite: string;
+  types: string[];
+  key: string;
+  weight: number;
+  height: number;
+  baseStats: number[];
+}
 
-interface PokemonObject {
-    num: number;
-    sprite: string;
-    types: string[];
-    key: string;
-    weight: number;
-    height: number;
-    baseStats: number[]
-  }
-
-function DetailsCardComponent(pokemonObject: PokemonObject ) {
+function DetailsCardComponent({ pokemon }: { pokemon: Pokemon }) {
   return (
     <div className="pokemonCard">
-      <h1>#{pokemonObject.num} {pokemonObject.key}</h1>
-      <img src={pokemonObject.sprite} alt="" />
+      <h1>#{pokemon.num} {pokemon.key}</h1>
+      <img src={pokemon.sprite} alt="" />
       <div className="pokeType">
-        {pokemonObject.types.map((type, index) => (
+        {pokemon.types.map((type, index) => (
           <TypeComponent key={index} pokemonType={type} />
         ))}
       </div>
       <div>
-        <p>Weight: {pokemonObject.weight} kg</p>
-        <p>Height: {pokemonObject.height} m</p>
+        <p>Weight: {pokemon.weight} kg</p>
+        <p>Height: {pokemon.height} m</p>
       </div>
       <div className="baseStats">
             <h3>Base Stats</h3>
-            <p>attack: {pokemonObject.baseStats[0]}</p>
-            <p>defense: {pokemonObject.baseStats[1]}</p>
-            <p>hp: {pokemonObject.baseStats[2]}</p>
-            <p>speed: {pokemonObject.baseStats[5]}</p>
-            <p>specialattack: {pokemonObject.baseStats[3]}</p>
-            <p>specialdefense: {pokemonObject.baseStats[4]}</p>
+            <p>attack: {pokemon.baseStats[0]}</p>
+            <p>defense: {pokemon.baseStats[1]}</p>
+            <p>hp: {pokemon.baseStats[2]}</p>
+            <p>speed: {pokemon.baseStats[5]}</p>
+            <p>specialattack: {pokemon.baseStats[3]}</p>
+            <p>specialdefense: {pokemon.baseStats[4]}</p>
       </div>
     </div>
   );

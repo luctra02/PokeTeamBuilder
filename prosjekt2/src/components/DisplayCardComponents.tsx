@@ -1,6 +1,17 @@
 import CardComponent from "../components/CardComponent"
 import { useState } from "react"
 import pokemonArray  from "../assets/PokemonList"
+import { useNavigate } from "react-router-dom";
+
+interface PokemonObject {
+  num: number;
+  sprite: string;
+  types: string[];
+  key: string;
+  weight: number;
+  height: number;
+  baseStats: number[]
+}
 
 function DisplayCardComponents() {
   const itemsPerPage = 15;
@@ -35,18 +46,25 @@ function DisplayCardComponents() {
   const startItem = (pageNumber - 1) * itemsPerPage;
   const endItem = Math.min(startItem + itemsPerPage, totalItems);
 
+  //navigate to detailspage for a selected pokemon
+  const navigate = useNavigate(); 
+
+  function changeToDetailPage(pokemon: PokemonObject) {
+    navigate(`/pokemonInfo/${pokemon.num}`, { state: { pokemon } });
+  }
+
   return (
     
     <>
       <div>
         {pokemonArray.slice(startItem, endItem).map((pokemon) => (
+          <button key={pokemon.num} onClick={() => (changeToDetailPage(pokemon))}>
           <CardComponent
-            key={pokemon.num}
             id={pokemon.num}
             name={pokemon.key}
             image={pokemon.sprite}
             types={pokemon.types}
-          />
+          /></button>
         ))}
         <button onClick={() => changePage(pageNumber - 1)}>Previous page</button>
         {generatePageButtons()}
