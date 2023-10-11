@@ -67,14 +67,10 @@ function DisplayCardComponents() {
     <>
       <div>
         {searchedArray.slice(startItem, endItem).map((pokemon) => (
-          <button key={pokemon.num} onClick={() => (changeToDetailPage(pokemon))}>
+          <div key={pokemon.num} onClick={() => (changeToDetailPage(pokemon))}>
           <CardComponent
-            key={pokemon.num}
-            id={pokemon.num}
-            name={pokemon.key}
-            image={pokemon.sprite}
-            types={pokemon.types}
-          /></button>
+            pokemonObject={{id:pokemon.num, name:pokemon.key, image:pokemon.sprite, types:pokemon.types}}
+          /></div>
         ))}
         <button onClick={() => changePage(pageNumber - 1)}>Previous page</button>
         {generatePageButtons()}

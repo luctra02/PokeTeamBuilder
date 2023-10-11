@@ -2,6 +2,7 @@ import CardComponent from "../components/CardComponent"
 import { useState } from "react"
 import pokemonArray  from "../assets/PokemonList"
 import { useNavigate } from "react-router-dom";
+import { getTeamSize } from "../utils/teamFunctions";
 
 interface PokemonObject {
   num: number;
@@ -14,6 +15,12 @@ interface PokemonObject {
 }
 
 function DisplayCardComponents() {
+  const [_count, setCount] = useState(getTeamSize()); 
+
+  function updateCount(count: number) {
+    setCount(count);
+  }
+
   const itemsPerPage = 15;
   const totalItems = pokemonArray.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage);
@@ -58,13 +65,11 @@ function DisplayCardComponents() {
     <>
       <div className="pokemonDisplayBox">
         {pokemonArray.slice(startItem, endItem).map((pokemon) => (
-          <button className="pokemonDisplayButton"key={pokemon.num} onClick={() => (changeToDetailPage(pokemon))}>
+          <div className="pokemonDisplayButton"key={pokemon.num} onClick={() => (changeToDetailPage(pokemon))}>
           <CardComponent
-            id={pokemon.num}
-            name={pokemon.key}
-            image={pokemon.sprite}
-            types={pokemon.types}
-          /></button>
+            pokemonObject={{id:pokemon.num, name:pokemon.key, image:pokemon.sprite, types:pokemon.types}}
+            updateCount={updateCount}
+          /></div>
         ))}
       </div>
       <div className="pageSelector">

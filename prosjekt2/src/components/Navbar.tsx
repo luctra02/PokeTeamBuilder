@@ -25,7 +25,7 @@ function Navbar () {
             </div>
 
             <ul className="navbar-list">
-                <Link to='/'><li className="navbar-item"><a href="/">Home</a></li></Link>
+                <Link to='/'><li className="navbar-item">Home</li></Link>
                 <div className="navbar-item">
                     <input
                         type="text"
