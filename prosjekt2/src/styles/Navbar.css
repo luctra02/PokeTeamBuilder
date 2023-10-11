@@ -49,3 +49,12 @@
     margin: 0.4rem 0.3rem;
   }
   
+  input[type="text"] {
+    width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+    border-radius: 15px;
+    border:none;
+  }
