@@ -65,7 +65,7 @@ function DisplayCardComponents() {
     <>
       <div className="pokemonDisplayBox">
         {pokemonArray.slice(startItem, endItem).map((pokemon) => (
-          <div className="pokemonDisplayButton"key={pokemon.num} onClick={() => (changeToDetailPage(pokemon))}>
+          <div className="pokemonDisplayButton" key={pokemon.num} onClick={() => (changeToDetailPage(pokemon))}>
           <CardComponent
             pokemonObject={{id:pokemon.num, name:pokemon.key, image:pokemon.sprite, types:pokemon.types}}
             updateCount={updateCount}

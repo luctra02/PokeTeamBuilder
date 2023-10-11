@@ -45,7 +45,7 @@ interface Pokemon {
       }  
 
       return (
-        <button onClick={(e) => { e.stopPropagation(); changeTeam(pokemonTeam);}} disabled={isButtonDisabled}> {buttonText}</button>
+        <button className="teamButton" onClick={(e) => { e.stopPropagation(); changeTeam(pokemonTeam);}} disabled={isButtonDisabled}> {buttonText}</button>
         );
   }
   
