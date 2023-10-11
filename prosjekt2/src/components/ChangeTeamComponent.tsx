@@ -3,11 +3,16 @@ import { addPokemonToTeam, checkIfTeamIsFull, checkPokemonInTeam, getTeamSize, r
 
 
 interface Pokemon {
-    num: number;
-    sprite: string;
-    types: string[];
-    name: string;
-  }
+  num: number;
+  sprite: string;
+  types: string[];
+  key: string;
+  weight: number;
+  height: number;
+  baseStats: number[];
+  name: String
+}
+  
   
   function ChangeTeamComponent( { pokemonTeam, updateCount }: { pokemonTeam: Pokemon, updateCount?: Function }) {
     const [buttonText, setButtonText] = useState('Add to Team');

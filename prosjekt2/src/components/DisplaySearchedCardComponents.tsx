@@ -69,7 +69,7 @@ function DisplayCardComponents() {
         {searchedArray.slice(startItem, endItem).map((pokemon) => (
           <div className="pokemonDisplayButton" key={pokemon.num} onClick={() => (changeToDetailPage(pokemon))}>
           <CardComponent
-            pokemonObject={{id:pokemon.num, name:pokemon.key, image:pokemon.sprite, types:pokemon.types}}
+            pokemonObject={{id:pokemon.num, name:pokemon.key, image:pokemon.sprite, types:pokemon.types, key: pokemon.key, baseStats:pokemon.baseStats, weight:pokemon.weight, height: pokemon.height}}
           /></div>
         ))}
       </div>

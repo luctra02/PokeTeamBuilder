@@ -83,7 +83,7 @@ function DetailsCardComponent({ pokemon }: { pokemon: Pokemon }) {
             </div>
           </div>
         </div>
-        <ChangeTeamComponent pokemonTeam={{ num: pokemon.num, sprite: pokemon.sprite, types: pokemon.types, name: pokemon.key }}/>
+        <ChangeTeamComponent pokemonTeam={{ num: pokemon.num, sprite: pokemon.sprite, types: pokemon.types, name: pokemon.key, key: pokemon.key, weight:pokemon.weight, height: pokemon.height, baseStats: pokemon.baseStats }}/>
     </div>
   );
 }

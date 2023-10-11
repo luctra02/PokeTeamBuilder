@@ -2,8 +2,11 @@ interface Pokemon {
     num: number;
     sprite: string;
     types: string[];
-    name: string;
-
+    key: string;
+    weight: number;
+    height: number;
+    baseStats: number[];
+    name: String
   }
 
 function addPokemonToTeam(pokemon: Pokemon){
@@ -15,8 +18,12 @@ function addPokemonToTeam(pokemon: Pokemon){
         sprite: pokemon.sprite,
         types: pokemon.types,
         name: pokemon.name,
+        baseStats: pokemon.baseStats,
+        key: pokemon.key,
+        weight: pokemon.weight,
+        height: pokemon.height
       };
-    
+    console.log(pokemon.baseStats)
     myTeam.push(newPokemon)
     const updatedTeam = JSON.stringify(myTeam);
     localStorage.setItem('team', updatedTeam);

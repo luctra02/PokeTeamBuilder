@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 function Navbar () {
     const [searchTerm, setSearchTerm] = useState('');
     const navigate = useNavigate();
-    
+
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(e.target.value);
       };
@@ -26,6 +26,7 @@ function Navbar () {
 
             <ul className="navbar-list">
                 <Link to='/'><li className="navbar-item">Home</li></Link>
+                <Link to='/team'><li className="navbar-item">My Team</li></Link>
                 <div className="navbar-item">
                     <input
                         type="text"
@@ -36,7 +37,7 @@ function Navbar () {
                     />
                 </div>
             </ul>
-            
+
         </nav>
 
         )
