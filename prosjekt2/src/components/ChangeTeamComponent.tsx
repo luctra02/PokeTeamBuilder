@@ -3,11 +3,16 @@ import { addPokemonToTeam, checkIfTeamIsFull, checkPokemonInTeam, getTeamSize, r
 
 
 interface Pokemon {
-    num: number;
-    sprite: string;
-    types: string[];
-    name: string;
-  }
+  num: number;
+  sprite: string;
+  types: string[];
+  key: string;
+  weight: number;
+  height: number;
+  baseStats: number[];
+  name: String
+}
+  
   
 interface UpdateCountFunction {
   (newCount: number): void;
