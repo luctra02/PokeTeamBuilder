@@ -1,27 +1,42 @@
-# React + TypeScript + Vite
+# Program Informasjon
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+PokeTeamBuilder er en nettside der brukeren kan få opp informasjon om alle pokemons fra første generasjon og lage et lag.
+På hjemmesiden får brukeren informasjon som id-nummer, navn, bilde og type til de ulike pokemonene. 
+Brukeren kan trykke på en pokemon for å få opp mer informasjon om den pokemonen.
+Det er også mulig å legge til pokemons til et lag, men man kan bare ha maks 6 pokemons på laget.
 
-Currently, two official plugins are available:
+# Installasjon og Setup Instruksjoner
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+For å kjøre appen lokalt må man først klone dette repositoriet. Du trenger node og npm installert globalt på maskinen din.
 
-## Expanding the ESLint configuration
+Krav:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Node version 20.5+
+npm version 9.8+
 
-- Configure the top-level `parserOptions` property like this:
+## Installasjon:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+Hvis du ikke er .\prosjekt2\ kjør
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+`cd .\prosjekt2\`
+
+Etter det kan du installere de riktige pakkene ved
+
+`npm install`
+
+
+## Start Serveren:
+
+`npm run dev`
+
+## For å besøke appen:
+
+localhost:5173
+
+# Navigasjon av nettsiden:
+
+På hjemmesiden blir det vist 15 pokemons om gangen. Brukeren kan bla frem og tilbake mellom pokemons ved å bytte sidetallet på bunnen av hjemmesiden. 
+Det er også mulig å søke på pokemons etter navn ved å bruke søkefeltet i navbaren. For å komme seg tilbake til hjemmesiden kan man trykke på "Home" i navbaren. 
+Brukeren kan få opp mer informasjon om en pokemon hvis man trykker på pokemonen på hjemmesiden. 
+Det er også mulig å legge til/fjerne pokemons fra laget ved å trykke på en knapp.
+For å se hvilke pokemons som er på laget ditt kan man trykke på "My Team" i navbaren og få informasjon om pokemonene der og.
