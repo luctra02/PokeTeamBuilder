@@ -76,7 +76,7 @@ export async function fetchPokemonList(): Promise<PokemonData[]> {
       .map((pokemon) => pokemon);
 
     console.log("FETCHER HER: ", pokemonList)
-    for (var pokemon of pokemonList) {
+    for (const pokemon of pokemonList) {
       console.log("{num:"+ pokemon.num+ ", sprite: '"+ pokemon.sprite+ "', types: ['"+pokemon.types[0].name+"', '"+ pokemon.types[1]?.name+"'], key: '"+ pokemon.key+"', weight:", pokemon.weight+", height:"+ pokemon.height+", baseStats: ["+pokemon.baseStats.attack+",",pokemon.baseStats.defense+",",pokemon.baseStats.hp+",",pokemon.baseStats.specialattack+",",pokemon.baseStats.specialdefense+",",pokemon.baseStats.speed+"]},")
     }
     return pokemonList;

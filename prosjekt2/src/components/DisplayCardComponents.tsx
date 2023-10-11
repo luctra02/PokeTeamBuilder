@@ -15,7 +15,7 @@ interface PokemonObject {
 }
 
 function DisplayCardComponents() {
-  const [_count, setCount] = useState(getTeamSize()); 
+  const [, setCount] = useState(getTeamSize()); 
 
   function updateCount(count: number) {
     setCount(count);

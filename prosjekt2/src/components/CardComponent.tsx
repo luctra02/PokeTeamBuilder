@@ -8,7 +8,12 @@ interface PokemonObjectType {
   types: string[];
 }
 
-function CardComponent({pokemonObject, updateCount} : {pokemonObject: PokemonObjectType, updateCount?: Function}) {
+interface UpdateCountFunction {
+  (newCount: number): void;
+}
+
+
+function CardComponent({pokemonObject, updateCount} : {pokemonObject: PokemonObjectType, updateCount?: UpdateCountFunction}) {
   return (
     <div className="pokemonCard">
       <h2>#{pokemonObject.id} {pokemonObject.name}</h2>

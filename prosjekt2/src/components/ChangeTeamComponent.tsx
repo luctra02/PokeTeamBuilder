@@ -9,10 +9,14 @@ interface Pokemon {
     name: string;
   }
   
-  function ChangeTeamComponent( { pokemonTeam, updateCount }: { pokemonTeam: Pokemon, updateCount?: Function }) {
+interface UpdateCountFunction {
+  (newCount: number): void;
+}
+  
+  function ChangeTeamComponent( { pokemonTeam, updateCount }: { pokemonTeam: Pokemon, updateCount?: UpdateCountFunction }) {
     const [buttonText, setButtonText] = useState('Add to Team');
     const [isButtonDisabled, setIsButtonDisabled] = useState(false);
-
+    const teamSize = getTeamSize()
     useEffect(() => {
       const exists = checkPokemonInTeam(pokemonTeam.num);
       if (exists) {
@@ -25,7 +29,7 @@ interface Pokemon {
         setIsButtonDisabled(false);
       }
       
-    }, [getTeamSize()]);
+    }, [teamSize, pokemonTeam.num]);
 
     function changeTeam(pokemon: Pokemon){
         const exists = checkPokemonInTeam(pokemon.num);
