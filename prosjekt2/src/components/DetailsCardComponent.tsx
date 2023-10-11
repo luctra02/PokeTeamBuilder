@@ -1,4 +1,5 @@
 import TypeComponent from "./TypeComponent";
+import ChangeTeamComponent from "./ChangeTeamComponent";
 
 interface Pokemon {
   num: number;
@@ -82,6 +83,7 @@ function DetailsCardComponent({ pokemon }: { pokemon: Pokemon }) {
             </div>
           </div>
         </div>
+        <ChangeTeamComponent pokemonTeam={{ num: pokemon.num, sprite: pokemon.sprite, types: pokemon.types, name: pokemon.key }}/>
     </div>
   );
 }
