@@ -21,7 +21,7 @@ function DisplayCardComponents() {
     setCount(count);
   }
 
-  const itemsPerPage = 15;
+  const itemsPerPage = 16;
   const totalItems = pokemonArray.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
