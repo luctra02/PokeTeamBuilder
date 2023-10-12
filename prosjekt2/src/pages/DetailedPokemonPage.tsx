@@ -1,16 +1,16 @@
-import DetailsCardComponent from "../components/DetailsCardComponent";
-import { useLocation } from "react-router-dom";
+import DetailsCardComponent from '../components/DetailsCardComponent';
+import { useLocation } from 'react-router-dom';
 
 // import styles
-import "../styles/PokemonPage.css"
+import '../styles/PokemonPage.css';
 
 function DetailedPokemonPage() {
-    const location = useLocation();
-    const pokemon = location.state?.pokemon;
+  const location = useLocation();
+  const pokemon = location.state?.pokemon;
 
   return (
     <>
-      <DetailsCardComponent pokemon={pokemon}/>
+      <DetailsCardComponent pokemon={pokemon} />
     </>
   );
 }

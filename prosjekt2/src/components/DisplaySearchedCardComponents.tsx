@@ -1,7 +1,7 @@
-import CardComponent from "./CardComponent"
-import { useEffect, useState } from "react"
-import pokemonArray  from "../assets/PokemonList"
-import { useLocation, useNavigate } from "react-router-dom";
+import CardComponent from './CardComponent';
+import { useEffect, useState } from 'react';
+import pokemonArray from '../assets/PokemonList';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 interface PokemonObject {
   num: number;
@@ -10,7 +10,7 @@ interface PokemonObject {
   key: string;
   weight: number;
   height: number;
-  baseStats: number[]
+  baseStats: number[];
 }
 
 function DisplayCardComponents() {
@@ -18,7 +18,7 @@ function DisplayCardComponents() {
 
   const [pageNumber, setPageNumber] = useState(1);
   const [searchedArray, setSearchedArray] = useState(pokemonArray);
-  const [totalSearchedItems, setTotalSearchedItems] = useState(0)
+  const [totalSearchedItems, setTotalSearchedItems] = useState(0);
   const location = useLocation();
   const navigate = useNavigate();
   const searchTerm = location.state.searchTerm;
@@ -31,11 +31,9 @@ function DisplayCardComponents() {
   }
 
   useEffect(() => {
-    const filteredArray = pokemonArray.filter((pokemon) =>
-      pokemon.key.includes(searchTerm)
-    );
+    const filteredArray = pokemonArray.filter((pokemon) => pokemon.key.includes(searchTerm));
     setSearchedArray(filteredArray);
-    setTotalSearchedItems(filteredArray.length)
+    setTotalSearchedItems(filteredArray.length);
   }, [searchTerm]);
 
   function generatePageButtons() {
@@ -47,7 +45,7 @@ function DisplayCardComponents() {
         pageButtons.push(
           <button key={i} onClick={() => changePage(i)}>
             {i}
-          </button>
+          </button>,
         );
       }
     }
@@ -63,20 +61,29 @@ function DisplayCardComponents() {
   const endItem = Math.min(startItem + itemsPerPage, totalSearchedItems);
 
   return (
-    
     <>
       <div className="pokemonDisplayBox">
         {searchedArray.slice(startItem, endItem).map((pokemon) => (
-          <div className="pokemonDisplayButton" key={pokemon.num} onClick={() => (changeToDetailPage(pokemon))}>
-          <CardComponent
-            pokemonObject={{id:pokemon.num, name:pokemon.key, image:pokemon.sprite, types:pokemon.types, key: pokemon.key, baseStats:pokemon.baseStats, weight:pokemon.weight, height: pokemon.height}}
-          /></div>
+          <div className="pokemonDisplayButton" key={pokemon.num} onClick={() => changeToDetailPage(pokemon)}>
+            <CardComponent
+              pokemonObject={{
+                id: pokemon.num,
+                name: pokemon.key,
+                image: pokemon.sprite,
+                types: pokemon.types,
+                key: pokemon.key,
+                baseStats: pokemon.baseStats,
+                weight: pokemon.weight,
+                height: pokemon.height,
+              }}
+            />
+          </div>
         ))}
       </div>
       <div className="pageSelector">
         <button onClick={() => changePage(pageNumber - 1)}>Previous page</button>
-          {generatePageButtons()}
-          <button onClick={() => changePage(pageNumber + 1)}>Next page</button>
+        {generatePageButtons()}
+        <button onClick={() => changePage(pageNumber + 1)}>Next page</button>
       </div>
     </>
   );

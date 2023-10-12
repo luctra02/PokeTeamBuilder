@@ -1,6 +1,6 @@
-import CardComponent from "./CardComponent";
-import updateCount from "./DisplayCardComponents"
-import { useNavigate } from "react-router-dom";
+import CardComponent from './CardComponent';
+import updateCount from './DisplayCardComponents';
+import { useNavigate } from 'react-router-dom';
 
 interface PokemonObject {
   num: number;
@@ -9,7 +9,7 @@ interface PokemonObject {
   key: string;
   weight: number;
   height: number;
-  baseStats: number[]
+  baseStats: number[];
 }
 
 function DisplayTeam() {
@@ -18,19 +18,29 @@ function DisplayTeam() {
 
   function changeToDetailPage(pokemon: PokemonObject) {
     navigate('/pokemonInfo/${pokemon.num}', { state: { pokemon } });
-    console.log(team)
-    console.log(pokemon.num)
+    console.log(team);
+    console.log(pokemon.num);
   }
 
   return (
     <>
       <div className="pokemonDisplayBox">
         {team.map((pokemon: PokemonObject) => (
-          <div className="pokemonDisplayButton"key={pokemon.num} onClick={() => (changeToDetailPage(pokemon))}>
-          <CardComponent
-            pokemonObject={{id:pokemon.num, name:pokemon.key, image:pokemon.sprite, types:pokemon.types, baseStats:pokemon.baseStats, weight:pokemon.weight, height: pokemon.height, key:pokemon.key}}
-            updateCount={updateCount}
-          /></div>
+          <div className="pokemonDisplayButton" key={pokemon.num} onClick={() => changeToDetailPage(pokemon)}>
+            <CardComponent
+              pokemonObject={{
+                id: pokemon.num,
+                name: pokemon.key,
+                image: pokemon.sprite,
+                types: pokemon.types,
+                baseStats: pokemon.baseStats,
+                weight: pokemon.weight,
+                height: pokemon.height,
+                key: pokemon.key,
+              }}
+              updateCount={updateCount}
+            />
+          </div>
         ))}
       </div>
     </>

@@ -1,77 +1,75 @@
 .pokemonDisplayBox {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 20px;
-    gap: 20px;
-    margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 20px;
+  gap: 20px;
+  margin-top: 50px;
 }
 .pokemonDisplayButton {
-    width: calc((100% / 4) - 20px);
-    min-width: 250px;
-    flex-grow: 1;
-    height: 250px;
-    background-color: rgba(255, 255, 255, 1);
-    background-color: transparent;
-    border-radius: 20px;
-    border: none;
+  width: calc((100% / 4) - 20px);
+  min-width: 250px;
+  flex-grow: 1;
+  height: 250px;
+  background-color: rgba(255, 255, 255, 1);
+  background-color: transparent;
+  border-radius: 20px;
+  border: none;
 }
 
 .pokemonDisplayButton:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .pokemonCard {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .pokemonCard h2 {
-    text-align: center;
-    margin: 0;
+  text-align: center;
+  margin: 0;
 }
 
 .pokemonCard img {
-    height: 100px;
-    align-self: center;
+  height: 100px;
+  align-self: center;
 }
 
 .pageSelector {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 10px;
-    padding: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 25px;
 }
 
 .pageSelector button {
-    border: none;
-    background: transparent;
-    
+  border: none;
+  background: transparent;
 }
 
-
 .pokeType {
-    display: flex;
-    gap: 3px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
+  display: flex;
+  gap: 3px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .PokeTypeBox {
-    font-size: 16px;
-    padding: 3px 10px;
-    border-radius: 5px;
+  font-size: 16px;
+  padding: 3px 10px;
+  border-radius: 5px;
 }
 
 .teamButton {
-    width: 150px;
-    height: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
-    border: none;
-    margin-top: 10px;
-    align-self: center;
+  width: 150px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  border: none;
+  margin-top: 10px;
+  align-self: center;
 }

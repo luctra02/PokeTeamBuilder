@@ -1,9 +1,7 @@
-import DisplayTeam from "../components/DisplayTeam";
+import DisplayTeam from '../components/DisplayTeam';
 
 function DisplayTeamPage() {
-  return (
-    <DisplayTeam />
-  );
+  return <DisplayTeam />;
 }
 
 export default DisplayTeamPage;

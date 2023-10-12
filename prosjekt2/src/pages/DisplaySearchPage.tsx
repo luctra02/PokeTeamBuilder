@@ -1,9 +1,9 @@
-import DisplaySearchedCardComponents from "../components/DisplaySearchedCardComponents"
+import DisplaySearchedCardComponents from '../components/DisplaySearchedCardComponents';
 
 function DisplaySearchPage() {
   return (
     <>
-      <DisplaySearchedCardComponents/>
+      <DisplaySearchedCardComponents />
     </>
   );
 }
