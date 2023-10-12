@@ -3,7 +3,7 @@
 PokeTeamBuilder er en nettside der brukeren kan få opp informasjon om alle pokemons fra første generasjon og lage et lag.
 På hjemmesiden får brukeren informasjon som id-nummer, navn, bilde og type til de ulike pokemonene. 
 Brukeren kan trykke på en pokemon for å få opp mer informasjon om den pokemonen.
-Det er også mulig å legge til pokemons til et lag, men man kan bare ha maks 6 pokemons på laget.
+Det er også mulig å legge til pokemons på et lag, men man kan bare ha maks 6 pokemons på laget.
 
 # Installasjon og Setup Instruksjoner
 
