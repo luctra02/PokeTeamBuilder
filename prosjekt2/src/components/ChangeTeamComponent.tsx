@@ -10,7 +10,7 @@ interface Pokemon {
   weight: number;
   height: number;
   baseStats: number[];
-  name: String
+  name: string
 }
   
   
