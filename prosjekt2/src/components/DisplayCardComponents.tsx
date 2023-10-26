@@ -14,7 +14,7 @@ interface PokemonObject {
 }
 
 function DisplaySearchedCardComponents() {
-  const itemsPerPage = 15;
+  const itemsPerPage = 16;
 
   const [pageNumber, setPageNumber] = useState(1);
   const [searchedArray, setSearchedArray] = useState(pokemonArray);
@@ -35,6 +35,7 @@ function DisplaySearchedCardComponents() {
       const filteredArray = pokemonArray.filter((pokemon) => pokemon.key.includes(searchTerm));
       setSearchedArray(filteredArray);
       setTotalSearchedItems(filteredArray.length);
+      setPageNumber(1);
     } else {
       setSearchedArray(pokemonArray);
       setTotalSearchedItems(pokemonArray.length);
