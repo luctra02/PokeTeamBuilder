@@ -1,8 +1,7 @@
-import CardComponent from '../components/CardComponent';
-import { useState } from 'react';
+import CardComponent from './CardComponent';
+import { useEffect, useState } from 'react';
 import pokemonArray from '../assets/PokemonList';
-import { useNavigate } from 'react-router-dom';
-import { getTeamSize } from '../utils/teamFunctions';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 interface PokemonObject {
   num: number;
@@ -14,24 +13,33 @@ interface PokemonObject {
   baseStats: number[];
 }
 
-function DisplayCardComponents() {
-  const [, setCount] = useState(getTeamSize());
-
-  function updateCount(count: number) {
-    setCount(count);
-  }
-
-  const itemsPerPage = 16;
-  const totalItems = pokemonArray.length;
-  const totalPages = Math.ceil(totalItems / itemsPerPage);
+function DisplaySearchedCardComponents() {
+  const itemsPerPage = 15;
 
   const [pageNumber, setPageNumber] = useState(1);
+  const [searchedArray, setSearchedArray] = useState(pokemonArray);
+  const [totalSearchedItems, setTotalSearchedItems] = useState(0);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const totalPages = Math.ceil(totalSearchedItems / itemsPerPage);
 
   function changePage(newPage: number) {
     if (newPage >= 1 && newPage <= totalPages) {
       setPageNumber(newPage);
     }
   }
+
+  useEffect(() => {
+    if (location.state?.searchTerm != null) {
+      const searchTerm = location.state.searchTerm.toLowerCase();
+      const filteredArray = pokemonArray.filter((pokemon) => pokemon.key.includes(searchTerm));
+      setSearchedArray(filteredArray);
+      setTotalSearchedItems(filteredArray.length);
+    } else {
+      setSearchedArray(pokemonArray);
+      setTotalSearchedItems(pokemonArray.length);
+    }
+  }, [location.state?.searchTerm]);
 
   function generatePageButtons() {
     const pageButtons = [];
@@ -50,20 +58,17 @@ function DisplayCardComponents() {
     return pageButtons;
   }
 
-  const startItem = (pageNumber - 1) * itemsPerPage;
-  const endItem = Math.min(startItem + itemsPerPage, totalItems);
-
-  //navigate to detailspage for a selected pokemon
-  const navigate = useNavigate();
-
   function changeToDetailPage(pokemon: PokemonObject) {
     navigate(`/pokemonInfo/${pokemon.num}`, { state: { pokemon } });
   }
 
+  const startItem = (pageNumber - 1) * itemsPerPage;
+  const endItem = Math.min(startItem + itemsPerPage, totalSearchedItems);
+
   return (
     <>
       <div className="pokemonDisplayBox">
-        {pokemonArray.slice(startItem, endItem).map((pokemon) => (
+        {searchedArray.slice(startItem, endItem).map((pokemon) => (
           <div className="pokemonDisplayButton" key={pokemon.num} onClick={() => changeToDetailPage(pokemon)}>
             <CardComponent
               pokemonObject={{
@@ -72,11 +77,10 @@ function DisplayCardComponents() {
                 image: pokemon.sprite,
                 types: pokemon.types,
                 key: pokemon.key,
+                baseStats: pokemon.baseStats,
                 weight: pokemon.weight,
                 height: pokemon.height,
-                baseStats: pokemon.baseStats,
               }}
-              updateCount={updateCount}
             />
           </div>
         ))}
@@ -90,4 +94,4 @@ function DisplayCardComponents() {
   );
 }
 
-export default DisplayCardComponents;
+export default DisplaySearchedCardComponents;

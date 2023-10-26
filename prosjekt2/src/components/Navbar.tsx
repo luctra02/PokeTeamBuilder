@@ -12,7 +12,7 @@ function Navbar() {
 
   const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      navigate('/searchDisplay', { state: { searchTerm: searchTerm } });
+      navigate('/', { state: { searchTerm: searchTerm } });
     }
   };
 
