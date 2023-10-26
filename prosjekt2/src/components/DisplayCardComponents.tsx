@@ -3,6 +3,7 @@ import { useState } from 'react';
 import pokemonArray from '../assets/PokemonList';
 import { useNavigate } from 'react-router-dom';
 import { getTeamSize } from '../utils/teamFunctions';
+import { Pagination } from '@mui/material';
 
 interface PokemonObject {
   num: number;
@@ -31,23 +32,6 @@ function DisplayCardComponents() {
     if (newPage >= 1 && newPage <= totalPages) {
       setPageNumber(newPage);
     }
-  }
-
-  function generatePageButtons() {
-    const pageButtons = [];
-    const numToShow = 2;
-
-    for (let i = pageNumber - numToShow; i <= pageNumber + numToShow; i++) {
-      if (i >= 1 && i <= totalPages) {
-        pageButtons.push(
-          <button key={i} onClick={() => changePage(i)}>
-            {i}
-          </button>,
-        );
-      }
-    }
-
-    return pageButtons;
   }
 
   const startItem = (pageNumber - 1) * itemsPerPage;
@@ -82,9 +66,7 @@ function DisplayCardComponents() {
         ))}
       </div>
       <div className="pageSelector">
-        <button onClick={() => changePage(pageNumber - 1)}>Previous page</button>
-        {generatePageButtons()}
-        <button onClick={() => changePage(pageNumber + 1)}>Next page</button>
+        <Pagination count={totalPages} page={pageNumber} onChange={(_event, value) => changePage(value)} />
       </div>
     </>
   );

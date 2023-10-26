@@ -2,6 +2,7 @@ import CardComponent from './CardComponent';
 import { useEffect, useState } from 'react';
 import pokemonArray from '../assets/PokemonList';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Pagination from '@mui/material/Pagination';
 
 interface PokemonObject {
   num: number;
@@ -14,7 +15,7 @@ interface PokemonObject {
 }
 
 function DisplayCardComponents() {
-  const itemsPerPage = 15;
+  const itemsPerPage = 16;
 
   const [pageNumber, setPageNumber] = useState(1);
   const [searchedArray, setSearchedArray] = useState(pokemonArray);
@@ -36,22 +37,7 @@ function DisplayCardComponents() {
     setTotalSearchedItems(filteredArray.length);
   }, [searchTerm]);
 
-  function generatePageButtons() {
-    const pageButtons = [];
-    const numToShow = 2;
 
-    for (let i = pageNumber - numToShow; i <= pageNumber + numToShow; i++) {
-      if (i >= 1 && i <= totalPages) {
-        pageButtons.push(
-          <button key={i} onClick={() => changePage(i)}>
-            {i}
-          </button>,
-        );
-      }
-    }
-
-    return pageButtons;
-  }
 
   function changeToDetailPage(pokemon: PokemonObject) {
     navigate(`/pokemonInfo/${pokemon.num}`, { state: { pokemon } });
@@ -81,9 +67,7 @@ function DisplayCardComponents() {
         ))}
       </div>
       <div className="pageSelector">
-        <button onClick={() => changePage(pageNumber - 1)}>Previous page</button>
-        {generatePageButtons()}
-        <button onClick={() => changePage(pageNumber + 1)}>Next page</button>
+        <Pagination count={totalPages} page={pageNumber} onChange={(_event, value) => changePage(value)} />
       </div>
     </>
   );
