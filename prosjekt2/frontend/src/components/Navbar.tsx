@@ -1,8 +1,32 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
+  const [mode, setMode] = useState('light');
+
+  const toggleMode = () => {
+    setMode(prevMode => prevMode === 'light' ? 'dark' : 'light');
+  };
+
+  useEffect(() => {
+    const root = document.documentElement;
+
+    root.style.setProperty('--background', 'url(https://w.wallhaven.cc/full/4l/wallhaven-4lmey2.png)');
+
+  }, []);
+
+  useEffect(() => {
+      const root = document.documentElement;
+      if (mode === 'light') {
+        root.style.setProperty('--background', 'url(https://w.wallhaven.cc/full/4l/wallhaven-4lmey2.png)');
+        return;
+      } else {
+        root.style.setProperty('--background', 'url(https://w.wallhaven.cc/full/49/wallhaven-4963zx.jpg)');
+        return;
+      }
+  }, [mode]);
+
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
 
@@ -25,6 +49,9 @@ function Navbar() {
       </div>
 
       <ul className="navbar-list">
+        <li className="navbar-item" onClick={toggleMode}>
+          {mode === 'light' ? 'Dark Mode' : 'Light Mode'}
+        </li>
         <Link to="/">
           <li className="navbar-item">Home</li>
         </Link>
