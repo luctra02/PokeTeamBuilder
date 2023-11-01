@@ -1,5 +1,5 @@
 import CardComponent from '../components/CardComponent';
-import { useState } from 'react';
+import { KeyboardEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getTeamSize } from '../utils/teamFunctions';
 import { Pagination } from '@mui/material';
@@ -58,11 +58,18 @@ function DisplayCardComponents() {
     navigate(`/pokemonInfo/${pokemon.id}`, { state: { pokemon } });
   }
 
+  const handleEnterPress = (event : KeyboardEvent, pokemon: PokemonObject) => {
+    // Check if the key pressed is 'Enter'
+    if (event.key === 'Enter') {
+      changeToDetailPage(pokemon);
+    }
+};
+
   return (
     <>
       <div className="pokemonDisplayBox">
         {pokemonArray.slice(startItem, endItem).map((pokemon) => (
-          <div className="pokemonDisplayButton" key={pokemon.id} onClick={() => changeToDetailPage(pokemon)}>
+          <div className="pokemonDisplayButton" tabIndex={0} key={pokemon.id} onClick={() => changeToDetailPage(pokemon)} onKeyDown={(event) => handleEnterPress(event, pokemon)}>
             <CardComponent
               pokemonObject={{
                 id: pokemon.id,
