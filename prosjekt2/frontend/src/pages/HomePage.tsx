@@ -1,3 +1,4 @@
+//import AddPokemonToDatabase from '../components/AddPokemonToDatabase';
 import DisplayCardComponents from '../components/DisplayCardComponents';
 
 // import styles
@@ -7,6 +8,7 @@ function HomePage() {
   return (
     <>
       <DisplayCardComponents />
+      {/*<AddPokemonToDatabase />*/}
     </>
   );
 }

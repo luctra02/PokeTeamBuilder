@@ -3,13 +3,20 @@ import updateCount from './DisplayCardComponents';
 import { useNavigate } from 'react-router-dom';
 
 interface PokemonObject {
-  num: number;
-  sprite: string;
+  id: number;
+  name: string;
+  image: string;
   types: string[];
-  key: string;
   weight: number;
   height: number;
-  baseStats: number[];
+  baseStats: {
+    attack: number;
+    defense: number;
+    hp: number;
+    speed: number;
+    specialattack: number;
+    specialdefense: number;
+  };
 }
 
 function DisplayTeam() {
@@ -18,25 +25,23 @@ function DisplayTeam() {
 
   function changeToDetailPage(pokemon: PokemonObject) {
     navigate('/pokemonInfo/${pokemon.num}', { state: { pokemon } });
-    console.log(team);
-    console.log(pokemon.num);
   }
 
   return (
     <>
       <div className="pokemonDisplayBox">
         {team.map((pokemon: PokemonObject) => (
-          <div className="pokemonDisplayButton" key={pokemon.num} onClick={() => changeToDetailPage(pokemon)}>
+          <div className="pokemonDisplayButton" key={pokemon.id} onClick={() => changeToDetailPage(pokemon)}>
             <CardComponent
               pokemonObject={{
-                id: pokemon.num,
-                name: pokemon.key,
-                image: pokemon.sprite,
+                id: pokemon.id,
+                name: pokemon.name,
+                image: pokemon.image,
                 types: pokemon.types,
                 baseStats: pokemon.baseStats,
                 weight: pokemon.weight,
                 height: pokemon.height,
-                key: pokemon.key,
+
               }}
               updateCount={updateCount}
             />

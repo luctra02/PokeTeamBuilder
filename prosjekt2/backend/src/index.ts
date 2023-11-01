@@ -4,7 +4,8 @@ import { connect } from 'mongoose';
 import  Pokemon  from '../models/pokemon.js';
 
 
-const MONGODB = "mongodb+srv://Team28:PokeTeamBuilder@poketeambuilder.ksuiabl.mongodb.net/?retryWrites=true&w=majority";
+const MONGODB = "mongodb+srv://Team28:PokeTeamBuilder@poketeambuilder.ksuiabl.mongodb.net/PokeTeamBuilder?retryWrites=true&w=majority";
+
 
 const typeDefs = `#graphql
   type Pokemon{
@@ -12,8 +13,8 @@ const typeDefs = `#graphql
     name: String
     image: String
     types: [String]
-    weight: Int
-    height: Int
+    weight: Float
+    height: Float
     baseStats: BaseStats
   }
 
@@ -31,8 +32,8 @@ const typeDefs = `#graphql
     name: String
     image: String
     types: [String]
-    weight: Int
-    height: Int
+    weight: Float
+    height: Float
     baseStats: BaseStatsInput
   }
 
@@ -46,7 +47,7 @@ const typeDefs = `#graphql
   }
 
   type Query {
-    getPokemon(name: String!): Pokemon!
+    getPokemon(name: String!): [Pokemon]
     getPokemons(limit: Int): [Pokemon]
   }
 
@@ -58,17 +59,17 @@ const typeDefs = `#graphql
 const resolvers = {
   Query:{
       async getPokemon(_, { name }){
-          return await Pokemon.find({ name: name });
+        const regex = new RegExp(name, 'i'); // 'i' for case-insensitive
+        return await Pokemon.find({ name: { $regex: regex } });
       },
       async getPokemons(_, { limit }){
-        return await Pokemon.find().limit(limit);
+        return await Pokemon.find().sort({id:1}).limit(limit);
       }
   },
   Mutation:{
     async addPokemon(_, {pokemonInput: {id, name, image, types, weight, height, baseStats}} ){
-      const res = await new Pokemon({id, name, image, types, weight, height, baseStats}).save();
-
-      return res._id;
+        const res = await new Pokemon({id, name, image, types, weight, height, baseStats}).save();
+        return res._id;
     }
   }
 }
