@@ -13,17 +13,17 @@ function Navbar() {
     const root = document.documentElement;
 
     root.style.setProperty('--background', 'url(https://w.wallhaven.cc/full/4l/wallhaven-4lmey2.png)');
-
+    root.style.setProperty('--text-color', 'black');
   }, []);
 
   useEffect(() => {
       const root = document.documentElement;
       if (mode === 'light') {
         root.style.setProperty('--background', 'url(https://w.wallhaven.cc/full/4l/wallhaven-4lmey2.png)');
-        return;
+        root.style.setProperty('--text-color', 'black');
       } else {
         root.style.setProperty('--background', 'url(https://w.wallhaven.cc/full/49/wallhaven-4963zx.jpg)');
-        return;
+        root.style.setProperty('--text-color', 'white');
       }
   }, [mode]);
 

@@ -6,7 +6,9 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: black;
+  --text-color: black;
+  color: var(--text-color);
+
   background-color: #242424;
 
   font-synthesis: none;
