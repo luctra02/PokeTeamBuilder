@@ -1,22 +1,29 @@
 import CardComponent from './CardComponent';
 import { useEffect, useState } from 'react';
-import pokemonArray from '../assets/PokemonList';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Pagination from '@mui/material/Pagination';
 
 interface PokemonObject {
-  num: number;
-  sprite: string;
+  id: number;
+  name: string;
+  image: string;
   types: string[];
-  key: string;
   weight: number;
   height: number;
-  baseStats: number[];
+  baseStats: {
+    attack: number;
+    defense: number;
+    hp: number;
+    speed: number;
+    specialattack: number;
+    specialdefense: number;
+  };
 }
 
 function DisplayCardComponents() {
+  const pokemonDatabase = localStorage.getItem("PokemonDatabase")
+  const pokemonArray: PokemonObject[] = pokemonDatabase ? JSON.parse(pokemonDatabase) : [];
   const itemsPerPage = 16;
-
   const [pageNumber, setPageNumber] = useState(1);
   const [searchedArray, setSearchedArray] = useState(pokemonArray);
   const [totalSearchedItems, setTotalSearchedItems] = useState(0);
@@ -32,7 +39,7 @@ function DisplayCardComponents() {
   }
 
   useEffect(() => {
-    const filteredArray = pokemonArray.filter((pokemon) => pokemon.key.includes(searchTerm));
+    const filteredArray = pokemonArray.filter((pokemon) => pokemon.name.includes(searchTerm.toLowerCase()));
     setSearchedArray(filteredArray);
     setTotalSearchedItems(filteredArray.length);
   }, [searchTerm]);
@@ -40,7 +47,7 @@ function DisplayCardComponents() {
 
 
   function changeToDetailPage(pokemon: PokemonObject) {
-    navigate(`/pokemonInfo/${pokemon.num}`, { state: { pokemon } });
+    navigate(`/pokemonInfo/${pokemon.id}`, { state: { pokemon } });
   }
 
   const startItem = (pageNumber - 1) * itemsPerPage;
@@ -50,17 +57,16 @@ function DisplayCardComponents() {
     <>
       <div className="pokemonDisplayBox">
         {searchedArray.slice(startItem, endItem).map((pokemon) => (
-          <div className="pokemonDisplayButton" key={pokemon.num} onClick={() => changeToDetailPage(pokemon)}>
+          <div className="pokemonDisplayButton" key={pokemon.id} onClick={() => changeToDetailPage(pokemon)}>
             <CardComponent
               pokemonObject={{
-                id: pokemon.num,
-                name: pokemon.key,
-                image: pokemon.sprite,
+                id: pokemon.id,
+                name: pokemon.name,
+                image: pokemon.image,
                 types: pokemon.types,
-                key: pokemon.key,
-                baseStats: pokemon.baseStats,
                 weight: pokemon.weight,
                 height: pokemon.height,
+                baseStats: pokemon.baseStats
               }}
             />
           </div>

@@ -6,10 +6,16 @@ interface PokemonObjectType {
   name: string;
   image: string;
   types: string[];
-  key: string;
   weight: number;
   height: number;
-  baseStats: number[];
+  baseStats: {
+    attack: number;
+    defense: number;
+    hp: number;
+    speed: number;
+    specialattack: number;
+    specialdefense: number;
+  };
 }
 
 interface UpdateCountFunction {
@@ -37,14 +43,13 @@ function CardComponent({
       <ChangeTeamComponent
         updateCount={updateCount}
         pokemonTeam={{
-          num: pokemonObject.id,
-          sprite: pokemonObject.image,
-          types: pokemonObject.types,
+          id: pokemonObject.id,
           name: pokemonObject.name,
-          baseStats: pokemonObject.baseStats,
-          key: pokemonObject.key,
+          image: pokemonObject.image,
+          types: pokemonObject.types,
           weight: pokemonObject.weight,
           height: pokemonObject.height,
+          baseStats: pokemonObject.baseStats
         }}
       />
     </div>

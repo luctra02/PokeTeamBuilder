@@ -8,14 +8,20 @@ import {
 } from '../utils/teamFunctions';
 
 interface Pokemon {
-  num: number;
-  sprite: string;
+  id: number;
+  name: string;
+  image: string;
   types: string[];
-  key: string;
   weight: number;
   height: number;
-  baseStats: number[];
-  name: string;
+  baseStats: {
+    attack: number;
+    defense: number;
+    hp: number;
+    speed: number;
+    specialattack: number;
+    specialdefense: number;
+  };
 }
 
 interface UpdateCountFunction {
@@ -33,7 +39,7 @@ function ChangeTeamComponent({
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const teamSize = getTeamSize();
   useEffect(() => {
-    const exists = checkPokemonInTeam(pokemonTeam.num);
+    const exists = checkPokemonInTeam(pokemonTeam.id);
     if (exists) {
       setButtonText('Remove from Team');
     } else if (!exists && checkIfTeamIsFull()) {
@@ -43,12 +49,12 @@ function ChangeTeamComponent({
       setButtonText('Add to Team');
       setIsButtonDisabled(false);
     }
-  }, [teamSize, pokemonTeam.num]);
+  }, [teamSize, pokemonTeam.id]);
 
   function changeTeam(pokemon: Pokemon) {
-    const exists = checkPokemonInTeam(pokemon.num);
+    const exists = checkPokemonInTeam(pokemon.id);
     if (exists) {
-      removePokemonFromTeam(pokemon.num);
+      removePokemonFromTeam(pokemon.id);
       setButtonText('Add to Team');
       if (getTeamSize() == 5 && updateCount) {
         updateCount(getTeamSize());

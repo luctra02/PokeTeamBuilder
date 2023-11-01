@@ -1,21 +1,35 @@
 import CardComponent from '../components/CardComponent';
 import { useState } from 'react';
-import pokemonArray from '../assets/PokemonList';
 import { useNavigate } from 'react-router-dom';
 import { getTeamSize } from '../utils/teamFunctions';
 import { Pagination } from '@mui/material';
+import fetchPokemonList from '../assets/PokemonDatabase';
+
 
 interface PokemonObject {
-  num: number;
-  sprite: string;
+  id: number;
+  name: string;
+  image: string;
   types: string[];
-  key: string;
   weight: number;
   height: number;
-  baseStats: number[];
+  baseStats: {
+    attack: number;
+    defense: number;
+    hp: number;
+    speed: number;
+    specialattack: number;
+    specialdefense: number;
+  };
 }
 
+
 function DisplayCardComponents() {
+  if(!localStorage.getItem("PokemonDatabase")){
+    fetchPokemonList();
+  }
+  const pokemonDatabase = localStorage.getItem("PokemonDatabase")
+  const pokemonArray: PokemonObject[] = pokemonDatabase ? JSON.parse(pokemonDatabase) : [];
   const [, setCount] = useState(getTeamSize());
 
   function updateCount(count: number) {
@@ -41,24 +55,23 @@ function DisplayCardComponents() {
   const navigate = useNavigate();
 
   function changeToDetailPage(pokemon: PokemonObject) {
-    navigate(`/pokemonInfo/${pokemon.num}`, { state: { pokemon } });
+    navigate(`/pokemonInfo/${pokemon.id}`, { state: { pokemon } });
   }
 
   return (
     <>
       <div className="pokemonDisplayBox">
         {pokemonArray.slice(startItem, endItem).map((pokemon) => (
-          <div className="pokemonDisplayButton" key={pokemon.num} onClick={() => changeToDetailPage(pokemon)}>
+          <div className="pokemonDisplayButton" key={pokemon.id} onClick={() => changeToDetailPage(pokemon)}>
             <CardComponent
               pokemonObject={{
-                id: pokemon.num,
-                name: pokemon.key,
-                image: pokemon.sprite,
+                id: pokemon.id,
+                name: pokemon.name,
+                image: pokemon.image,
                 types: pokemon.types,
-                key: pokemon.key,
                 weight: pokemon.weight,
                 height: pokemon.height,
-                baseStats: pokemon.baseStats,
+                baseStats: pokemon.baseStats
               }}
               updateCount={updateCount}
             />

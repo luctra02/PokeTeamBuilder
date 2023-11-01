@@ -30,7 +30,7 @@ interface Pokemon {
 });
 
 const PokemonSchema = new Schema<Pokemon>({
-    id: {type: Number, required: true},
+    id: {type: Number, required: true, unique: true},
     name: { type: String, required: true },
     image: {type: String, required: true },
     types: {type: [String], required: true},

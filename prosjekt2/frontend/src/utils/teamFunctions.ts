@@ -1,12 +1,18 @@
 interface Pokemon {
-  num: number;
-  sprite: string;
+  id: number;
+  name: string;
+  image: string;
   types: string[];
-  key: string;
   weight: number;
   height: number;
-  baseStats: number[];
-  name: string;
+  baseStats: {
+    attack: number;
+    defense: number;
+    hp: number;
+    speed: number;
+    specialattack: number;
+    specialdefense: number;
+  };
 }
 
 function addPokemonToTeam(pokemon: Pokemon) {
@@ -14,39 +20,35 @@ function addPokemonToTeam(pokemon: Pokemon) {
   const teamJSON = localStorage.getItem('team');
   const myTeam = teamJSON ? JSON.parse(teamJSON) : [];
   const newPokemon = {
-    num: pokemon.num,
-    sprite: pokemon.sprite,
+    id: pokemon.id,
+    image: pokemon.image,
     types: pokemon.types,
     name: pokemon.name,
     baseStats: pokemon.baseStats,
-    key: pokemon.key,
     weight: pokemon.weight,
     height: pokemon.height,
   };
-  console.log(pokemon.baseStats);
   myTeam.push(newPokemon);
   const updatedTeam = JSON.stringify(myTeam);
   localStorage.setItem('team', updatedTeam);
 
-  console.log('Updated Team:', myTeam);
 }
 
 function removePokemonFromTeam(id: number) {
   const teamJSON = localStorage.getItem('team');
   const myTeam: Pokemon[] = teamJSON ? JSON.parse(teamJSON) : [];
-  const index = myTeam.findIndex((pokemon) => pokemon.num == id);
+  const index = myTeam.findIndex((pokemon) => pokemon.id == id);
   if (index != -1) {
     myTeam.splice(index, 1);
     const updatedTeam = JSON.stringify(myTeam);
     localStorage.setItem('team', updatedTeam);
   }
-  console.log('Updated Team:', myTeam);
 }
 
 function checkPokemonInTeam(id: number) {
   const teamJSON = localStorage.getItem('team');
   const myTeam: Pokemon[] = teamJSON ? JSON.parse(teamJSON) : [];
-  const index = myTeam.findIndex((pokemon) => pokemon.num == id);
+  const index = myTeam.findIndex((pokemon) => pokemon.id == id);
   if (index != -1) {
     return true;
   } else {
