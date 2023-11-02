@@ -39,8 +39,8 @@ query GetPokemons($limit: Int) {
     }
   }`;
 
-function fetchPokemonList(){
-    const {loading, error, data} = useQuery(GET_POKEMONS, {
+function FetchPokemonList(){
+    const {loading, data} = useQuery(GET_POKEMONS, {
         variables: { limit: 151 },
       }
     );
@@ -55,4 +55,4 @@ function fetchPokemonList(){
 }
 
 
-export default fetchPokemonList;
+export default FetchPokemonList;

@@ -2,7 +2,7 @@ import CardComponent from '../components/CardComponent';
 import { KeyboardEvent, useState,useEffect } from 'react';
 import { getTeamSize } from '../utils/teamFunctions';
 import { Pagination } from '@mui/material';
-import fetchPokemonList from '../assets/PokemonDatabase';
+import FetchPokemonList from '../assets/PokemonDatabase';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 interface PokemonObject {
@@ -25,7 +25,7 @@ interface PokemonObject {
 
 function DisplayCardComponents() {
   if(!localStorage.getItem("PokemonDatabase")){
-    fetchPokemonList();
+    FetchPokemonList();
   }
   const pokemonDatabase = localStorage.getItem("PokemonDatabase")
   const pokemonArray: PokemonObject[] = pokemonDatabase ? JSON.parse(pokemonDatabase) : [];
