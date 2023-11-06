@@ -36,13 +36,11 @@ function DisplayCardComponents() {
   }
 
   const itemsPerPage = 16;
-
   const [pageNumber, setPageNumber] = useState(1);
   const [searchedArray, setSearchedArray] = useState(pokemonArray);
-  const [totalSearchedItems, setTotalSearchedItems] = useState(0);
-  const location = useLocation();
+  const [numberOfPokemons, setNumberOfPokemons] = useState(0);
   const navigate = useNavigate();
-  const totalPages = Math.ceil(totalSearchedItems / itemsPerPage);
+  const totalPages = Math.ceil(numberOfPokemons / itemsPerPage);
 
   function changePage(newPage: number) {
     if (newPage >= 1 && newPage <= totalPages) {
@@ -50,18 +48,14 @@ function DisplayCardComponents() {
     }
   }
 
+
   useEffect(() => {
-    if (location.state?.searchTerm != null) {
-      const searchTerm = location.state.searchTerm.toLowerCase();
-      const filteredArray = pokemonArray.filter((pokemon) => pokemon.name.includes(searchTerm));
-      setSearchedArray(filteredArray);
-      setTotalSearchedItems(filteredArray.length);
-      setPageNumber(1);
-    } else {
-      setSearchedArray(pokemonArray);
-      setTotalSearchedItems(pokemonArray.length);
-    }
-  }, [location.state?.searchTerm]);
+    const filteredStorage = sessionStorage.getItem("FilteredPokemons")
+    const searchedStorage = sessionStorage.getItem("SearchedPokemons")
+    const searchedPokemons: PokemonObject[] = filteredStorage ? JSON.parse(filteredStorage) : searchedStorage ? JSON.parse(searchedStorage) : pokemonArray;
+    setSearchedArray(searchedPokemons)
+    setNumberOfPokemons(searchedPokemons.length)
+  }, [sessionStorage.getItem("FilteredPokemons"), sessionStorage.getItem("SearchedPokemons")]);
 
 
   function changeToDetailPage(pokemon: PokemonObject) {
@@ -69,13 +63,12 @@ function DisplayCardComponents() {
   }
 
   const handleEnterPress = (event : KeyboardEvent, pokemon: PokemonObject) => {
-    // Check if the key pressed is 'Enter'
     if (event.key === 'Enter') {
       changeToDetailPage(pokemon);
     }
 };
   const startItem = (pageNumber - 1) * itemsPerPage;
-  const endItem = Math.min(startItem + itemsPerPage, totalSearchedItems);
+  const endItem = Math.min(startItem + itemsPerPage, numberOfPokemons);
 
   return (
     <>
