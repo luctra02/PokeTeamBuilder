@@ -91,7 +91,12 @@ function DisplayCardComponents() {
         ))}
       </div>
       <div className="pageSelector">
-        <Pagination count={totalPages} page={pageNumber} onChange={(_event, value) => changePage(value)} />
+      <Pagination
+        count={totalPages}
+        page={pageNumber}
+        onChange={(_event, value) => changePage(value)}
+        siblingCount={3} 
+      />
       </div>
     </>
   );
