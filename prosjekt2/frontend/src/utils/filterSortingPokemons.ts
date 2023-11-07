@@ -49,8 +49,6 @@ export function filterPokemons(type: string){
 }
 
 export function sortPokemons(attribute: Attribute){
-    
-    console.log(attribute)
     const sortFunction = (a: PokemonObject, b: PokemonObject) => {
         if (attribute == 'name') {
           return String(a[attribute]).localeCompare(String(b[attribute]));

@@ -41,7 +41,7 @@ query GetPokemons($limit: Int) {
 
 function FetchPokemonList(){
     const {loading, data} = useQuery(GET_POKEMONS, {
-        variables: { limit: 151 },
+        variables: { limit: 896 },
       }
     );
     if(!loading){

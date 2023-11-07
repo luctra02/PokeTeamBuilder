@@ -8,15 +8,17 @@ import { Attribute } from "../utils/constants";
 
 function SortDropdown(){  
     const navigate = useNavigate();
-    const sortBySelector =  document.getElementById("sortBySelector") as HTMLSelectElement
+    const JSONAttribute = sessionStorage.getItem('attribute')
+    const attribute: string = JSONAttribute ? JSON.parse(JSONAttribute) : 'id';
 
-    if(!sessionStorage.getItem('SearchedPokemons') && sortBySelector){
-        sortBySelector.value = "id";
+    if(!sessionStorage.getItem('SearchedPokemons')){
+        sessionStorage.setItem('attribute', JSON.stringify('id'))
     }
 
     function handleSort(attribute: string){
         sortPokemons(attribute as Attribute)
         navigate('/')
+        sessionStorage.setItem('attribute', JSON.stringify(attribute))
     }
     
     
@@ -24,7 +26,7 @@ function SortDropdown(){
     return(
         <>
             <p>Sort by: </p>
-            <select id='sortBySelector' onChange={e => handleSort(e.target.value)}>
+            <select value={attribute} onChange={e => handleSort(e.target.value)}>
                 <option value="id">ID</option>
                 {sortBy.map(attribute => (
                 <option value={attribute.toLowerCase().replace(" ", "")} key={attribute}>{attribute}</option>
