@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { filterPokemons } from "../utils/filterSortingPokemons";
 import { types } from "../utils/constants";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 function TypesDropdown(){  
     const typesStorage = sessionStorage.getItem("FilteredTypes")
@@ -20,15 +21,22 @@ function TypesDropdown(){
     }
 
     return(
-        <>
-            <p>Type: </p>
-            <select value={type} onChange={e => handleFilter(e.target.value)}>
-                <option value="All">All</option>
-                {filteredTypes.map(type => (
-                    <option value={type} key={type}>{type}</option>
-                ))}
-            </select>
-        </>
+        <FormControl fullWidth>
+            <InputLabel id="type">Type</InputLabel>
+            <Select 
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={type}
+            label="Type"
+            onChange={e => handleFilter(e.target.value)}
+            >
+                <MenuItem value="All">All</MenuItem>
+            {filteredTypes.map(type => (
+                <MenuItem value={type} key={type}>{type}</MenuItem>
+            ))}
+            </Select>
+
+        </FormControl>
     )
 }
 export default TypesDropdown

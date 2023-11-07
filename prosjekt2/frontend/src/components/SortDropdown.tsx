@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { sortPokemons } from "../utils/filterSortingPokemons";
 import { sortBy } from "../utils/constants";
 import { Attribute } from "../utils/constants";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 
 
@@ -24,15 +25,21 @@ function SortDropdown(){
     
 
     return(
-        <>
-            <p>Sort by: </p>
-            <select value={attribute} onChange={e => handleSort(e.target.value)}>
-                <option value="id">ID</option>
-                {sortBy.map(attribute => (
-                <option value={attribute.toLowerCase().replace(" ", "")} key={attribute}>{attribute}</option>
+        <FormControl fullWidth>
+            <InputLabel id="sort-by">Sort by</InputLabel>
+            <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={attribute}
+            label="Sort by"
+            onChange={e => handleSort(e.target.value)}
+            >
+                <MenuItem value="id">ID</MenuItem>
+            {sortBy.map(attribute => (
+                <MenuItem value={attribute.toLowerCase().replace(" ", "")} key={attribute}>{attribute}</MenuItem>
             ))}
-            </select>
-        </>
+            </Select>
+        </FormControl>
     )
 }
 export default SortDropdown
