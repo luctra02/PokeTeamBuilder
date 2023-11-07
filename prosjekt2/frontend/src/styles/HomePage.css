@@ -16,6 +16,7 @@
   background-color: transparent;
   border-radius: 20px;
   border: none;
+  cursor: pointer;
 }
 
 .pokemonDisplayButton:hover {
@@ -42,7 +43,9 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  bottom: 40px;
+  margin-top: 25px;
+  padding-bottom: 40px;
+
   position: absolute;
 }
 
