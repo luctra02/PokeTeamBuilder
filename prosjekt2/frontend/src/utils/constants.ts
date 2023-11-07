@@ -20,6 +20,22 @@ export const types: string[] = [
     'Fairy'
   ];
 
+export const sortBy: string[] =[
+  'Name',
+  'Weight',
+  'Height',
+  'Attack',
+  'Defense',
+  'HP',
+  'Speed',
+  'Special Attack',
+  'Special Defense'
+  
+]
+
+export type Attribute = 'id' | 'name' | 'weight' | 'height' | 'attack' | 'defense' | 'hp' | 'speed' | 'specialattack' | 'specialdefense';
+
+
 export const typeColors: Record<string, string> = {
     Normal: '#A8A878',
     Fire: '#F08030',

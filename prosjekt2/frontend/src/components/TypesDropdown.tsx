@@ -1,26 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { filterPokemons } from "../utils/filterSortingPokemons";
-import { types } from "../utils/typesAndColors";
+import { types } from "../utils/constants";
 
-
-
-
-interface PokemonObject {
-    id: number;
-    name: string;
-    image: string;
-    types: string[];
-    weight: number;
-    height: number;
-    baseStats: {
-      attack: number;
-      defense: number;
-      hp: number;
-      speed: number;
-      specialattack: number;
-      specialdefense: number;
-    };
-  }
 
 function TypesDropdown(){  
     const typesStorage = sessionStorage.getItem("FilteredTypes")
@@ -28,7 +9,9 @@ function TypesDropdown(){
     const navigate = useNavigate();
     const typeSelector =  document.getElementById("typeSelector") as HTMLSelectElement
 
-    if(!sessionStorage.getItem('FilteredPokemons')){
+
+    
+    if(!sessionStorage.getItem('FilteredPokemons') && typeSelector){
         typeSelector.value = "All";
     }
 
@@ -40,12 +23,15 @@ function TypesDropdown(){
     
 
     return(
-        <select id='typeSelector' onChange={e => handleFilter(e.target.value)}>
-            <option value="All">All</option>
-            {filteredTypes.map(type => (
-                <option value={type} key={type}>{type}</option>
-            ))}
-        </select>
+        <>
+            <p>Type: </p>
+            <select id='typeSelector' onChange={e => handleFilter(e.target.value)}>
+                <option value="All">All</option>
+                {filteredTypes.map(type => (
+                    <option value={type} key={type}>{type}</option>
+                ))}
+            </select>
+        </>
     )
 }
 export default TypesDropdown

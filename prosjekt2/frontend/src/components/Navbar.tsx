@@ -3,6 +3,7 @@ import '../styles/Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
 import TypesDropdown from './TypesDropdown';
 import { searchPokemons } from '../utils/filterSortingPokemons';
+import SortDropdown from './SortDropdown';
 
 function Navbar() {
   const searchStorage = sessionStorage.getItem('searchValue')
@@ -39,7 +40,8 @@ function Navbar() {
       </div>
 
       <ul className="navbar-list">
-        <TypesDropdown/>
+      {location.pathname == '/project2' && <TypesDropdown />}
+        {location.pathname == '/project2' && <SortDropdown />}
         <Link to="/" onClick={clearSessionStorage}>
           <li className="navbar-item">Home</li>
         </Link>

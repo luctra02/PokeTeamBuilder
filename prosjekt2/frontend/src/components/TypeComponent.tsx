@@ -1,4 +1,4 @@
-import {typeColors} from "../utils/typesAndColors";
+import {typeColors} from "../utils/constants";
 interface TypeComponentProps {
   pokemonType: string;
 }
