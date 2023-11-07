@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import '../styles/Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
+import { searchPokemons } from '../utils/filterSortingPokemons';
 
 function Navbar() {
   const [mode, setMode] = useState('light');
@@ -27,35 +28,46 @@ function Navbar() {
       }
   }, [mode]);
 
-  const [searchTerm, setSearchTerm] = useState('');
+  const searchStorage = sessionStorage.getItem('searchValue')
+  const searchValue: string = searchStorage ? JSON.parse(searchStorage) : '';
+
+  const [searchTerm, setSearchTerm] = useState(searchValue);
   const navigate = useNavigate();
 
+  function clearSessionStorage(){
+    sessionStorage.clear()
+    setSearchTerm('')
+  }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
   };
 
   const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      navigate('/searchDisplay', { state: { searchTerm: searchTerm } });
+      sessionStorage.removeItem('FilteredPokemons')
+      searchPokemons(searchTerm);
+      sessionStorage.setItem("searchValue", JSON.stringify(searchTerm))
+      navigate('/');
+      
+
     }
   };
 
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <Link to="/">
+        <Link to="/" onClick={clearSessionStorage}>
           <p>Pokemon</p>
         </Link>
       </div>
-
       <ul className="navbar-list">
         <li className="navbar-item" onClick={toggleMode}>
           {mode === 'light' ? 'Dark Mode' : 'Light Mode'}
         </li>
-        <Link to="/">
+        <Link to="/" onClick={clearSessionStorage}>
           <li className="navbar-item">Home</li>
         </Link>
-        <Link to="/team">
+        <Link to="/team" onClick={clearSessionStorage}>
           <li className="navbar-item">My Team</li>
         </Link>
         <div className="navbar-item">

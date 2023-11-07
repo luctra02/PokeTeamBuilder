@@ -1,5 +1,4 @@
 import CardComponent from './CardComponent';
-import updateCount from './DisplayCardComponents';
 import { useNavigate } from 'react-router-dom';
 
 interface PokemonObject {
@@ -43,7 +42,6 @@ function DisplayTeam() {
                 height: pokemon.height,
 
               }}
-              updateCount={updateCount}
             />
           </div>
         ))}

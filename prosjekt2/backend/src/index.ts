@@ -4,7 +4,7 @@ import { connect } from 'mongoose';
 import  Pokemon  from '../models/pokemon.js';
 
 
-const MONGODB = "mongodb+srv://Team28:PokeTeamBuilder@poketeambuilder.ksuiabl.mongodb.net/PokeTeamBuilder?retryWrites=true&w=majority";
+const MONGODB = "mongodb://it2810-28.idi.ntnu.no:27017/PokeTeamBuilder";
 
 
 const typeDefs = `#graphql

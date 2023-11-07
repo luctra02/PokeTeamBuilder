@@ -75,3 +75,11 @@
   margin-top: 10px;
   align-self: center;
 }
+
+.sorting {
+  display: flex;
+  margin-top: 70px;
+  width: 80%;
+  margin-left: 10%;
+  gap: 20px;
+}
