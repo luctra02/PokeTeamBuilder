@@ -51,8 +51,8 @@ function FetchTeam() {
         variables: { teamId: id }
     });
 
-    if (!loading && data.getTeam) {
-        const teamList: PokemonData[] = data.getTeam.pokemon;
+    if (!loading) {
+        const teamList: PokemonData[] = data?.getTeam ? data.getTeam.pokemon : [];
         const teamDataString = JSON.stringify(teamList);
         sessionStorage.setItem('team', teamDataString);
     }
