@@ -21,7 +21,7 @@ interface TeamDatabaseFunctionProps {
   pokemon: Pokemon;
   buttonText: string;
   isButtonDisabled: boolean;
-  changeTeam: Function;
+  changeTeam: (pokemon: Pokemon) => void;
 }
 
   const CREATE_TEAM = gql`

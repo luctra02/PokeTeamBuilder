@@ -20,15 +20,9 @@ interface PokemonObject {
 }
 
 function DisplayTeam() {
-  if(!sessionStorage.getItem('team')){
-    FetchTeam();
-  }
-  
+  const navigate = useNavigate();
   const storedTeam = sessionStorage.getItem('team')
   const team: PokemonObject[] = storedTeam ? JSON.parse(storedTeam) : [];
-  
-
-  const navigate = useNavigate();
   
   function changeToDetailPage(pokemon: PokemonObject) {
     navigate('/pokemonInfo/${pokemon.num}', { state: { pokemon } });
@@ -37,6 +31,7 @@ function DisplayTeam() {
   return (
     <>
       <div className="pokemonDisplayBox">
+        {!sessionStorage.getItem('team') && <FetchTeam/>}
         {team.map((pokemon: PokemonObject) => (
           <div className="pokemonDisplayButton" key={pokemon.id} onClick={() => changeToDetailPage(pokemon)}>
             <CardComponent

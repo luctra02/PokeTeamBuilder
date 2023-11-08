@@ -24,16 +24,8 @@ interface PokemonObject {
 
 
 function DisplayCardComponents() {
-  if(!localStorage.getItem("PokemonDatabase")){
-    FetchPokemonList();
-  }
   const pokemonDatabase = localStorage.getItem("PokemonDatabase")
   const pokemonArray: PokemonObject[] = pokemonDatabase ? JSON.parse(pokemonDatabase) : [];
-  const [, setCount] = useState(getTeamSize());
-
-  function updateCount(count: number) {
-    setCount(count);
-  }
 
   const itemsPerPage = 16;
   const [pageNumber, setPageNumber] = useState(1);
@@ -48,14 +40,19 @@ function DisplayCardComponents() {
     }
   }
 
-
+  const filteredPokemons = sessionStorage.getItem("FilteredPokemons")
+  const searchedPokemons = sessionStorage.getItem("SearchedPokemons")
+  
   useEffect(() => {
     const filteredStorage = sessionStorage.getItem("FilteredPokemons")
     const searchedStorage = sessionStorage.getItem("SearchedPokemons")
     const searchedPokemons: PokemonObject[] = filteredStorage ? JSON.parse(filteredStorage) : searchedStorage ? JSON.parse(searchedStorage) : pokemonArray;
     setSearchedArray(searchedPokemons)
     setNumberOfPokemons(searchedPokemons.length)
-  }, [sessionStorage.getItem("FilteredPokemons"), sessionStorage.getItem("SearchedPokemons")]);
+    //eslint wants to add pokemonarray to the dependency array but that creates an infinite loop, 
+    //therefore we disabled the check for that
+    // eslint-disable-next-line react-hooks/exhaustive-deps   
+  }, [filteredPokemons, searchedPokemons]);
 
 
   function changeToDetailPage(pokemon: PokemonObject) {
@@ -85,7 +82,6 @@ function DisplayCardComponents() {
                 height: pokemon.height,
                 baseStats: pokemon.baseStats
               }}
-              updateCount = {updateCount}
             />
           </div>
         ))}
@@ -97,6 +93,7 @@ function DisplayCardComponents() {
         onChange={(_event, value) => changePage(value)}
         siblingCount={3} 
       />
+      {!localStorage.getItem('PokemonDatabase') && <FetchPokemonList/>}
       </div>
     </>
   );

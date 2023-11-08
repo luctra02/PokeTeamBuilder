@@ -1,4 +1,6 @@
 import { gql, useQuery } from "@apollo/client";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface PokemonData {
   id: number;
@@ -43,20 +45,23 @@ const GET_TEAM = gql`
 
 
 function FetchTeam() {
+    const navigate = useNavigate();
     const id = localStorage.getItem('teamId');
-    
-    const { data } = useQuery(GET_TEAM, {
+    const { loading, data } = useQuery(GET_TEAM, {
         variables: { teamId: id }
     });
 
-    if (data && data.getTeam) {
+    if (!loading && data.getTeam) {
         const teamList: PokemonData[] = data.getTeam.pokemon;
         const teamDataString = JSON.stringify(teamList);
         sessionStorage.setItem('team', teamDataString);
     }
+    const team = sessionStorage.getItem('team')
+    useEffect(() => {
+        navigate('/team')
+    }, [team, navigate]);
+    
+    return (<></>)
 }
-  
-
-
 
 export { FetchTeam };

@@ -7,6 +7,7 @@ import {
   removePokemonFromTeam,
 } from '../utils/teamFunctions';
 import TeamDatabaseFunction from './TeamDatabaseFunction';
+import { useNavigate } from 'react-router-dom';
 
 interface Pokemon {
   id: number;
@@ -25,17 +26,11 @@ interface Pokemon {
   };
 }
 
-interface UpdateCountFunction {
-  (newCount: number): void;
-}
 
-function ChangeTeamComponent({
-  pokemonTeam,
-  updateCount,
-}: {
-  pokemonTeam: Pokemon;
-  updateCount?: UpdateCountFunction;
-}) {
+
+function ChangeTeamComponent({pokemonTeam}: {pokemonTeam: Pokemon}) {
+  const navigate = useNavigate()
+
   const [buttonText, setButtonText] = useState('Add to Team');
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const teamSize = getTeamSize();
@@ -57,14 +52,14 @@ function ChangeTeamComponent({
     if (exists) {
       removePokemonFromTeam(pokemon.id);
       setButtonText('Add to Team');
-      if (getTeamSize() == 5 && updateCount) {
-        updateCount(getTeamSize());
+      if (getTeamSize() == 5 && location.pathname == '/project2') {
+        navigate('/');
       }
     } else if (!checkIfTeamIsFull()) {
       addPokemonToTeam(pokemon);
       setButtonText('Remove from Team');
-      if (getTeamSize() == 6 && updateCount) {
-        updateCount(getTeamSize());
+      if (getTeamSize() == 6 && location.pathname == '/project2') {
+        navigate('/');
       }
     }
   }

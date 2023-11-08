@@ -1,4 +1,6 @@
 import { gql, useQuery } from "@apollo/client";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface PokemonData {
     id: number;
@@ -41,6 +43,7 @@ query GetPokemons($limit: Int) {
 
 
 function FetchPokemonList(){
+    const navigate = useNavigate();
     const {loading, data} = useQuery(GET_POKEMONS, {
         variables: { limit: 896 },
       }
@@ -49,10 +52,13 @@ function FetchPokemonList(){
         const pokemonList: PokemonData[] = data.getPokemons;
         const updatedPokemonList = JSON.stringify(pokemonList);
         localStorage.setItem('PokemonDatabase', updatedPokemonList);
-        
-        
     }
+    const pokemonDatabase = sessionStorage.getItem('PokemonDatabase')
+    useEffect(() => {
+        navigate('/')
+    }, [pokemonDatabase, navigate]);
 
+    return (<></>)
 }
 
 

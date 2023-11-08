@@ -18,17 +18,9 @@ interface PokemonObjectType {
   };
 }
 
-interface UpdateCountFunction {
-  (newCount: number): void;
-}
 
-function CardComponent({
-  pokemonObject,
-  updateCount,
-}: {
-  pokemonObject: PokemonObjectType;
-  updateCount?: UpdateCountFunction;
-}) {
+
+function CardComponent({pokemonObject}: {pokemonObject: PokemonObjectType}) {
   return (
     <div className="pokemonCard">
       <h2>
@@ -41,7 +33,6 @@ function CardComponent({
         ))}
       </div>
       <ChangeTeamComponent
-        updateCount={updateCount}
         pokemonTeam={{
           id: pokemonObject.id,
           name: pokemonObject.name,
