@@ -79,9 +79,6 @@ function Navbar() {
             onKeyPress={handleSearch}
           />
         </div>
-        <Link to="/login">
-          <li className="navbar-item">Login</li>
-        </Link>
       </ul>
     </nav>
   );

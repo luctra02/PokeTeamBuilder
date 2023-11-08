@@ -3,7 +3,7 @@ import { KeyboardEvent, useState,useEffect } from 'react';
 import { getTeamSize } from '../utils/teamFunctions';
 import { Pagination } from '@mui/material';
 import FetchPokemonList from '../assets/PokemonDatabase';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 interface PokemonObject {
   id: number;
