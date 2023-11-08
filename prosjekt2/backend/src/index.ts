@@ -125,15 +125,22 @@ const resolvers = {
   }
 }
 
-await connect(MONGODB);
+async function main() {
+  await connect(MONGODB);
 
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
+  const server = new ApolloServer({
+    typeDefs,
+    resolvers,
+  });
+
+  const { url } = await startStandaloneServer(server, {
+    listen : { port: 4000 }
+  });
+
+  console.log(`Server is ready at ${url}`);
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
 });
-
-const { url } = await startStandaloneServer(server, {
-  listen : { port: 4000 }
-});
-
-console.log(`Server is ready at ${url}`);

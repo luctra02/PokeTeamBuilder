@@ -1,26 +1,27 @@
+/* eslint no-use-before-define: 2 */  // --> ON
 import { Schema, model } from "mongoose";
 
+interface BaseStats{
+    attack: number
+    defense: number
+    hp: number
+    speed: number
+    specialattack: number
+    specialdefense: number
+}
+
 interface Pokemon {
-    id: Number;
-    name: String;
-    image: String;
-    types: String[];
-    weight: Number;
-    height: Number;
+    id: number;
+    name: string;
+    image: string;
+    types: string[];
+    weight: number;
+    height: number;
     baseStats: BaseStats;
 }
 
-interface BaseStats{
-    attack: Number
-    defense: Number
-    hp: Number
-    speed: Number
-    specialattack: Number
-    specialdefense: Number
-}
-
 interface Team{
-    teamId: String;
+    teamId: string;
     pokemon: Pokemon[];
 }
 

@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "compile": "tsc",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "start": "npm run compile && node ./dist/src/index.js"
   },
   "keywords": [],
@@ -13,11 +14,19 @@
   "license": "ISC",
   "dependencies": {
     "@apollo/server": "^4.9.5",
+      
+    "eslint": "^8.53.0",
     "graphql": "^16.8.1",
+    "lint": "^0.8.19",
     "mongoose": "^7.6.3"
   },
   "devDependencies": {
     "@types/node": "^20.8.9",
-    "typescript": "^5.2.2"
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "typescript": "^5.2.2",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3"
   }
 }
