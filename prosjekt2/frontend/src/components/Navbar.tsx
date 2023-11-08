@@ -35,7 +35,12 @@ function Navbar() {
   const navigate = useNavigate();
 
   function clearSessionStorage(){
-    sessionStorage.clear()
+    sessionStorage.removeItem('FilteredPokemons')
+    sessionStorage.removeItem('FilteredTypes')
+    sessionStorage.removeItem('SearchedPokemons')
+    sessionStorage.removeItem('type')
+    sessionStorage.removeItem('attribute')
+    sessionStorage.removeItem('searchValue')
     setSearchTerm('')
   }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -48,8 +53,6 @@ function Navbar() {
       searchPokemons(searchTerm);
       sessionStorage.setItem("searchValue", JSON.stringify(searchTerm))
       navigate('/');
-      
-
     }
   };
 
