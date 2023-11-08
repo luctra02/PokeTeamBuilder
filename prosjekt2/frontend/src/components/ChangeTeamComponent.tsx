@@ -6,6 +6,7 @@ import {
   getTeamSize,
   removePokemonFromTeam,
 } from '../utils/teamFunctions';
+import TeamDatabaseFunction from './TeamDatabaseFunction';
 
 interface Pokemon {
   id: number;
@@ -69,17 +70,13 @@ function ChangeTeamComponent({
   }
 
   return (
-    <button
-      className="teamButton"
-      onClick={(e) => {
-        e.stopPropagation();
-        changeTeam(pokemonTeam);
-      }}
-      disabled={isButtonDisabled}
-    >
-      {' '}
-      {buttonText}
-    </button>
+    <TeamDatabaseFunction
+      pokemon={pokemonTeam}
+      buttonText={buttonText}
+      isButtonDisabled={isButtonDisabled}
+      changeTeam={changeTeam}
+    />
+
   );
 }
 

@@ -1,3 +1,4 @@
+import { FetchTeam } from '../assets/TeamDatabase';
 import CardComponent from './CardComponent';
 import { useNavigate } from 'react-router-dom';
 
@@ -19,9 +20,16 @@ interface PokemonObject {
 }
 
 function DisplayTeam() {
-  const team = JSON.parse(localStorage.getItem('team') || '[]');
-  const navigate = useNavigate();
+  if(!sessionStorage.getItem('team')){
+    FetchTeam();
+  }
+  
+  const storedTeam = sessionStorage.getItem('team')
+  const team: PokemonObject[] = storedTeam ? JSON.parse(storedTeam) : [];
+  
 
+  const navigate = useNavigate();
+  
   function changeToDetailPage(pokemon: PokemonObject) {
     navigate('/pokemonInfo/${pokemon.num}', { state: { pokemon } });
   }

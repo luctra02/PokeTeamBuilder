@@ -4,7 +4,6 @@ import HomePage from './pages/HomePage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DisplayTeamPage from './pages/DisplayTeamPage';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
-import LoginPage from './pages/LoginPage';
 
 const client = new ApolloClient({
   uri: 'http://localhost:4000',
@@ -20,7 +19,6 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/pokemonInfo/:id" element={<DetailedPokemonPage />} />
             <Route path="/team" element={<DisplayTeamPage />} />
-            <Route path="/login" element={<LoginPage />} />
           </Routes>
         </div>
       </Router>
