@@ -21,12 +21,17 @@ interface PokemonObjectType {
 
 
 function CardComponent({pokemonObject}: {pokemonObject: PokemonObjectType}) {
+  function capitalizeFirstLetter(string: string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   return (
     <div className="pokemonCard">
       <h2>
-        #{pokemonObject.id} {pokemonObject.name}
+       {capitalizeFirstLetter(pokemonObject.name)}
       </h2>
       <img src={pokemonObject.image} alt="" />
+      <div className='pokemonID'>#{pokemonObject.id + 1000}</div>
       <div className="pokeType">
         {pokemonObject.types.map((type, index) => (
           <TypeComponent key={index} pokemonType={type} />

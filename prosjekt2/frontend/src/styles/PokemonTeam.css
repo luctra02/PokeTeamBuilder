@@ -1,0 +1,23 @@
+.pokeball {
+  width: 250px;
+  height: 250px;  
+}
+
+.pokemonTeamDisplayBox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0.5rem;
+}
+
+.teamContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+}

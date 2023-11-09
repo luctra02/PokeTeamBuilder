@@ -60,11 +60,11 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-logo">
         <Link to="/" onClick={clearSessionStorage}>
-          <p>Pokemon</p>
+          <p>PokemonTeamBuilder</p>
         </Link>
       </div>
       <ul className="navbar-list">
-        <li className="navbar-item" onClick={toggleMode}>
+        <li className="navbar-item noselect" onClick={toggleMode}>
           {mode === 'light' ? 'Dark Mode' : 'Light Mode'}
         </li>
         <Link to="/" onClick={clearSessionStorage}>

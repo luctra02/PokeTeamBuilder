@@ -1,6 +1,7 @@
 import { FetchTeam } from '../assets/TeamDatabase';
 import CardComponent from './CardComponent';
 import { useNavigate } from 'react-router-dom';
+import '../styles/PokemonTeam.css';
 
 interface PokemonObject {
   id: number;
@@ -29,27 +30,27 @@ function DisplayTeam() {
   }
 
   return (
-    <>
-      <div className="pokemonDisplayBox">
-        {!sessionStorage.getItem('team') && <FetchTeam/>}
-        {team.map((pokemon: PokemonObject) => (
-          <div className="pokemonDisplayButton" key={pokemon.id} onClick={() => changeToDetailPage(pokemon)}>
-            <CardComponent
-              pokemonObject={{
-                id: pokemon.id,
-                name: pokemon.name,
-                image: pokemon.image,
-                types: pokemon.types,
-                baseStats: pokemon.baseStats,
-                weight: pokemon.weight,
-                height: pokemon.height,
+    <div className="teamContainer"> 
+    <div className="pokemonTeamDisplayBox">
+      {!sessionStorage.getItem('team') && <FetchTeam/>}
+      {team.map((pokemon: PokemonObject) => (
+        <div className="pokemonDisplayButton" key={pokemon.id} onClick={() => changeToDetailPage(pokemon)}>
+          <CardComponent
+            pokemonObject={{
+              id: pokemon.id,
+              name: pokemon.name,
+              image: pokemon.image,
+              types: pokemon.types,
+              baseStats: pokemon.baseStats,
+              weight: pokemon.weight,
+              height: pokemon.height,
 
-              }}
-            />
-          </div>
-        ))}
-      </div>
-    </>
+            }}
+          />
+        </div>
+      ))}
+    </div>
+    </div>
   );
 }
 

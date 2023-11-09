@@ -60,7 +60,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
 }
 
 .PokeTypeBox {
@@ -70,11 +69,12 @@
 }
 
 .teamButton {
+  cursor: pointer;
   width: 150px;
-  height: 20px;
+  height: 25px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  border: none;
+  border: 1px white solid;
   margin-top: 10px;
   align-self: center;
 }
@@ -85,4 +85,14 @@
   width: 80%;
   margin-left: 10%;
   gap: 20px;
+}
+
+.pokemonID {
+  color: #616161;
+  display: flex;
+  font-weight: bold;
+  font-size: 10px;
+  align-content:center;
+  justify-content: center;
+
 }
