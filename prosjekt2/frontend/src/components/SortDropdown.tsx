@@ -7,17 +7,17 @@ import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 function SortDropdown(){  
     const navigate = useNavigate();
-    const JSONAttribute = sessionStorage.getItem('attribute')
+    const JSONAttribute = sessionStorage.getItem('sort')
     const attribute: string = JSONAttribute ? JSON.parse(JSONAttribute) : 'id';
 
     if(!sessionStorage.getItem('SearchedPokemons')){
-        sessionStorage.setItem('attribute', JSON.stringify('id'))
+        sessionStorage.setItem('sort', JSON.stringify('id'))
     }
 
     function handleSort(attribute: string){
         sortPokemons(attribute as Attribute)
         navigate('/')
-        sessionStorage.setItem('attribute', JSON.stringify(attribute))
+        sessionStorage.setItem('sort', JSON.stringify(attribute))
     }
 
     return(
