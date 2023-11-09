@@ -10,8 +10,8 @@ function HomePage() {
   return (
     <>
       <section className="sorting">
-        {location.pathname == '/project2' && <TypesDropdown />}
-        {location.pathname == '/project2' && <SortDropdown />}
+        <TypesDropdown />
+        <SortDropdown />
       </section>
       <DisplayCardComponents />
       {/*<AddPokemonToDatabase />*/}

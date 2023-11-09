@@ -8,11 +8,8 @@ function TypesDropdown(){
     const filteredTypes: string[] = typesStorage ? JSON.parse(typesStorage) : types;
     const navigate = useNavigate();
     const JSONType = sessionStorage.getItem('type')
-    const type: string = JSONType ? JSON.parse(JSONType) : 'All';
+    const type: string = JSONType ? JSON.parse(JSONType) : '';
     
-    if(!sessionStorage.getItem('FilteredPokemons')){
-        sessionStorage.setItem('type', JSON.stringify('All'))
-    }
 
     function handleFilter(type: string){
         filterPokemons(type)
@@ -37,11 +34,13 @@ function TypesDropdown(){
               value={type}
               key={type}
             >
-              {type}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+                <MenuItem value="">All</MenuItem>
+            {filteredTypes.map((type) => (
+                <MenuItem value={type} key={type}>{type}</MenuItem>
+            ))}
+            </Select>
+
+        </FormControl>
     )
 }
 export default TypesDropdown

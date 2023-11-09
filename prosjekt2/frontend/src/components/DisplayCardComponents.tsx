@@ -3,6 +3,7 @@ import { KeyboardEvent, useState,useEffect } from 'react';
 import { Pagination } from '@mui/material';
 import FetchPokemonList from '../assets/PokemonDatabase';
 import { useNavigate } from 'react-router-dom';
+import { gql, useQuery } from '@apollo/client';
 
 interface PokemonObject {
   id: number;
@@ -21,38 +22,73 @@ interface PokemonObject {
   };
 }
 
+const GET_POKEMONS = gql`query GetPokemons($offset: Int!, $limit: Int!, $search: String, $sort: String, $type: String) {
+  getPokemons(offset: $offset, limit: $limit, search: $search, sort: $sort, type: $type) {
+    count
+    pokemons {
+      name
+      baseStats {
+        attack
+        defense
+        hp
+        speed
+        specialattack
+        specialdefense
+      }
+      height
+      id
+      image
+      types
+      weight
+    }
+  }
+}`
+
 
 function DisplayCardComponents() {
-  const pokemonDatabase = localStorage.getItem("PokemonDatabase")
-  const pokemonArray: PokemonObject[] = pokemonDatabase ? JSON.parse(pokemonDatabase) : [];
-
-  const itemsPerPage = 16;
   const [pageNumber, setPageNumber] = useState(1);
-  const [searchedArray, setSearchedArray] = useState(pokemonArray);
-  const [numberOfPokemons, setNumberOfPokemons] = useState(0);
+  const [filterType, setFilterType] = useState("");
+  const [sortPokemons, setSortPokemons] = useState("id");
+  const [searchValue, setSearchValue] = useState("")
+  const itemsPerPage = 16;
+
+  const pageStorage = sessionStorage.getItem('page')
+  const typeStorage = sessionStorage.getItem('type')
+  const sortStorage = sessionStorage.getItem('sort')
+  const searchStorage = sessionStorage.getItem('searchValue')
+  useEffect(() => {
+    const checkPage = pageStorage ? JSON.parse(pageStorage) : 1
+    if(checkPage == pageNumber){
+      setPageNumber(1)
+    }else{
+      setPageNumber(checkPage);
+    }
+    setFilterType(typeStorage ? JSON.parse(typeStorage) : '');
+    setSortPokemons(sortStorage ? JSON.parse(sortStorage) : 'id');
+    setSearchValue(searchStorage ? JSON.parse(searchStorage) : '');
+
+  
+  }, [typeStorage, sortStorage, searchStorage, pageStorage]);
+
+  const {loading, data} = useQuery(GET_POKEMONS, {
+    variables: { limit: itemsPerPage, offset: (pageNumber -1) * itemsPerPage, type: filterType, sort: sortPokemons, search: searchValue },
+  }
+) 
   const navigate = useNavigate();
+  if (loading) {
+    // Return loading indicator or do nothing until data is loaded
+    return <div>Loading...</div>;
+  }
+  const pokemonArray: PokemonObject[] = data?.getPokemons.pokemons;
+  const numberOfPokemons = data?.getPokemons.count
   const totalPages = Math.ceil(numberOfPokemons / itemsPerPage);
 
   function changePage(newPage: number) {
     if (newPage >= 1 && newPage <= totalPages) {
-      setPageNumber(newPage);
+        sessionStorage.setItem("page", JSON.stringify(newPage));
+        navigate('/')
     }
   }
-
-  const filteredPokemons = sessionStorage.getItem("FilteredPokemons")
-  const searchedPokemons = sessionStorage.getItem("SearchedPokemons")
-  
-  useEffect(() => {
-    const filteredStorage = sessionStorage.getItem("FilteredPokemons")
-    const searchedStorage = sessionStorage.getItem("SearchedPokemons")
-    const searchedPokemons: PokemonObject[] = filteredStorage ? JSON.parse(filteredStorage) : searchedStorage ? JSON.parse(searchedStorage) : pokemonArray;
-    setSearchedArray(searchedPokemons)
-    setNumberOfPokemons(searchedPokemons.length)
-    //eslint wants to add pokemonarray to the dependency array but that creates an infinite loop, 
-    //therefore we disabled the check for that
-    // eslint-disable-next-line react-hooks/exhaustive-deps   
-  }, [filteredPokemons, searchedPokemons]);
-
 
   function changeToDetailPage(pokemon: PokemonObject) {
     navigate(`/pokemonInfo/${pokemon.id}`, { state: { pokemon } });
@@ -63,8 +99,6 @@ function DisplayCardComponents() {
       changeToDetailPage(pokemon);
     }
 };
-  const startItem = (pageNumber - 1) * itemsPerPage;
-  const endItem = Math.min(startItem + itemsPerPage, numberOfPokemons);
 
   const paginationStyle = {
     color: 'var(--text-color)', // Use your CSS variable here
@@ -73,7 +107,7 @@ function DisplayCardComponents() {
   return (
     <>
       <div className="pokemonDisplayBox">
-        {searchedArray.slice(startItem, endItem).map((pokemon) => (
+        {pokemonArray.map((pokemon) => (
           <div className="pokemonDisplayButton" tabIndex={0} key={pokemon.id} onClick={() => changeToDetailPage(pokemon)} onKeyDown={(event) => handleEnterPress(event, pokemon)}>
             <CardComponent
               pokemonObject={{
