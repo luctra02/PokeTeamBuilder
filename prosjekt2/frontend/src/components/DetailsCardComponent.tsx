@@ -28,7 +28,7 @@ function DetailsCardComponent({ pokemon }: { pokemon: Pokemon }) {
   return (
     <div className="pokemonInfo">
       <h1>
-        #{pokemon.id} {pokemon.name}
+        #{pokemon.id === 591 ? "amongus >" : pokemon.id} {pokemon.name}
       </h1>
       <div className="pokemonInfoWrapper">
         <div className="pokeImage">

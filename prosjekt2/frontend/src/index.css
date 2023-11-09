@@ -23,7 +23,13 @@
   background-size: cover;
   --background: url(https://w.wallhaven.cc/full/4l/wallhaven-4lmey2.png);
   background-image: var(--background);
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 
+}
+
+:root::-webkit-scrollbar {
+  display: none;
 }
 body {
   margin: 0;

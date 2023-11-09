@@ -17,18 +17,24 @@
   display: flex;
   flex-direction: row;
   z-index: 100;
-  font-family: pokemonFont;
 }
 
 .navbar-logo {
   height: 50px;
-  padding: 10px;
+  margin-left: 10px;
   display: flex;
 }
 
 .navbar-logo a {
   display: flex;
   flex-direction: row;
+  font-family: pokemonFont;
+  font-size: 28px;
+  transition: 0.1s ease-in-out;
+}
+
+.navbar-logo a:hover {
+  color: #ffcb05;
 }
 
 .navbar-list {
@@ -42,9 +48,17 @@
   margin: 0.4rem 0.3rem;
 }
 
+.navbar-item:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+
+}
+
 .navbar-item {
   margin: 0 10px;
   cursor: pointer;
+  transition: 0.1s ease-in-out;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 .noselect {
@@ -59,7 +73,7 @@
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
 }
 
 .navbar-item a {
@@ -67,15 +81,12 @@ a {
   color: white;
 }
 
-.navbar-item a:hover {
-  text-decoration: underline;
+.nohover:hover {
+  background-color: transparent;
 }
 
-.navbar-logo p {
-  color: white;
-  font-size: 1.5rem;
-  margin: 0.4rem 0.3rem;
-  font-family: pokemonFont;
+.navbar-item a:hover {
+  text-decoration: underline;
 }
 
 input[type='text'] {

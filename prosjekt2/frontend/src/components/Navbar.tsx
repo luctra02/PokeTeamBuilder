@@ -60,20 +60,22 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-logo">
         <Link to="/" onClick={clearSessionStorage}>
-          <p>PokemonTeamBuilder</p>
+          PokemonTeamBuilder
         </Link>
       </div>
       <ul className="navbar-list">
+        <a>
         <li className="navbar-item noselect" onClick={toggleMode}>
           {mode === 'light' ? 'Dark Mode' : 'Light Mode'}
         </li>
+        </a>
         <Link to="/" onClick={clearSessionStorage}>
           <li className="navbar-item">Home</li>
         </Link>
         <Link to="/team" onClick={clearSessionStorage}>
           <li className="navbar-item">My Team</li>
         </Link>
-        <div className="navbar-item">
+        <div className="navbar-item nohover">
           <input
             type="text"
             placeholder="Search Pokemon Name"

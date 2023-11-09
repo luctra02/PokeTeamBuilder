@@ -22,21 +22,26 @@ function TypesDropdown(){
 
     return(
         <FormControl fullWidth>
-            <InputLabel id="type">Type</InputLabel>
-            <Select 
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={type}
-            label="Type"
-            onChange={e => handleFilter(e.target.value)}
+        <InputLabel id="type" style={{ color: 'var(--text-color)' }}>Type</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={type}
+          label="Type"
+          onChange={(e) => handleFilter(e.target.value)}
+          style={{ color: 'var(--text-color)' }}
+        >
+          <MenuItem value="All">All</MenuItem>
+          {filteredTypes.map((type) => (
+            <MenuItem
+              value={type}
+              key={type}
             >
-                <MenuItem value="All">All</MenuItem>
-            {filteredTypes.map(type => (
-                <MenuItem value={type} key={type}>{type}</MenuItem>
-            ))}
-            </Select>
-
-        </FormControl>
+              {type}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
     )
 }
 export default TypesDropdown

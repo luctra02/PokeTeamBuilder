@@ -66,6 +66,10 @@ function DisplayCardComponents() {
   const startItem = (pageNumber - 1) * itemsPerPage;
   const endItem = Math.min(startItem + itemsPerPage, numberOfPokemons);
 
+  const paginationStyle = {
+    color: 'var(--text-color)', // Use your CSS variable here
+  };
+
   return (
     <>
       <div className="pokemonDisplayBox">
@@ -90,8 +94,9 @@ function DisplayCardComponents() {
         count={totalPages}
         page={pageNumber}
         onChange={(_event, value) => changePage(value)}
-        siblingCount={3} 
-      />
+        siblingCount={3}
+        style={paginationStyle}
+    />
       {!localStorage.getItem('PokemonDatabase') && <FetchPokemonList/>}
       </div>
     </>

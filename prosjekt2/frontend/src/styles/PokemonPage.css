@@ -65,3 +65,7 @@
   display: flex;
   gap: 20px;
 }
+
+.pokemonInfo h1{
+  font-weight: normal;
+}
