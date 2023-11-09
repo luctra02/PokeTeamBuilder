@@ -16,16 +16,31 @@ npm version 9.8+
 
 ## Installasjon:
 
-Hvis du ikke er .\prosjekt2\ kjør
+## Start serveren i backend:
 
-`cd .\prosjekt2\`
+For å komme til backend mappen kjør
+
+`cd .\prosjekt2\backend`
 
 Etter det kan du installere de riktige pakkene ved
 
 `npm install`
 
+Serveren startes ved å kjøre
 
-## Start Serveren:
+`npm start`
+
+## Start appen i frontend:
+
+Etter du har kjørtt serveren, åpne en ny terminal og kjør
+
+`cd .\prosjekt2\frontend`
+
+Etter det kan du installere de riktige pakkene ved
+
+`npm install`
+
+For å starte appen kjør
 
 `npm run dev`
 
@@ -40,3 +55,23 @@ Det er også mulig å søke på pokemons etter navn ved å bruke søkefeltet i n
 Brukeren kan få opp mer informasjon om en pokemon hvis man trykker på pokemonen på hjemmesiden. 
 Det er også mulig å legge til/fjerne pokemons fra laget ved å trykke på en knapp.
 For å se hvilke pokemons som er på laget ditt kan man trykke på "My Team" i navbaren og få informasjon om pokemonene der og.
+Det er også mulig å filtrere pokemon på typer og sortere dem på forskjellige stats. Default så blir de sortert på id.
+Det er også muliug å skifte nettsiden til dark mode ved å trykke på dark mode knappen.
+
+# Teknologi og valg
+
+## Data
+
+Vi fikk dataen vår fra https://graphqlpokemon.favware.tech/v7, et omfattende pokemon GraphQL API med nok av info om alle pokemon. Siden det ikke er mer enn rundt
+1000 pokemon valgte vi å hente så mange som mulig. Dessverre hadde ikke den siste generasjonen av pokemon fungerende sprites, så vi valgte å bare hente pokemon fra
+gen 1 til gen 8 (896 pokemon).
+
+## Database
+
+Vi valgte å bruke MongoDB database. Ingen av gruppemedlemmene hadde mye erfaring med å jobbe med databaser i prosjekt, så vi valgte MongoDB siden det var et av
+databasealternativene presentert i forelesningene. Etter mer ressearch virket det som et godt, fleksibelt, og brukervennlig valg av database.
+
+## Server
+
+Vi bruker en Apollo server med GraphQL som query språk. Dette var også en av teknologiene presentert i forelesningen, og virket som en god kombo med valget vårt
+av database og Apollo Client på klient siden vår.
