@@ -1,22 +1,6 @@
 import TypeComponent from './TypeComponent';
 import ChangeTeamComponent from './ChangeTeamComponent';
-
-interface Pokemon {
-  id: number;
-  name:string;
-  image: string;
-  types: string[];
-  weight: number;
-  height: number;
-  baseStats: {
-    attack: number;
-    defense: number;
-    hp: number;
-    speed: number;
-    specialattack: number;
-    specialdefense: number;
-  };
-}
+import { Pokemon } from '../utils/constants';
 
 function DetailsCardComponent({ pokemon }: { pokemon: Pokemon }) {
   function roundToFive(num: number) {

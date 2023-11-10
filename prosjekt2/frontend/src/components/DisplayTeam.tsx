@@ -1,39 +1,29 @@
-import { FetchTeam } from '../assets/TeamDatabase';
 import CardComponent from './CardComponent';
 import { useNavigate } from 'react-router-dom';
 import '../styles/PokemonTeam.css';
-
-interface PokemonObject {
-  id: number;
-  name: string;
-  image: string;
-  types: string[];
-  weight: number;
-  height: number;
-  baseStats: {
-    attack: number;
-    defense: number;
-    hp: number;
-    speed: number;
-    specialattack: number;
-    specialdefense: number;
-  };
-}
+import { useQuery } from '@apollo/client';
+import { GET_TEAM } from '../graphql/queries';
+import { Pokemon } from '../utils/constants';
 
 function DisplayTeam() {
   const navigate = useNavigate();
-  const storedTeam = sessionStorage.getItem('team')
-  const team: PokemonObject[] = storedTeam ? JSON.parse(storedTeam) : [];
-  
-  function changeToDetailPage(pokemon: PokemonObject) {
-    navigate('/pokemonInfo/${pokemon.num}', { state: { pokemon } });
+  const id = localStorage.getItem('teamId');
+  const { loading, data } = useQuery(GET_TEAM, {
+    variables: { teamId: id}
+  });
+
+  if (loading) {
+      return <div>Loading...</div>;
+  }
+
+  function changeToDetailPage(pokemon: Pokemon) {
+    navigate(`/pokemonInfo/${pokemon.id}`, { state: { pokemon } });
   }
 
   return (
     <div className="teamContainer"> 
     <div className="pokemonTeamDisplayBox">
-      {!sessionStorage.getItem('team') && <FetchTeam/>}
-      {team.map((pokemon: PokemonObject) => (
+      {data?.getTeam.pokemon.map((pokemon: Pokemon) => (
         <div className="pokemonDisplayButton" key={pokemon.id} onClick={() => changeToDetailPage(pokemon)}>
           <CardComponent
             pokemonObject={{
@@ -44,7 +34,6 @@ function DisplayTeam() {
               baseStats: pokemon.baseStats,
               weight: pokemon.weight,
               height: pokemon.height,
-
             }}
           />
         </div>

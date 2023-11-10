@@ -29,12 +29,40 @@ export const resolvers = {
                 count,
             };
         },
-        async getTeam(_, { teamId }) {
+        async getTeam(_, { teamId}) {
           const team = await Team.findOne({ teamId: teamId });
           if (!team) {
-            throw new Error('Team not found.');
+            return new Team({ teamId, pokemons: [] });
           }
           return team
+        },
+        async getTypes(_, { search="", type }) {
+          const filters: pokemonFilters = {}
+            if (type){
+                filters.types = { $in: [type] };
+            }
+            filters.name = {$regex: new RegExp(search, 'i')}
+            
+            const pokemons = await Pokemon.find(filters);
+            const uniqueTypesSet = new Set<string>();
+            pokemons.map((pokemon) => {
+                pokemon.types.forEach(type => uniqueTypesSet.add(type));
+            })
+
+          return {types: Array.from(uniqueTypesSet)}
+        },
+        async checkPokemonInTeam(_, {teamId, name}) {
+          const team = await Team.findOne({
+            teamId: teamId,
+            pokemon: { $elemMatch: { name: name } }
+          });
+          
+
+          if (team) {
+            return true; 
+          } else {
+            return false; 
+          }
         }
     },
     Mutation:{
@@ -59,10 +87,8 @@ export const resolvers = {
           throw new Error(`Failed to delete the Pokemon: ${error.message}`);
         }
       },
-      
       async createTeam(_, { teamInput: { teamId, pokemon } }) {
-        const existingTeam = await Team.findOne({ teamId });
-  
+        const existingTeam = await Team.findOne({ teamId: teamId });
         if (existingTeam) {
           existingTeam.pokemon.push(...pokemon);
           await existingTeam.save();

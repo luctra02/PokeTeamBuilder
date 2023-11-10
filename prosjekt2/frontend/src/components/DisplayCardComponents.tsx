@@ -1,49 +1,10 @@
 import CardComponent from '../components/CardComponent';
 import { KeyboardEvent, useState,useEffect } from 'react';
 import { Pagination } from '@mui/material';
-import FetchPokemonList from '../assets/PokemonDatabase';
 import { useNavigate } from 'react-router-dom';
-import { gql, useQuery } from '@apollo/client';
-
-interface PokemonObject {
-  id: number;
-  name: string;
-  image: string;
-  types: string[];
-  weight: number;
-  height: number;
-  baseStats: {
-    attack: number;
-    defense: number;
-    hp: number;
-    speed: number;
-    specialattack: number;
-    specialdefense: number;
-  };
-}
-
-const GET_POKEMONS = gql`query GetPokemons($offset: Int!, $limit: Int!, $search: String, $sort: String, $type: String) {
-  getPokemons(offset: $offset, limit: $limit, search: $search, sort: $sort, type: $type) {
-    count
-    pokemons {
-      name
-      baseStats {
-        attack
-        defense
-        hp
-        speed
-        specialattack
-        specialdefense
-      }
-      height
-      id
-      image
-      types
-      weight
-    }
-  }
-}`
-
+import { useQuery } from '@apollo/client';
+import { GET_POKEMONS } from '../graphql/queries';
+import { Pokemon } from '../utils/constants';
 
 function DisplayCardComponents() {
   const [pageNumber, setPageNumber] = useState(1);
@@ -60,14 +21,13 @@ function DisplayCardComponents() {
     const checkPage = pageStorage ? JSON.parse(pageStorage) : 1
     if(checkPage == pageNumber){
       setPageNumber(1)
+      sessionStorage.setItem("page", JSON.stringify(1));
     }else{
       setPageNumber(checkPage);
     }
     setFilterType(typeStorage ? JSON.parse(typeStorage) : '');
     setSortPokemons(sortStorage ? JSON.parse(sortStorage) : 'id');
     setSearchValue(searchStorage ? JSON.parse(searchStorage) : '');
-
-  
   }, [typeStorage, sortStorage, searchStorage, pageStorage]);
 
   const {loading, data} = useQuery(GET_POKEMONS, {
@@ -76,10 +36,9 @@ function DisplayCardComponents() {
 ) 
   const navigate = useNavigate();
   if (loading) {
-    // Return loading indicator or do nothing until data is loaded
     return <div>Loading...</div>;
   }
-  const pokemonArray: PokemonObject[] = data?.getPokemons.pokemons;
+  const pokemonArray: Pokemon[] = data?.getPokemons.pokemons;
   const numberOfPokemons = data?.getPokemons.count
   const totalPages = Math.ceil(numberOfPokemons / itemsPerPage);
 
@@ -90,18 +49,18 @@ function DisplayCardComponents() {
     }
   }
 
-  function changeToDetailPage(pokemon: PokemonObject) {
-    navigate(`/pokemonInfo/${pokemon.id}`, { state: { pokemon } });
+  function changeToDetailPage(pokemon: Pokemon) {
+      navigate(`/pokemonInfo/${pokemon.id}`, { state: { pokemon } });
   }
 
-  const handleEnterPress = (event : KeyboardEvent, pokemon: PokemonObject) => {
+  const handleEnterPress = (event : KeyboardEvent, pokemon: Pokemon) => {
     if (event.key === 'Enter') {
-      changeToDetailPage(pokemon);
+        changeToDetailPage(pokemon);
     }
 };
 
   const paginationStyle = {
-    color: 'var(--text-color)', // Use your CSS variable here
+    color: 'var(--text-color)', 
   };
 
   return (
@@ -131,7 +90,6 @@ function DisplayCardComponents() {
         siblingCount={3}
         style={paginationStyle}
     />
-      {!localStorage.getItem('PokemonDatabase') && <FetchPokemonList/>}
       </div>
     </>
   );

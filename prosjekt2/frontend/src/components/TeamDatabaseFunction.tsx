@@ -1,59 +1,76 @@
-import { gql, useMutation } from '@apollo/client';
-
-interface Pokemon {
-  id: number;
-  name: string;
-  image: string;
-  types: string[];
-  weight: number;
-  height: number;
-  baseStats: {
-    attack: number;
-    defense: number;
-    hp: number;
-    speed: number;
-    specialattack: number;
-    specialdefense: number;
-  };
-}
+import { useMutation } from '@apollo/client';
+import { CREATE_TEAM, DELETE_FROM_TEAM } from '../graphql/mutations';
+import { Pokemon, Team } from '../utils/constants';
+import { GET_TEAM } from '../graphql/queries';
 
 interface TeamDatabaseFunctionProps {
   pokemon: Pokemon;
   buttonText: string;
   isButtonDisabled: boolean;
-  changeTeam: (pokemon: Pokemon) => void;
+  changeTeam: () => void;
 }
 
-  const CREATE_TEAM = gql`
-  mutation CreateTeam($teamInput: TeamInput) {
-    createTeam(teamInput: $teamInput)
-  }
-`;
-
-const DELETE_FROM_TEAM = gql`
-  mutation deletePokemon($name: String!, $teamId: ID!) {
-    deletePokemonFromTeam(name: $name, teamId: $teamId)
-  }
-`;
-
 function TeamDatabaseFunction({pokemon, buttonText, isButtonDisabled, changeTeam}: TeamDatabaseFunctionProps)  {
-  const [createTeam] = useMutation(CREATE_TEAM);
-  const [pokemonDeleteFromTeam] = useMutation(DELETE_FROM_TEAM);
   let teamId = localStorage.getItem('teamId');
-  //localStorage.clear();
+  if (!teamId) {
+    teamId = Math.random().toString(36).slice(2, 11); 
+    localStorage.setItem('teamId', teamId);
+  }
 
-
-  function AddTeamToDatabase() {
-
-
-    if (!teamId) {
-      // Generate a random teamId
-      teamId = Math.random().toString(36).slice(2, 11); // Using slice to get a substring of 9 characters
+  const [createTeam] = useMutation(CREATE_TEAM, {
+    update: (cache, { data: { createTeam } }) => {
+      const existingData = cache.readQuery<{ getTeam: Team }>({
+        query: GET_TEAM,
+        variables: { teamId: teamId },
+      });
   
-      // Set the new teamId in localStorage
-      localStorage.setItem('teamId', teamId);
-    }
+      if (existingData?.getTeam) {
+        const currentTeam = existingData.getTeam;
+  
+        const updatedTeam: Team = {
+          ...currentTeam,
+          pokemon: [...currentTeam.pokemon, createTeam],
+        };
+  
+        cache.writeQuery<{ getTeam: Team }>({
+          query: GET_TEAM,
+          variables: { teamId: teamId },
+          data: { getTeam: updatedTeam },
+        });
+      }
+    },
+  });
+  
 
+  const [pokemonDeleteFromTeam] = useMutation(DELETE_FROM_TEAM, {
+    update: (cache, { data: { deletePokemonFromTeam } }) => {
+      const existingData = cache.readQuery<{ getTeam: Team }>({
+        query: GET_TEAM,
+        variables: { teamId: teamId },
+      });
+  
+      if (existingData?.getTeam) {
+        const currentTeam = existingData.getTeam;
+  
+        const indexToRemove = currentTeam.pokemon.findIndex(
+          (poke) => poke.name === deletePokemonFromTeam
+        );
+  
+        if (indexToRemove !== -1) {
+          currentTeam.pokemon.splice(indexToRemove, 1);
+  
+          cache.writeQuery<{ getTeam: Team }>({
+            query: GET_TEAM,
+            variables: { teamId: teamId },
+            data: { getTeam: currentTeam },
+          });
+        }
+      }
+    },
+  });
+  
+  
+  function AddTeamToDatabase() {
     createTeam({ 
       variables: { 
         teamInput: { 
@@ -95,7 +112,7 @@ function TeamDatabaseFunction({pokemon, buttonText, isButtonDisabled, changeTeam
         } else if (buttonText == 'Remove from Team') {
           DeletePokemonFromTeam();
         }
-        changeTeam(pokemon);
+        changeTeam();
       }}
       disabled={isButtonDisabled}
     >
