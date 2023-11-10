@@ -56,7 +56,7 @@ Brukeren kan få opp mer informasjon om en pokemon hvis man trykker på pokemone
 Det er også mulig å legge til/fjerne pokemons fra laget ved å trykke på en knapp.
 For å se hvilke pokemons som er på laget ditt kan man trykke på "My Team" i navbaren og få informasjon om pokemonene der og.
 Det er også mulig å filtrere pokemon på typer og sortere dem på forskjellige stats. Default så blir de sortert på id.
-Det er også muliug å skifte nettsiden til dark mode ved å trykke på dark mode knappen.
+Det er også mulig å skifte nettsiden til dark mode ved å trykke på dark mode knappen.
 
 # Teknologi og valg
 
@@ -75,3 +75,7 @@ databasealternativene presentert i forelesningene. Etter mer ressearch virket de
 
 Vi bruker en Apollo server med GraphQL som query språk. Dette var også en av teknologiene presentert i forelesningen, og virket som en god kombo med valget vårt
 av database og Apollo Client på klient siden vår.
+
+# Bugs
+
+Legge/fjerne pokemons til team er noen ganger bugged på VM, men funker helt fint i localhost.
