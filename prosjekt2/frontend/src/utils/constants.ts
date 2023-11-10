@@ -1,25 +1,3 @@
-
-export const types: string[] = [
-    'Normal',
-    'Fire',
-    'Water',
-    'Electric',
-    'Grass',
-    'Ice',
-    'Fighting',
-    'Poison',
-    'Ground',
-    'Flying',
-    'Psychic',
-    'Bug',
-    'Rock',
-    'Ghost',
-    'Dragon',
-    'Dark',
-    'Steel',
-    'Fairy'
-  ];
-
 export const sortBy: string[] =[
   'Name',
   'Weight',
@@ -30,11 +8,7 @@ export const sortBy: string[] =[
   'Speed',
   'Special Attack',
   'Special Defense'
-  
 ]
-
-export type Attribute = 'id' | 'name' | 'weight' | 'height' | 'attack' | 'defense' | 'hp' | 'speed' | 'specialattack' | 'specialdefense';
-
 
 export const typeColors: Record<string, string> = {
     Normal: '#A8A878',
@@ -57,4 +31,25 @@ export const typeColors: Record<string, string> = {
     Fairy: '#EE99AC',
     Default: '#A8A8A8'
   };
+  
+export interface Pokemon {
+  id: number;
+  name: string;
+  image: string;
+  types: string[];
+  weight: number;
+  height: number;
+  baseStats: {
+    attack: number;
+    defense: number;
+    hp: number;
+    speed: number;
+    specialattack: number;
+    specialdefense: number;
+  };
+}
+export interface Team {
+  teamId: string;
+  pokemon: Pokemon[];
+}
   

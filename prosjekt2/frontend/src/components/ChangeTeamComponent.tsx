@@ -1,67 +1,68 @@
 import { useState, useEffect } from 'react';
-import {
-  addPokemonToTeam,
-  checkIfTeamIsFull,
-  checkPokemonInTeam,
-  getTeamSize,
-  removePokemonFromTeam,
-} from '../utils/teamFunctions';
 import TeamDatabaseFunction from './TeamDatabaseFunction';
 import { useNavigate } from 'react-router-dom';
-
-interface Pokemon {
-  id: number;
-  name: string;
-  image: string;
-  types: string[];
-  weight: number;
-  height: number;
-  baseStats: {
-    attack: number;
-    defense: number;
-    hp: number;
-    speed: number;
-    specialattack: number;
-    specialdefense: number;
-  };
-}
-
-
+import { useQuery } from '@apollo/client';
+import {
+  GET_TEAM,
+  CHECK_POKEMON_IN_TEAM
+} from '../graphql/queries';
+import { Pokemon} from '../utils/constants';
 
 function ChangeTeamComponent({pokemonTeam}: {pokemonTeam: Pokemon}) {
   const navigate = useNavigate()
 
   const [buttonText, setButtonText] = useState('Add to Team');
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
-  const teamSize = getTeamSize();
+  const [teamSize, setTeamSize] = useState(0)
+  const [check, setCheck] = useState(false)
+  const [isUpdatingCheck, setIsUpdatingCheck] = useState(false);
+  const id = localStorage.getItem('teamId');
+
   useEffect(() => {
-    const exists = checkPokemonInTeam(pokemonTeam.id);
-    if (exists) {
+    if (check) {
       setButtonText('Remove from Team');
-    } else if (!exists && checkIfTeamIsFull()) {
+    } else if (!check && teamSize == 6) {
       setButtonText('Team is full');
       setIsButtonDisabled(true);
     } else {
       setButtonText('Add to Team');
       setIsButtonDisabled(false);
     }
-  }, [teamSize, pokemonTeam.id]);
+  }, [teamSize, check]);
 
-  function changeTeam(pokemon: Pokemon) {
-    const exists = checkPokemonInTeam(pokemon.id);
-    if (exists) {
-      removePokemonFromTeam(pokemon.id);
-      setButtonText('Add to Team');
-      if (getTeamSize() == 5 && location.pathname == '/project2') {
-        navigate('/');
+  const { loading: loadingTeam, data: team, refetch: refetchTeam} = useQuery(GET_TEAM, {
+    variables: { teamId: id},
+  });
+  
+  const { loading: loadingCheck, data: checkData, refetch: refetchCheck} = useQuery(CHECK_POKEMON_IN_TEAM, {
+    variables: { teamId: id, name: pokemonTeam.name},
+  });
+  
+
+  if (loadingTeam || loadingCheck) {
+      return <div>Loading...</div>;
+  } 
+  
+  if (team && team.getTeam.pokemon.length != teamSize ) {
+      setTeamSize(team.getTeam.pokemon.length)
+      if (!isUpdatingCheck){
+          setCheck(checkData.checkPokemonInTeam)
+          setIsUpdatingCheck(true);
       }
-    } else if (!checkIfTeamIsFull()) {
-      addPokemonToTeam(pokemon);
-      setButtonText('Remove from Team');
-      if (getTeamSize() == 6 && location.pathname == '/project2') {
-        navigate('/');
-      }
-    }
+  }
+
+  async function changeTeam() {
+      await refetchTeam({
+        teamId: id,
+      });
+
+      await refetchCheck({
+        teamId: id, 
+        name: pokemonTeam.name,
+      });
+      setCheck(!check)
+
+      navigate(`${location.pathname.replace('/project2', '')}`, { state: { pokemon: pokemonTeam } } );
   }
 
   return (

@@ -12,7 +12,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router basename="/project2">
+      <Router basename="/project2/">
         <div className="App">
           <Navbar />
           <Routes>

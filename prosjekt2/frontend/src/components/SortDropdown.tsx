@@ -1,21 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import { sortPokemons } from "../utils/filterSortingPokemons";
 import { sortBy } from "../utils/constants";
-import { Attribute } from "../utils/constants";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-
 
 function SortDropdown(){  
     const navigate = useNavigate();
     const JSONAttribute = sessionStorage.getItem('sort')
     const attribute: string = JSONAttribute ? JSON.parse(JSONAttribute) : 'id';
 
-    if(!sessionStorage.getItem('SearchedPokemons')){
-        sessionStorage.setItem('sort', JSON.stringify('id'))
-    }
-
     function handleSort(attribute: string){
-        sortPokemons(attribute as Attribute)
         navigate('/')
         sessionStorage.setItem('sort', JSON.stringify(attribute))
     }

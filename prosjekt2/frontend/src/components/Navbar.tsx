@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import '../styles/Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
-import { searchPokemons } from '../utils/filterSortingPokemons';
 
 function Navbar() {
   const [mode, setMode] = useState('light');
@@ -44,9 +43,8 @@ function Navbar() {
 
   const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      sessionStorage.removeItem('FilteredPokemons')
-      searchPokemons(searchTerm);
       sessionStorage.setItem("searchValue", JSON.stringify(searchTerm))
+      sessionStorage.removeItem("type")
       navigate('/');
     }
   };
