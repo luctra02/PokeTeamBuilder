@@ -38,9 +38,11 @@ function TypesDropdown(){
             {filteredTypes.map((type) => (
                 <MenuItem value={type} key={type}>{type}</MenuItem>
             ))}
-            </Select>
-
-        </FormControl>
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
     )
 }
+
 export default TypesDropdown
