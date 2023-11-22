@@ -1,16 +1,16 @@
 import TypeComponent from './TypeComponent';
 import ChangeTeamComponent from './ChangeTeamComponent';
 import { Pokemon } from '../utils/constants';
+import { useNavigate } from 'react-router-dom';
+import StatComponent from './StatComponent';
+
 
 function DetailsCardComponent({ pokemon }: { pokemon: Pokemon }) {
-  function roundToFive(num: number) {
-    num = num * 150;
-    num = num / 255;
-    return Math.round(num / 5) * 5;
-  }
+  const navigate = useNavigate();
 
   return (
-    <div className="pokemonInfo">
+    <section className="pokemonInfo">
+      <button onClick={() => navigate(-1)}>Back</button>
       <h1>
         #{pokemon.id === 591 ? "amongus >" : pokemon.id} {pokemon.name}
       </h1>
@@ -30,47 +30,12 @@ function DetailsCardComponent({ pokemon }: { pokemon: Pokemon }) {
           </div>
           <div className="baseStats">
             <h3>Base Stats</h3>
-            <div className="stat-container">
-              <div id="attackFill" className="fill-bar-container">
-                <div className="fill-bar" style={{ height: `${roundToFive(pokemon.baseStats.attack)}px` }}></div>
-              </div>
-              <label htmlFor="attackFill">attack</label>
-            </div>
-
-            <div className="stat-container">
-              <div id="defenseFill" className="fill-bar-container">
-                <div className="fill-bar" style={{ height: `${roundToFive(pokemon.baseStats.defense)}px` }}></div>
-              </div>
-              <label htmlFor="defenseFill">defense</label>
-            </div>
-
-            <div className="stat-container">
-              <div id="hpFill" className="fill-bar-container">
-                <div className="fill-bar" style={{ height: `${roundToFive(pokemon.baseStats.hp)}px` }}></div>
-              </div>
-              <label htmlFor="hpFill">hp</label>
-            </div>
-
-            <div className="stat-container">
-              <div id="speedFill" className="fill-bar-container">
-                <div className="fill-bar" style={{ height: `${roundToFive(pokemon.baseStats.speed)}px` }}></div>
-              </div>
-              <label htmlFor="speedFill">speed</label>
-            </div>
-
-            <div className="stat-container">
-              <div id="specialAttackFill" className="fill-bar-container">
-                <div className="fill-bar" style={{ height: `${roundToFive(pokemon.baseStats.specialattack)}px` }}></div>
-              </div>
-              <label htmlFor="specialAttackFill">special attack</label>
-            </div>
-
-            <div className="stat-container">
-              <div id="specialDefenseFill" className="fill-bar-container">
-                <div className="fill-bar" style={{ height: `${roundToFive(pokemon.baseStats.defense)}px` }}></div>
-              </div>
-              <label htmlFor="specialDefenseFill">special defense</label>
-            </div>
+            <StatComponent stats={pokemon.baseStats.attack} statName={"attack"} />
+            <StatComponent stats={pokemon.baseStats.defense} statName={"defense"} />
+            <StatComponent stats={pokemon.baseStats.hp} statName={"hp"} />
+            <StatComponent stats={pokemon.baseStats.specialattack} statName={"specialattack"} />
+            <StatComponent stats={pokemon.baseStats.specialdefense} statName={"specialdefense"} />
+            <StatComponent stats={pokemon.baseStats.speed} statName={"speed"} />
           </div>
         </div>
       </div>
@@ -85,7 +50,7 @@ function DetailsCardComponent({ pokemon }: { pokemon: Pokemon }) {
           baseStats: pokemon.baseStats,
         }}
       />
-    </div>
+    </section>
   );
 }
 

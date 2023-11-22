@@ -8,7 +8,7 @@ function CardComponent({pokemonObject}: {pokemonObject: Pokemon}) {
   }
 
   return (
-    <div className="pokemonCard">
+    <article className="pokemonCard">
       <h2>
        {capitalizeFirstLetter(pokemonObject.name)}
       </h2>
@@ -30,7 +30,7 @@ function CardComponent({pokemonObject}: {pokemonObject: Pokemon}) {
           baseStats: pokemonObject.baseStats
         }}
       />
-    </div>
+    </article>
   );
 }
 
