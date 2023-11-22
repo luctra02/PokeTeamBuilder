@@ -22,23 +22,23 @@ function DisplayTeam() {
 
   return (
     <div className="teamContainer"> 
-    <div className="pokemonTeamDisplayBox">
-      {data?.getTeam.pokemon.map((pokemon: Pokemon) => (
-        <div className="pokemonDisplayButton" key={pokemon.id} onClick={() => changeToDetailPage(pokemon)}>
-          <CardComponent
-            pokemonObject={{
-              id: pokemon.id,
-              name: pokemon.name,
-              image: pokemon.image,
-              types: pokemon.types,
-              baseStats: pokemon.baseStats,
-              weight: pokemon.weight,
-              height: pokemon.height,
-            }}
-          />
-        </div>
-      ))}
-    </div>
+      <section className="pokemonTeamDisplayBox">
+        {data?.getTeam.pokemon.map((pokemon: Pokemon) => (
+          <article className="pokemonDisplayButton" key={pokemon.id} onClick={() => changeToDetailPage(pokemon)}>
+            <CardComponent
+              pokemonObject={{
+                id: pokemon.id,
+                name: pokemon.name,
+                image: pokemon.image,
+                types: pokemon.types,
+                baseStats: pokemon.baseStats,
+                weight: pokemon.weight,
+                height: pokemon.height,
+              }}
+            />
+          </article>
+        ))}
+      </section>
     </div>
   );
 }

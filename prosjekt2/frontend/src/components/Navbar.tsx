@@ -51,11 +51,11 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
+      <figure className="navbar-logo">
         <Link to="/" onClick={clearSessionStorage}>
           PokemonTeamBuilder
         </Link>
-      </div>
+      </figure>
       <ul className="navbar-list">
         <a>
         <li className="navbar-item noselect" onClick={toggleMode}>

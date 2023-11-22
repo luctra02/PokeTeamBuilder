@@ -6,11 +6,9 @@ interface TypeComponentProps {
 function TypeComponent({ pokemonType }: TypeComponentProps) {
   const color = typeColors[pokemonType];
   return (
-    <div>
-      <div className="pokeType PokeTypeBox" style={{ backgroundColor: color }}>
-        {pokemonType}
-      </div>
-    </div>
+    <section className="pokeType PokeTypeBox" style={{ backgroundColor: color }}>
+      {pokemonType}
+    </section>
   );
 }
 

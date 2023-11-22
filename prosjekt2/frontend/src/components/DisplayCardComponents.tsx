@@ -64,10 +64,10 @@ function DisplayCardComponents() {
   };
 
   return (
-    <>
-      <div className="pokemonDisplayBox">
+    <section>
+      <section className="pokemonDisplayBox">
         {pokemonArray.map((pokemon) => (
-          <div className="pokemonDisplayButton" tabIndex={0} key={pokemon.id} onClick={() => changeToDetailPage(pokemon)} onKeyDown={(event) => handleEnterPress(event, pokemon)}>
+          <article className="pokemonDisplayButton" tabIndex={0} key={pokemon.id} onClick={() => changeToDetailPage(pokemon)} onKeyDown={(event) => handleEnterPress(event, pokemon)}>
             <CardComponent
               pokemonObject={{
                 id: pokemon.id,
@@ -79,9 +79,9 @@ function DisplayCardComponents() {
                 baseStats: pokemon.baseStats
               }}
             />
-          </div>
+          </article>
         ))}
-      </div>
+      </section>
       <div className="pageSelector">
       <Pagination
         count={totalPages}
@@ -91,7 +91,7 @@ function DisplayCardComponents() {
         style={paginationStyle}
     />
       </div>
-    </>
+    </section>
   );
 }
 
