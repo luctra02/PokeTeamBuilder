@@ -37,7 +37,6 @@ function ChangeTeamComponent({pokemonTeam}: {pokemonTeam: Pokemon}) {
   const { loading: loadingCheck, data: checkData, refetch: refetchCheck} = useQuery(CHECK_POKEMON_IN_TEAM, {
     variables: { teamId: id, name: pokemonTeam.name},
   });
-  
 
   if (loadingTeam || loadingCheck) {
       return <div>Loading...</div>;

@@ -1,0 +1,57 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders a pokemon > renders the correct  1`] = `
+<DocumentFragment>
+  <nav
+    class="navbar"
+  >
+    <div
+      class="navbar-logo"
+    >
+      <a
+        href="/"
+      >
+        PokemonTeamBuilder
+      </a>
+    </div>
+    <ul
+      class="navbar-list"
+    >
+      <a>
+        <li
+          class="navbar-item noselect"
+        >
+          Dark Mode
+        </li>
+      </a>
+      <a
+        href="/"
+      >
+        <li
+          class="navbar-item"
+        >
+          Home
+        </li>
+      </a>
+      <a
+        href="/team"
+      >
+        <li
+          class="navbar-item"
+        >
+          My Team
+        </li>
+      </a>
+      <div
+        class="navbar-item nohover"
+      >
+        <input
+          placeholder="Search Pokemon Name"
+          type="text"
+          value=""
+        />
+      </div>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;

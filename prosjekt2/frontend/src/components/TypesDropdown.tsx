@@ -2,12 +2,8 @@ import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { useEffect, useState } from "react";
 import { gql, useQuery } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
+import { GET_TYPES } from "../graphql/queries";
 
-const GET_TYPES = gql`query GetTypes($search: String, $type: String) {
-  getTypes(search: $search, type: $type) {
-    types
-  }
-}`
 
 function TypesDropdown(){  
     const navigate = useNavigate()
@@ -47,7 +43,7 @@ function TypesDropdown(){
             style={{ color: 'var(--text-color)' }}
           >
               <MenuItem value="">All</MenuItem>
-              {data.getTypes.types.map((type: string) => (
+              {data?.getTypes.types.map((type: string) => (
                   <MenuItem value={type} key={type}>{type}</MenuItem>
               ))}
           </Select>
