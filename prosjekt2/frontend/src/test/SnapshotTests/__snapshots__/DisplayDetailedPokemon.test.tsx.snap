@@ -1,0 +1,171 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders a pokemon > matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="pokemonInfo"
+  >
+    <h1>
+      #25 pikachu
+    </h1>
+    <div
+      class="pokemonInfoWrapper"
+    >
+      <div
+        class="pokeImage"
+      >
+        <img
+          alt=""
+          src="https://play.pokemonshowdown.com/sprites/ani/pikachu.gif"
+        />
+      </div>
+      <div
+        class="pokeStats"
+      >
+        <div
+          class="bodyStats"
+        >
+          <p>
+            Weight: 6 kg
+          </p>
+          <p>
+            Height: 0.4 m
+          </p>
+        </div>
+        <div
+          class="pokeType"
+        >
+          <div>
+            <div
+              class="pokeType PokeTypeBox"
+              style="background-color: rgb(248, 208, 48);"
+            >
+              Electric
+            </div>
+          </div>
+        </div>
+        <div
+          class="baseStats"
+        >
+          <h3>
+            Base Stats
+          </h3>
+          <div
+            class="stat-container"
+          >
+            <div
+              class="fill-bar-container"
+              id="attackFill"
+            >
+              <div
+                class="fill-bar"
+                style="height: 30px;"
+              />
+            </div>
+            <label
+              for="attackFill"
+            >
+              attack
+            </label>
+          </div>
+          <div
+            class="stat-container"
+          >
+            <div
+              class="fill-bar-container"
+              id="defenseFill"
+            >
+              <div
+                class="fill-bar"
+                style="height: 25px;"
+              />
+            </div>
+            <label
+              for="defenseFill"
+            >
+              defense
+            </label>
+          </div>
+          <div
+            class="stat-container"
+          >
+            <div
+              class="fill-bar-container"
+              id="hpFill"
+            >
+              <div
+                class="fill-bar"
+                style="height: 20px;"
+              />
+            </div>
+            <label
+              for="hpFill"
+            >
+              hp
+            </label>
+          </div>
+          <div
+            class="stat-container"
+          >
+            <div
+              class="fill-bar-container"
+              id="speedFill"
+            >
+              <div
+                class="fill-bar"
+                style="height: 55px;"
+              />
+            </div>
+            <label
+              for="speedFill"
+            >
+              speed
+            </label>
+          </div>
+          <div
+            class="stat-container"
+          >
+            <div
+              class="fill-bar-container"
+              id="specialAttackFill"
+            >
+              <div
+                class="fill-bar"
+                style="height: 30px;"
+              />
+            </div>
+            <label
+              for="specialAttackFill"
+            >
+              special attack
+            </label>
+          </div>
+          <div
+            class="stat-container"
+          >
+            <div
+              class="fill-bar-container"
+              id="specialDefenseFill"
+            >
+              <div
+                class="fill-bar"
+                style="height: 25px;"
+              />
+            </div>
+            <label
+              for="specialDefenseFill"
+            >
+              special defense
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="teamButton"
+    >
+      Add to Team
+    </button>
+  </div>
+</DocumentFragment>
+`;
