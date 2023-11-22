@@ -62,7 +62,7 @@ Deretter kjør
 
 ## End-to-end testing
 
-Vi gjør end-to-end testing ved bruk av Cypress. Appen må være startet opp i både frontend og backend på forhånd for å kjøre disse testene. Se [her](#start-appen-i-backend) for hvordan. For å kjøre testene, naviger til 'frontend'
+Vi gjør end-to-end testing ved bruk av Cypress. Appen må være startet opp i både frontend og backend på forhånd for å kjøre disse testene. Se [her](#start-serveren-i-backend) for hvordan. For å kjøre testene, naviger til 'frontend'
 
 `cd .\prosjekt2\frontend`
 
