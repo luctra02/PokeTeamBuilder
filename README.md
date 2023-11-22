@@ -48,6 +48,40 @@ For å starte appen kjør
 
 localhost:5173
 
+# Testing
+
+## Komponent testing
+
+Vi bruker Vitest for testing av komponenter og snapshot testing. For å kjøre testene naviger til 'frontend' mappen
+
+`cd .\prosjekt2\frontend`
+
+Deretter kjør
+
+`npm run test`
+
+## End-to-end testing
+
+Vi gjør end-to-end testing ved bruk av Cypress. Appen må være startet opp i frontend på forhånd for å kjøre disse testene. Se [her](#start-appen-i-frontend) for hvordan. For å kjøre testene, naviger til 'frontend'
+
+`cd .\prosjekt2\frontend`
+
+Deretter kjør
+
+`npx cypress open`
+
+I GUI-et som kommer opp trykk på:
+
+`e2e testing`
+
+Velg ønsket browser og klikk
+
+`start e2e testing i browser`
+
+Klikk deretter:
+
+`homePage.cy.ts`
+
 # Navigasjon av nettsiden:
 
 På hjemmesiden blir det vist 15 pokemons om gangen. Brukeren kan bla frem og tilbake mellom pokemons ved å bytte sidetallet på bunnen av hjemmesiden. 
