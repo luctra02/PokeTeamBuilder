@@ -58,7 +58,7 @@ export const typeDefs = `#graphql
 
   type Query {
     getPokemon(name: String!): [Pokemon]
-    getPokemons(offset:Int!, limit: Int!, search: String, sort: String, type: String): PokemonResult
+    getPokemons(offset:Int!, limit: Int!, search: String, sort: String, type: String, sortOrder: String): PokemonResult
     getTeam(teamId: ID!): Team
     getTypes(search: String, type: String): FilteredTypes!
     checkPokemonInTeam(teamId: ID!, name: String!): Boolean

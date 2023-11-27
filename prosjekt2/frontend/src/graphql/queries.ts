@@ -29,8 +29,8 @@ query Query($teamId: ID!, $name: String!) {
 }`;
 
 export const GET_POKEMONS = gql`
-query GetPokemons($offset: Int!, $limit: Int!, $search: String, $sort: String, $type: String) {
-  getPokemons(offset: $offset, limit: $limit, search: $search, sort: $sort, type: $type) {
+query GetPokemons($offset: Int!, $limit: Int!, $search: String, $sort: String, $type: String, $sortOrder: String) {
+  getPokemons(offset: $offset, limit: $limit, search: $search, sort: $sort, type: $type, sortOrder: $sortOrder) {
     count
     pokemons {
       name
@@ -49,7 +49,7 @@ query GetPokemons($offset: Int!, $limit: Int!, $search: String, $sort: String, $
       weight
     }
   }
-}`
+}`;
 
 export const GET_TYPES = gql`query GetTypes($search: String, $type: String) {
   getTypes(search: $search, type: $type) {
