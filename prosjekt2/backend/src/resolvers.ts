@@ -36,11 +36,8 @@ export const resolvers = {
           }
           return team
         },
-        async getTypes(_, { search="", type }) {
+        async getTypes(_, { search="" }) {
           const filters: pokemonFilters = {}
-            if (type){
-                filters.types = { $in: [type] };
-            }
             filters.name = {$regex: new RegExp(search, 'i')}
             
             const pokemons = await Pokemon.find(filters);

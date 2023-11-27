@@ -35,11 +35,9 @@ exports[`renders pokemon > matches the snapshot 1`] = `
               Electric
             </section>
           </div>
-          <button
-            class="teamButton"
-          >
-            Add to Team
-          </button>
+          <div>
+            Loading...
+          </div>
         </article>
       </article>
       <article
@@ -123,6 +121,9 @@ exports[`renders pokemon > matches the snapshot 1`] = `
               type="button"
             >
               1
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
             </button>
           </li>
           <li>

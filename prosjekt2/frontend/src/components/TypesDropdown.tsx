@@ -19,7 +19,7 @@ function TypesDropdown(){
     }, [typeStorage, searchStorage]);
 
     const {loading, data} = useQuery(GET_TYPES, {
-      variables: { search: searchValue, type: filterType}
+      variables: { search: searchValue}
     })
 
     if (loading) {
