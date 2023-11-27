@@ -17,6 +17,8 @@ function DisplayCardComponents() {
   const typeStorage = sessionStorage.getItem('type')
   const sortStorage = sessionStorage.getItem('sort')
   const searchStorage = sessionStorage.getItem('searchValue')
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
+
   useEffect(() => {
     const checkPage = pageStorage ? JSON.parse(pageStorage) : 1
     if(checkPage == pageNumber){
@@ -30,10 +32,28 @@ function DisplayCardComponents() {
     setSearchValue(searchStorage ? JSON.parse(searchStorage) : '');
   }, [typeStorage, sortStorage, searchStorage, pageStorage]);
 
-  const {loading, data} = useQuery(GET_POKEMONS, {
-    variables: { limit: itemsPerPage, offset: (pageNumber -1) * itemsPerPage, type: filterType, sort: sortPokemons, search: searchValue },
-  }
-) 
+  const { loading, data, refetch: refetchPokemons } = useQuery(GET_POKEMONS, {
+    variables: {
+      limit: itemsPerPage,
+      offset: (pageNumber - 1) * itemsPerPage,
+      type: filterType,
+      sort: sortPokemons,
+      search: searchValue,
+      sortOrder: sortOrder
+    },
+  });
+
+  const toggleSortOrder = async () => {
+    // Toggle between "asc" and "desc" when the button is clicked
+    const newSortOrder = sortOrder === "asc" ? "desc" : "asc";
+    setSortOrder(newSortOrder);
+
+    // Refetch the data with the new sort order
+    await refetchPokemons({
+      sortOrder: newSortOrder === "desc" ? "_desc" : "",
+    });
+  };
+
   const navigate = useNavigate();
   if (loading) {
     return <div>Loading...</div>;
@@ -63,8 +83,13 @@ function DisplayCardComponents() {
     color: 'var(--text-color)', 
   };
 
+
   return (
     <section>
+      {/* Add a button to toggle sorting order */}
+      <button onClick={toggleSortOrder}>
+        {sortOrder === "asc" ? "Sort Descending" : "Sort Ascending"}
+      </button>
       <section className="pokemonDisplayBox">
         {pokemonArray.map((pokemon) => (
           <article className="pokemonDisplayButton" tabIndex={0} key={pokemon.id} onClick={() => changeToDetailPage(pokemon)} onKeyDown={(event) => handleEnterPress(event, pokemon)}>

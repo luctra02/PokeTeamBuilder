@@ -11,7 +11,7 @@ export const resolvers = {
             const regex = new RegExp(name, 'i'); // 'i' for case-insensitive
             return await Pokemon.find({ name: { $regex: regex } });
         },
-        async getPokemons(_, { offset, limit, search="", type, sort }){
+        async getPokemons(_, { offset, limit, search="", type, sort, sortOrder }){
             if(sort == 'attack' || sort == 'defense' || sort == 'hp' || sort == 'specialattack' || sort == 'specialdefense' || sort == 'speed' ){
                 sort = "baseStats."+sort
             }
@@ -21,8 +21,15 @@ export const resolvers = {
             }
             filters.name = {$regex: new RegExp(search, 'i')}
             
-            const pokemons = await Pokemon.find(filters).sort({ [sort]: 1 }).skip(offset).limit(limit);
+            const sortOptions = {};
+            sortOptions[sort] = sortOrder === 'desc' ? -1 : 1;
+
+            const pokemons = await Pokemon.find(filters).sort(sortOptions).skip(offset).limit(limit);
             const count = await Pokemon.find(filters).countDocuments();
+
+            if (sortOrder === "desc") {
+              pokemons.reverse();
+            }
 
             return {
                 pokemons,
