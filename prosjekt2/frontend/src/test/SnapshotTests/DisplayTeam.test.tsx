@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { screen, waitFor } from '@testing-library/react';
 import { allMocks as mocks} from '../mocks/mockQueries';
 import { testPageRender } from '../testUtils';
 import DisplayTeam from '../../pages/DisplayTeamPage';

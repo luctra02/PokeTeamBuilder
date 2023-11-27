@@ -1,6 +1,6 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { useEffect, useState } from "react";
-import { gql, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
 import { GET_TYPES } from "../graphql/queries";
 

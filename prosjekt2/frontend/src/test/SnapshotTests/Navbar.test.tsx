@@ -1,5 +1,5 @@
-import { render, screen, waitFor } from '@testing-library/react';
-import { getPokemonsMock, allMocks as mocks} from '../mocks/mockQueries';
+import { screen } from '@testing-library/react';
+import { allMocks as mocks} from '../mocks/mockQueries';
 import { testPageRender } from '../testUtils';
 import Navbar from '../../components/Navbar';
 

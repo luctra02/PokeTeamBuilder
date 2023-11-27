@@ -58,7 +58,7 @@ exports[`renders a pokemon > matches the snapshot 1`] = `
               class="fill-bar-container"
               id="specialDefenseFill"
             >
-              <figure
+              <div
                 class="fill-bar"
                 style="height: 30px;"
               />
@@ -76,7 +76,7 @@ exports[`renders a pokemon > matches the snapshot 1`] = `
               class="fill-bar-container"
               id="specialDefenseFill"
             >
-              <figure
+              <div
                 class="fill-bar"
                 style="height: 25px;"
               />
@@ -94,7 +94,7 @@ exports[`renders a pokemon > matches the snapshot 1`] = `
               class="fill-bar-container"
               id="specialDefenseFill"
             >
-              <figure
+              <div
                 class="fill-bar"
                 style="height: 20px;"
               />
@@ -112,7 +112,7 @@ exports[`renders a pokemon > matches the snapshot 1`] = `
               class="fill-bar-container"
               id="specialDefenseFill"
             >
-              <figure
+              <div
                 class="fill-bar"
                 style="height: 55px;"
               />
@@ -130,7 +130,7 @@ exports[`renders a pokemon > matches the snapshot 1`] = `
               class="fill-bar-container"
               id="specialDefenseFill"
             >
-              <figure
+              <div
                 class="fill-bar"
                 style="height: 30px;"
               />
@@ -148,7 +148,7 @@ exports[`renders a pokemon > matches the snapshot 1`] = `
               class="fill-bar-container"
               id="specialDefenseFill"
             >
-              <figure
+              <div
                 class="fill-bar"
                 style="height: 30px;"
               />

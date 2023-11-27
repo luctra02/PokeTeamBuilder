@@ -1,6 +1,5 @@
-import { render, screen, waitFor } from '@testing-library/react';
-import { getPokemonsMock, allMocks as mocks} from '../mocks/mockQueries';
-import { testPageRender } from '../testUtils';
+import { render, screen } from '@testing-library/react';
+import { getPokemonsMock} from '../mocks/mockQueries';
 import Type from '../../components/TypeComponent';
 
 

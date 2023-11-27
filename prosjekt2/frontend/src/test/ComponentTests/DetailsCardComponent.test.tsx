@@ -1,4 +1,4 @@
-import { cleanup, render, screen, waitFor } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import Details from '../../components/DetailsCardComponent';
 import { allMocks as mocks} from '../mocks/mockQueries';
 import { getPokemonsMock } from '../mocks/mockQueries';
