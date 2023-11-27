@@ -5,13 +5,13 @@ exports[`renders a team > matches the snapshot 1`] = `
   <div
     class="teamContainer"
   >
-    <div
+    <section
       class="pokemonTeamDisplayBox"
     >
-      <div
+      <article
         class="pokemonDisplayButton"
       >
-        <div
+        <article
           class="pokemonCard"
         >
           <h2>
@@ -29,23 +29,21 @@ exports[`renders a team > matches the snapshot 1`] = `
           <div
             class="pokeType"
           >
-            <div>
-              <div
-                class="pokeType PokeTypeBox"
-                style="background-color: rgb(248, 208, 48);"
-              >
-                Electric
-              </div>
-            </div>
+            <section
+              class="pokeType PokeTypeBox"
+              style="background-color: rgb(248, 208, 48);"
+            >
+              Electric
+            </section>
           </div>
           <button
             class="teamButton"
           >
             Remove from Team
           </button>
-        </div>
-      </div>
-    </div>
+        </article>
+      </article>
+    </section>
   </div>
 </DocumentFragment>
 `;

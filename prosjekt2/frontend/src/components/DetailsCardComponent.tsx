@@ -33,9 +33,9 @@ function DetailsCardComponent({ pokemon }: { pokemon: Pokemon }) {
             <StatComponent stats={pokemon.baseStats.attack} statName={"attack"} />
             <StatComponent stats={pokemon.baseStats.defense} statName={"defense"} />
             <StatComponent stats={pokemon.baseStats.hp} statName={"hp"} />
-            <StatComponent stats={pokemon.baseStats.specialattack} statName={"specialattack"} />
-            <StatComponent stats={pokemon.baseStats.specialdefense} statName={"specialdefense"} />
             <StatComponent stats={pokemon.baseStats.speed} statName={"speed"} />
+            <StatComponent stats={pokemon.baseStats.specialattack} statName={"special attack"} />
+            <StatComponent stats={pokemon.baseStats.specialdefense} statName={"special defense"} />
           </div>
         </div>
       </div>

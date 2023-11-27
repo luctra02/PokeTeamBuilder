@@ -5,7 +5,7 @@ exports[`renders a pokemon > renders the correct  1`] = `
   <nav
     class="navbar"
   >
-    <div
+    <figure
       class="navbar-logo"
     >
       <a
@@ -13,7 +13,7 @@ exports[`renders a pokemon > renders the correct  1`] = `
       >
         PokemonTeamBuilder
       </a>
-    </div>
+    </figure>
     <ul
       class="navbar-list"
     >
