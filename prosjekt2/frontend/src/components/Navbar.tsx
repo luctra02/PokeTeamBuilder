@@ -57,11 +57,11 @@ function Navbar() {
         </Link>
       </figure>
       <ul className="navbar-list">
-        <a>
+        {/* <a>
         <li className="navbar-item noselect" onClick={toggleMode}>
           {mode === 'light' ? 'Dark Mode' : 'Light Mode'}
         </li>
-        </a>
+        </a> */}
         <Link to="/" onClick={clearSessionStorage}>
           <li className="navbar-item">Home</li>
         </Link>
