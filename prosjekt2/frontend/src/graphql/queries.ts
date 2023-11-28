@@ -51,8 +51,8 @@ query GetPokemons($offset: Int!, $limit: Int!, $search: String, $sort: String, $
   }
 }`;
 
-export const GET_TYPES = gql`query GetTypes($search: String, $type: String) {
-  getTypes(search: $search, type: $type) {
+export const GET_TYPES = gql`query GetTypes($search: String) {
+  getTypes(search: $search) {
     types
   }
 }`
