@@ -27,9 +27,7 @@ export const resolvers = {
             const pokemons = await Pokemon.find(filters).sort(sortOptions).skip(offset).limit(limit);
             const count = await Pokemon.find(filters).countDocuments();
 
-            if (sortOrder === "desc") {
-              pokemons.reverse();
-            }
+      
 
             return {
                 pokemons,

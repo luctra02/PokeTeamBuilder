@@ -50,7 +50,7 @@ function DisplayCardComponents() {
 
     // Refetch the data with the new sort order
     await refetchPokemons({
-      sortOrder: newSortOrder === "desc" ? "_desc" : "",
+      sortOrder: newSortOrder === "desc" ? "_desc" : "asc",
     });
   };
 
@@ -86,7 +86,6 @@ function DisplayCardComponents() {
 
   return (
     <section>
-      {/* Add a button to toggle sorting order */}
       <button onClick={toggleSortOrder}>
         {sortOrder === "asc" ? "Sort Descending" : "Sort Ascending"}
       </button>
