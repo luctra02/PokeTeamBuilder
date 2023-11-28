@@ -19,7 +19,7 @@ describe('Navigation', () => {
 describe('Filter Pokemons', () => {
   beforeEach(() => {
     cy.visit('/')
-    cy.wait(2000);
+    cy.wait(1000);
   });
   
   it('filter pokemons by electric type', () => {
@@ -36,6 +36,23 @@ describe('Filter Pokemons', () => {
     cy.contains('Ice');
   });
 
+});
+
+describe('Team Interactions', () => {
+  beforeEach(() => {
+    cy.visit('/');
+    cy.wait(1000);
+    });
+
+  it('add to team then remove', () => {
+    cy.get('input[placeholder="Search Pokemon Name"]').type('Articuno');
+    cy.get('input[placeholder="Search Pokemon Name"]').type('{enter}');
+    cy.get('.pokemonCard').first().contains('Add to Team').click();
+    cy.contains('Remove from Team').should('exist')
+    cy.get('.pokemonCard').first().click()
+    cy.contains('Remove from Team').click();
+    cy.contains('Add to Team')
+  });
 });
 
 

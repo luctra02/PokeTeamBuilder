@@ -1,4 +1,4 @@
-import { CHECK_POKEMON_IN_TEAM, GET_TEAM, GET_POKEMONS, GET_TYPES  } from '../../graphql/queries';
+import { CHECK_POKEMON_IN_TEAM, GET_TEAM, GET_POKEMONS } from '../../graphql/queries';
 import { CREATE_TEAM } from '../../graphql/mutations';
 
 const getPokemonsMock = {
@@ -194,43 +194,9 @@ const checkStaraptorFalseMock = {
   }
 }
 
-const getTypes = {
-  request: {
-    query: GET_TYPES,
-    variables: {
-      search: "",
-      type: ''
-    },
-  },
-  result: {
-      data: {
-          getTypes: {
-              types:[
-                "Grass",
-                "Poison",
-                "Fire",
-                "Flying",
-                "Water",
-                "Bug",
-                "Normal",
-                "Electric",
-                "Ground",
-                "Fairy",
-                "Fighting",
-                "Psychic",
-                "Rock",
-                "Steel",
-                "Ice",
-                "Ghost",
-                "Dragon",
-                "Dark"
-              ]
-          }
-      }
-  }
-}
+
 
 
   
-const allMocks = [getPokemonsMock, getTeamMock, createTeamMock, checkPikachuFalseMock, checkPikachuTrueMock, checkStaraptorFalseMock, checkStaraptorTrueMock, getTypes]
+const allMocks = [getPokemonsMock, getTeamMock, createTeamMock, checkPikachuFalseMock, checkPikachuTrueMock, checkStaraptorFalseMock, checkStaraptorTrueMock]
 export { allMocks, getPokemonsMock };

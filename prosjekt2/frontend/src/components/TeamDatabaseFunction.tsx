@@ -19,27 +19,30 @@ function TeamDatabaseFunction({pokemon, buttonText, isButtonDisabled, changeTeam
 
   const [createTeam] = useMutation(CREATE_TEAM, {
     update: (cache, { data: { createTeam } }) => {
-      const existingData = cache.readQuery<{ getTeam: Team }>({
-        query: GET_TEAM,
-        variables: { teamId: teamId },
-      });
-  
-      if (existingData?.getTeam) {
-        const currentTeam = existingData.getTeam;
-  
-        const updatedTeam: Team = {
-          ...currentTeam,
-          pokemon: [...currentTeam.pokemon, createTeam],
-        };
-  
-        cache.writeQuery<{ getTeam: Team }>({
+      if (createTeam !== 'Team is full') {
+        const existingData = cache.readQuery<{ getTeam: Team }>({
           query: GET_TEAM,
           variables: { teamId: teamId },
-          data: { getTeam: updatedTeam },
         });
+  
+        if (existingData?.getTeam) {
+          const currentTeam = existingData.getTeam;
+  
+          const updatedTeam: Team = {
+            ...currentTeam,
+            pokemon: [...currentTeam.pokemon, createTeam],
+          };
+  
+          cache.writeQuery<{ getTeam: Team }>({
+            query: GET_TEAM,
+            variables: { teamId: teamId },
+            data: { getTeam: updatedTeam },
+          });
+        }
       }
     },
   });
+  
   
 
   const [pokemonDeleteFromTeam] = useMutation(DELETE_FROM_TEAM, {
@@ -52,19 +55,21 @@ function TeamDatabaseFunction({pokemon, buttonText, isButtonDisabled, changeTeam
       if (existingData?.getTeam) {
         const currentTeam = existingData.getTeam;
   
-        const indexToRemove = currentTeam.pokemon.findIndex(
-          (poke) => poke.name === deletePokemonFromTeam
+        const updatedPokemon = currentTeam.pokemon.filter(
+          (poke) => poke.name !== deletePokemonFromTeam
         );
-  
-        if (indexToRemove !== -1) {
-          currentTeam.pokemon.splice(indexToRemove, 1);
-  
-          cache.writeQuery<{ getTeam: Team }>({
-            query: GET_TEAM,
-            variables: { teamId: teamId },
-            data: { getTeam: currentTeam },
-          });
-        }
+        
+        const updatedTeam: Team = {
+          ...currentTeam,
+          pokemon: updatedPokemon,
+        };
+        
+        cache.writeQuery<{ getTeam: Team }>({
+          query: GET_TEAM,
+          variables: { teamId: teamId },
+          data: { getTeam: updatedTeam },
+        });
+        
       }
     },
   });
