@@ -91,14 +91,16 @@ export const resolvers = {
       },
       async createTeam(_, { teamInput: { teamId, pokemon } }) {
         const existingTeam = await Team.findOne({ teamId: teamId });
-        if (existingTeam) {
+        if (existingTeam && existingTeam.pokemon.length < 6) {
           existingTeam.pokemon.push(...pokemon);
           await existingTeam.save();
           return existingTeam.teamId;
-        } else {
+        } else if (!existingTeam){
           const newTeam = new Team({ teamId, pokemon });
           await newTeam.save();
           return newTeam.teamId;
+        } else {
+          return 'Team is full'
         }
       },
     }
