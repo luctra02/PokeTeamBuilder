@@ -12,13 +12,12 @@ describe('renders a pokemon', () => {
     it('displays correct information', async () => {
        testPageRender(<Details pokemon={getPokemonsMock.result.data.getPokemons.pokemons[0]} />, { mocks });  
         const pikachuImage = screen.getByRole('img', { name: "" });
-        expect(screen.getByText(/pikachu/)).toBeInTheDocument();
-        expect(screen.getByText(/#25/)).toBeInTheDocument();
+        expect(screen.getByText(/Pikachu/)).toBeInTheDocument();
+        expect(screen.getByText(/#0025/)).toBeInTheDocument();
         expect(pikachuImage).toBeInTheDocument();
         expect(screen.getByText(/Weight: 6 kg/)).toBeInTheDocument();
         expect(screen.getByText(/Height: 0.4 m/)).toBeInTheDocument();
         expect(screen.getByText(/Electric/)).toBeInTheDocument();
-        expect(screen.getByText(/Base Stats/)).toBeInTheDocument();
         expect(screen.getByText("attack")).toBeInTheDocument();
         expect(screen.getByText("defense")).toBeInTheDocument();
         expect(screen.getByText(/hp/)).toBeInTheDocument();
@@ -31,14 +30,13 @@ describe('renders a pokemon', () => {
     it('displays correct information', async () => {
         testPageRender(<Details pokemon={getPokemonsMock.result.data.getPokemons.pokemons[1]} />, { mocks });  
         const staraptorImage = screen.getByRole('img', { name: "" });
-        expect(screen.getByText(/staraptor/)).toBeInTheDocument();
-        expect(screen.getByText(/#398/)).toBeInTheDocument();
+        expect(screen.getByText(/Staraptor/)).toBeInTheDocument();
+        expect(screen.getByText(/#0398/)).toBeInTheDocument();
         expect(staraptorImage).toBeInTheDocument();
         expect(screen.getByText(/Weight: 24.9 kg/)).toBeInTheDocument();
         expect(screen.getByText(/Height: 1.2 m/)).toBeInTheDocument();
         expect(screen.getByText(/Normal/)).toBeInTheDocument();
         expect(screen.getByText(/Flying/)).toBeInTheDocument();
-        expect(screen.getByText(/Base Stats/)).toBeInTheDocument();
         expect(screen.getByText("attack")).toBeInTheDocument();
         expect(screen.getByText("defense")).toBeInTheDocument();
         expect(screen.getByText(/hp/)).toBeInTheDocument();

@@ -14,8 +14,8 @@ describe('renders a pokemon', () => {
       await waitFor(() => {
         const pikachuImage = screen.getByRole('img', { name: "" });
 
-        expect(screen.getByText(/pikachu/)).toBeInTheDocument();
-        expect(screen.getByText(/#25/)).toBeInTheDocument();
+        expect(screen.getByText(/Pikachu/)).toBeInTheDocument();
+        expect(screen.getByText(/#0025/)).toBeInTheDocument();
         expect(pikachuImage).toBeInTheDocument();
         expect(screen.getByText(/Weight: 6 kg/)).toBeInTheDocument();
         expect(screen.getByText(/Height: 0.4 m/)).toBeInTheDocument();

@@ -13,10 +13,9 @@ describe('renders a pokemon', () => {
       const { asFragment } = testPageRender(<Details pokemon={getPokemonsMock.result.data.getPokemons.pokemons[0]} />, { mocks });  
       await waitFor(() => {
  
-        expect(screen.getByText(/pikachu/)).toBeInTheDocument();
+        expect(screen.getByText(/Pikachu/)).toBeInTheDocument();
         expect(screen.getByText(/Weight: 6 kg/)).toBeInTheDocument();
         expect(screen.getByText(/Height: 0.4 m/)).toBeInTheDocument();
-        expect(screen.getByText(/Base Stats/))
 
       });
       expect(asFragment()).toMatchSnapshot();
