@@ -38,6 +38,7 @@ function TypesDropdown(){
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={filterType}
+            className="dropdown"
             label="Type"
             onChange={(e) => handleFilter(e.target.value)}
             style={{ color: 'var(--text-color)' }}

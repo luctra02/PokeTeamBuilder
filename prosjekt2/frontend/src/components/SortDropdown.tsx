@@ -19,6 +19,7 @@ function SortDropdown(){
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={attribute}
+          className="dropdown"
           label="Sort by"
           onChange={(e) => handleSort(e.target.value)}
           style={{ color: 'var(--text-color)' }}
