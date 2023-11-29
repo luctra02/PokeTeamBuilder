@@ -89,7 +89,7 @@ function DisplayCardComponents() {
       <section className="sortButtonWrapper">
       <Button variant="outlined" className='sortButton'
       onClick={toggleSortOrder}
-      >{sortOrder === "asc" ? "Sort Descending" : "Sort Ascending"}</Button>
+      >{sortOrder === "asc" ? "Sort Order: Ascending" : "Sort Order: Descending"}</Button>
       </section>
       <section className="pokemonDisplayBox">
         {pokemonArray.map((pokemon) => (
