@@ -94,3 +94,19 @@
   height: 30px;
   fill: black !important;
 }
+
+
+@media screen and (max-width: 720px) {
+  .pokemonInfoWrapper {
+    flex-direction: column;
+  }
+  .pokemonInfo {
+    position: absolute;
+    top: 100px;
+  }
+  .pokeImage {
+    display: flex;
+    justify-content: center;
+    align-content: center ;
+  }
+ }
