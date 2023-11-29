@@ -1,31 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import '../styles/Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
-  const [mode, setMode] = useState('light');
-
-  const toggleMode = () => {
-    setMode(prevMode => prevMode === 'light' ? 'dark' : 'light');
-  };
-
-  useEffect(() => {
-    const root = document.documentElement;
-
-    root.style.setProperty('--background', 'url(https://w.wallhaven.cc/full/4l/wallhaven-4lmey2.png)');
-    root.style.setProperty('--text-color', 'black');
-  }, []);
-
-  useEffect(() => {
-      const root = document.documentElement;
-      if (mode === 'light') {
-        root.style.setProperty('--background', 'url(https://w.wallhaven.cc/full/4l/wallhaven-4lmey2.png)');
-        root.style.setProperty('--text-color', 'black');
-      } else {
-        root.style.setProperty('--background', 'url(https://w.wallhaven.cc/full/49/wallhaven-4963zx.jpg)');
-        root.style.setProperty('--text-color', 'white');
-      }
-  }, [mode]);
 
   const searchStorage = sessionStorage.getItem('searchValue')
   const searchValue: string = searchStorage ? JSON.parse(searchStorage) : '';
@@ -56,6 +33,15 @@ function Navbar() {
           PokemonTeamBuilder
         </Link>
       </figure>
+      <div className="navbar-item nohover searchbar">
+          <input
+            type="text"
+            placeholder="Search Pokemon Name..."
+            value={searchTerm}
+            onChange={handleInputChange}
+            onKeyPress={handleSearch}
+          />
+        </div>
       <ul className="navbar-list">
         {/* <a>
         <li className="navbar-item noselect" onClick={toggleMode}>
@@ -68,15 +54,6 @@ function Navbar() {
         <Link to="/team" onClick={clearSessionStorage}>
           <li className="navbar-item">My Team</li>
         </Link>
-        <div className="navbar-item nohover">
-          <input
-            type="text"
-            placeholder="Search Pokemon Name"
-            value={searchTerm}
-            onChange={handleInputChange}
-            onKeyPress={handleSearch}
-          />
-        </div>
       </ul>
     </nav>
   );

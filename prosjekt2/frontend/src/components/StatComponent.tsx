@@ -10,11 +10,11 @@ function StatComponent(props : {stats: number, statName: string}) {
 
     return (
     <section className="stat-container">
-        <div id="specialDefenseFill" className="fill-bar-container">
+        <div id={statName} className="fill-bar-container">
                 <div className="fill-bar" style={{ height: `${roundToFive(stats)}px` }}>
                 </div>
             </div>
-        <label htmlFor="specialDefenseFill">{statName}</label>
+        <label htmlFor={statName}>{statName}</label>
     </section>
     )
 }

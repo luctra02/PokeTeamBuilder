@@ -3,16 +3,21 @@ import ChangeTeamComponent from './ChangeTeamComponent';
 import { Pokemon } from '../utils/constants';
 import { useNavigate } from 'react-router-dom';
 import StatComponent from './StatComponent';
+import { IoArrowBackSharp } from "react-icons/io5";
 
 
 function DetailsCardComponent({ pokemon }: { pokemon: Pokemon }) {
   const navigate = useNavigate();
 
+  function capitalizeFirstLetter(string: string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   return (
     <section className="pokemonInfo">
-      <button onClick={() => navigate(-1)}>Back</button>
+      <button className="backButton" onClick={() => navigate(-1)}><IoArrowBackSharp /></button>
       <h1>
-        #{pokemon.id === 591 ? "amongus >" : pokemon.id} {pokemon.name}
+      #{`${"0".repeat(4 - String(pokemon.id).length)}${pokemon.id}`} {capitalizeFirstLetter(pokemon.name)}
       </h1>
       <div className="pokemonInfoWrapper">
         <div className="pokeImage">
@@ -29,13 +34,12 @@ function DetailsCardComponent({ pokemon }: { pokemon: Pokemon }) {
             ))}
           </div>
           <div className="baseStats">
-            <h3>Base Stats</h3>
             <StatComponent stats={pokemon.baseStats.attack} statName={"attack"} />
             <StatComponent stats={pokemon.baseStats.defense} statName={"defense"} />
             <StatComponent stats={pokemon.baseStats.hp} statName={"hp"} />
-            <StatComponent stats={pokemon.baseStats.speed} statName={"speed"} />
             <StatComponent stats={pokemon.baseStats.specialattack} statName={"special attack"} />
             <StatComponent stats={pokemon.baseStats.specialdefense} statName={"special defense"} />
+            <StatComponent stats={pokemon.baseStats.speed} statName={"speed"} />
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import CardComponent from '../components/CardComponent';
 import { KeyboardEvent, useState,useEffect } from 'react';
-import { Pagination } from '@mui/material';
+import { Button, Pagination } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { GET_POKEMONS } from '../graphql/queries';
@@ -86,9 +86,11 @@ function DisplayCardComponents() {
 
   return (
     <section>
-      <button onClick={toggleSortOrder}>
-        {sortOrder === "asc" ? "Sort Descending" : "Sort Ascending"}
-      </button>
+      <section className="sortButtonWrapper">
+      <Button variant="outlined" className='sortButton'
+      onClick={toggleSortOrder}
+      >{sortOrder === "asc" ? "Sort Descending" : "Sort Ascending"}</Button>
+      </section>
       <section className="pokemonDisplayBox">
         {pokemonArray.map((pokemon) => (
           <article className="pokemonDisplayButton" tabIndex={0} key={pokemon.id} onClick={() => changeToDetailPage(pokemon)} onKeyDown={(event) => handleEnterPress(event, pokemon)}>

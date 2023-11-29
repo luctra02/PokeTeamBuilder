@@ -21,7 +21,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  --background: url(https://w.wallhaven.cc/full/4l/wallhaven-4lmey2.png);
+  --background: url(/background.png);
   background-image: var(--background);
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
