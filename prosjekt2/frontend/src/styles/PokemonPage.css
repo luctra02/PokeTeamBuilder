@@ -84,18 +84,13 @@
 .backButton {
   background-color: transparent;
   border: none;
-  cursor: pointer;;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
 }
 
 .backButton svg {
   width: 30px;
   height: 30px;
-  fill: black;
-}
-
-.backButton::after {
-  content: "Back";
-  font-size: 20px;
-  font-weight: bold;
-  margin-left: 10px;
+  fill: black !important;
 }

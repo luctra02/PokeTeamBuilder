@@ -49,10 +49,10 @@ function Navbar() {
         </li>
         </a> */}
         <Link to="/" onClick={clearSessionStorage}>
-          <li className="navbar-item">Home</li>
+          <li className="navbar-item" tabIndex={0}>Home</li>
         </Link>
         <Link to="/team" onClick={clearSessionStorage}>
-          <li className="navbar-item">My Team</li>
+          <li className="navbar-item" tabIndex={0}>My Team</li>
         </Link>
       </ul>
     </nav>
