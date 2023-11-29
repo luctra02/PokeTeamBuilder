@@ -1,7 +1,8 @@
 import { gql, useMutation } from '@apollo/client';
 import pokemonArray from '../assets/PokemonList';
-//For å bruke denne filen må man legge inn <AddPokemonToDatabase /> i Homepage og importen som hører med.
+//To use this file you have to add it to <AddPokemonToDatabase /> in Homepage and the corresponding import.
 
+// Define the structure of a Pokemon using TypeScript interface
 interface Pokemon {
     num: number;
     sprite: string;
@@ -12,6 +13,7 @@ interface Pokemon {
     baseStats: number[];
   }
 
+// Define the GraphQL mutation for adding a Pokemon to the database
 const ADD_POKEMON = gql`
     mutation AddPokemon($pokemonInput: PokemonInput) {
       addPokemon(pokemonInput: $pokemonInput)
@@ -21,7 +23,9 @@ const ADD_POKEMON = gql`
 function AddPokemonToDatabase() {
     const [addPokemons] = useMutation(ADD_POKEMON);
   
+    // Function to add a single Pokemon to the database
     function addPokemon(pokemon : Pokemon) {
+      // Call the addPokemon mutation with the necessary variables
       addPokemons({
         variables: {
           pokemonInput: {
@@ -43,7 +47,8 @@ function AddPokemonToDatabase() {
         },
       });
     }
-  
+    
+    // Return a button that, when clicked, adds all Pokemon from the array to the database
     return (
       <button onClick={() => pokemonArray.map((pokemon) => {addPokemon(pokemon)})}>Add pokemons</button>
     );

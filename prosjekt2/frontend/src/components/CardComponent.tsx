@@ -3,10 +3,12 @@ import ChangeTeamComponent from './ChangeTeamComponent';
 import TypeComponent from './TypeComponent';
 
 function CardComponent({pokemonObject}: {pokemonObject: Pokemon}) {
+  // Function to capitalize the first letter of a string
   function capitalizeFirstLetter(string: string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
+  // Return the JSX structure for the Pokemon card
   return (
     <article className="pokemonCard">
       <h2>

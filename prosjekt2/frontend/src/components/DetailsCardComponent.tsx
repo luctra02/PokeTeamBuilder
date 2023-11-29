@@ -7,32 +7,50 @@ import { IoArrowBackSharp } from "react-icons/io5";
 
 
 function DetailsCardComponent({ pokemon }: { pokemon: Pokemon }) {
+  // Hook for programmatic navigation
   const navigate = useNavigate();
 
+  // Function to capitalize the first letter of a string
   function capitalizeFirstLetter(string: string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
+  // JSX structure for the Pokemon details card
   return (
     <section className="pokemonInfo">
-      <button className="backButton" onClick={() => navigate(-1)}><IoArrowBackSharp /></button>
+      {/* Button to navigate back to the previous page */}
+      <button className="backButton" onClick={() => navigate(-1)}>
+        <IoArrowBackSharp />
+      </button>
+
+      {/* Display Pokemon ID and name */}
       <h1>
-      #{`${"0".repeat(4 - String(pokemon.id).length)}${pokemon.id}`} {capitalizeFirstLetter(pokemon.name)}
+        #{`${"0".repeat(4 - String(pokemon.id).length)}${pokemon.id}`} {capitalizeFirstLetter(pokemon.name)}
       </h1>
+
+      {/* Wrapper for Pokemon information */}
       <div className="pokemonInfoWrapper">
+        {/* Display Pokemon image */}
         <div className="pokeImage">
           <img src={pokemon.image} alt="" />
         </div>
+
+        {/* Display Pokemon statistics */}
         <div className="pokeStats">
+          {/* Display Pokemon weight and height */}
           <div className="bodyStats">
             <p>Weight: {pokemon.weight} kg</p>
             <p>Height: {pokemon.height} m</p>
           </div>
+
+          {/* Display Pokemon types using TypeComponent */}
           <div className="pokeType">
             {pokemon.types.map((type, index) => (
               <TypeComponent key={index} pokemonType={type} />
             ))}
           </div>
+
+          {/* Display Pokemon base stats using StatComponent */}
           <div className="baseStats">
             <StatComponent stats={pokemon.baseStats.attack} statName={"attack"} />
             <StatComponent stats={pokemon.baseStats.defense} statName={"defense"} />
@@ -43,6 +61,8 @@ function DetailsCardComponent({ pokemon }: { pokemon: Pokemon }) {
           </div>
         </div>
       </div>
+
+      {/* Render the ChangeTeamComponent with Pokemon team information */}
       <ChangeTeamComponent
         pokemonTeam={{
           id: pokemon.id,

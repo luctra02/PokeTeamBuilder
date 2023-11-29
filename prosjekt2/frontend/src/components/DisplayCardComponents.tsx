@@ -7,24 +7,26 @@ import { GET_POKEMONS } from '../graphql/queries';
 import { Pokemon } from '../utils/constants';
 
 function DisplayCardComponents() {
+  // State variables for pagination, type filtering, sorting, search, and sort order
   const [pageNumber, setPageNumber] = useState(1);
   const [filterType, setFilterType] = useState("");
   const [sortPokemons, setSortPokemons] = useState("id");
-  const [searchValue, setSearchValue] = useState("")
+  const [searchValue, setSearchValue] = useState("");
   const itemsPerPage = 16;
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
 
   const pageStorage = sessionStorage.getItem('page')
   const typeStorage = sessionStorage.getItem('type')
   const sortStorage = sessionStorage.getItem('sort')
   const searchStorage = sessionStorage.getItem('searchValue')
-  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
 
+  // Retrieve saved values from sessionStorage and update state accordingly
   useEffect(() => {
-    const checkPage = pageStorage ? JSON.parse(pageStorage) : 1
-    if(checkPage == pageNumber){
-      setPageNumber(1)
+    const checkPage = pageStorage ? JSON.parse(pageStorage) : 1;
+    if (checkPage === pageNumber) {
+      setPageNumber(1);
       sessionStorage.setItem("page", JSON.stringify(1));
-    }else{
+    } else {
       setPageNumber(checkPage);
     }
     setFilterType(typeStorage ? JSON.parse(typeStorage) : '');
@@ -32,6 +34,7 @@ function DisplayCardComponents() {
     setSearchValue(searchStorage ? JSON.parse(searchStorage) : '');
   }, [typeStorage, sortStorage, searchStorage, pageStorage]);
 
+  // GraphQL query to get paginated Pokemon data
   const { loading, data, refetch: refetchPokemons } = useQuery(GET_POKEMONS, {
     variables: {
       limit: itemsPerPage,
@@ -43,49 +46,57 @@ function DisplayCardComponents() {
     },
   });
 
+  // Function to toggle between ascending and descending sort order
   const toggleSortOrder = async () => {
-    // Toggle between "asc" and "desc" when the button is clicked
     const newSortOrder = sortOrder === "asc" ? "desc" : "asc";
     setSortOrder(newSortOrder);
-
-    // Refetch the data with the new sort order
     await refetchPokemons({
       sortOrder: newSortOrder === "desc" ? "_desc" : "asc",
     });
   };
 
+  // Hook for programmatic navigation
   const navigate = useNavigate();
+
+  // Loading state check
   if (loading) {
     return <div>Loading...</div>;
   }
+
+  // Extract Pokemon array and total number of Pokemon
   const pokemonArray: Pokemon[] = data?.getPokemons.pokemons;
-  const numberOfPokemons = data?.getPokemons.count
+  const numberOfPokemons = data?.getPokemons.count;
   const totalPages = Math.ceil(numberOfPokemons / itemsPerPage);
 
+  // Function to change the current page
   function changePage(newPage: number) {
     if (newPage >= 1 && newPage <= totalPages) {
-        sessionStorage.setItem("page", JSON.stringify(newPage));
-        navigate('/')
+      sessionStorage.setItem("page", JSON.stringify(newPage));
+      navigate('/');
     }
   }
 
+  // Function to navigate to the details page of a specific Pokemon
   function changeToDetailPage(pokemon: Pokemon) {
-      navigate(`/pokemonInfo/${pokemon.id}`, { state: { pokemon } });
+    navigate(`/pokemonInfo/${pokemon.id}`, { state: { pokemon } });
   }
 
-  const handleEnterPress = (event : KeyboardEvent, pokemon: Pokemon) => {
+  // Function to handle the 'Enter' key press on a Pokemon card
+  const handleEnterPress = (event: KeyboardEvent, pokemon: Pokemon) => {
     if (event.key === 'Enter') {
-        changeToDetailPage(pokemon);
+      changeToDetailPage(pokemon);
     }
-};
-
-  const paginationStyle = {
-    color: 'var(--text-color)', 
   };
 
+  // Style for the pagination component
+  const paginationStyle = {
+    color: 'var(--text-color)',
+  };
 
+  // JSX structure for the component
   return (
     <section>
+      {/* Section for sorting button */}
       <section className="sortButtonWrapper">
         <Button
           variant="outlined"
@@ -95,7 +106,10 @@ function DisplayCardComponents() {
           {sortOrder === "asc" ? "Sort Order: Ascending" : "Sort Order: Descending"}
         </Button>
       </section>
+
+      {/* Section for displaying Pokemon cards */}
       <section className="pokemonDisplayBox">
+        {/* Conditional rendering based on the number of Pokemon */}
         {numberOfPokemons === 0 ? (
           <p id="noPokemonsFound">No Pokemons found</p>
         ) : (
@@ -122,6 +136,8 @@ function DisplayCardComponents() {
           ))
         )}
       </section>
+
+      {/* Section for pagination */}
       {numberOfPokemons > 0 && (
         <div className="pageSelector">
           <Pagination
@@ -135,7 +151,6 @@ function DisplayCardComponents() {
       )}
     </section>
   );
-  
 }
 
 export default DisplayCardComponents;
