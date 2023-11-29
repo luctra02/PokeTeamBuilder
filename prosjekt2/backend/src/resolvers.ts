@@ -7,10 +7,6 @@ interface pokemonFilters{
 
 export const resolvers = {
     Query:{
-        async getPokemon(_, { name }){
-            const regex = new RegExp(name, 'i'); // 'i' for case-insensitive
-            return await Pokemon.find({ name: { $regex: regex } });
-        },
         async getPokemons(_, { offset, limit, search="", type, sort, sortOrder }){
             if(sort == 'attack' || sort == 'defense' || sort == 'hp' || sort == 'specialattack' || sort == 'specialdefense' || sort == 'speed' ){
                 sort = "baseStats."+sort
