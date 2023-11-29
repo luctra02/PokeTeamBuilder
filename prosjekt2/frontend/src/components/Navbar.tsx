@@ -35,6 +35,7 @@ function Navbar() {
       </figure>
       <div className="navbar-item nohover searchbar">
           <input
+            className='searchbar'
             type="text"
             placeholder="Search Pokemon Name..."
             value={searchTerm}

@@ -94,7 +94,6 @@ input[type='text'] {
   padding: 5px 10px;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.2);
-  color: white;
   border-radius: 15px;
   border: none;
   margin: 0.4rem 0.3rem;
@@ -110,9 +109,12 @@ input[type='text'] {
 }
 
 .searchbar {
+  width: 500px; 
   margin: 0.4rem 0.3rem;
-  flex-grow: 1;
+}
 
+.searchbar input::placeholder {
+  color: rgba(0, 0, 0, 0.7); 
 }
 
 .navbar-logo-img {
@@ -124,5 +126,9 @@ input[type='text'] {
 @media screen and (max-width: 680px) {
   .navbar-logo {
     display: none;
+  }
+
+  input[type='text'] {
+    width: 70%; 
   }
 }
