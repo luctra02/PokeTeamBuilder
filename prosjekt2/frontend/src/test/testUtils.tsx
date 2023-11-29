@@ -1,11 +1,9 @@
 import { render } from '@testing-library/react';
-import { MockedProvider } from '@apollo/client/testing';
+import { MockedProvider, MockedResponse } from '@apollo/client/testing';
 import { MemoryRouter } from 'react-router-dom';
 
-
-// You can extend this to accept any additional props you might need
 interface TestPageRenderOptions {
-  mocks: any[];
+  mocks: MockedResponse[];
   initialRoutes?: string[];
 }
 

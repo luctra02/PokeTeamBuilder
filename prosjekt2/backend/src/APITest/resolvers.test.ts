@@ -6,11 +6,6 @@ import mongoose from 'mongoose';
 import {GET_TYPES, GET_POKEMONS, GET_TEAM, CHECK_POKEMON_IN_TEAM} from "../../../frontend/src/graphql/queries.js"
 import {CREATE_TEAM, DELETE_FROM_TEAM} from "../../../frontend/src/graphql/mutations.js"
 
-
-
-
-const MONGODB = "mongodb://it2810-28.idi.ntnu.no:27017/PokeTeamBuilderTest";
-
 const testServer = new ApolloServer({
     typeDefs,
     resolvers,

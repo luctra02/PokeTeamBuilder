@@ -2,7 +2,7 @@ import { Pokemon, Team } from "../models/pokemonAndTeam.js";
 
 interface pokemonFilters{
     name?: {$regex: RegExp},
-    types?: {$in: String[]}
+    types?: {$in: string[]}
 }
 
 export const resolvers = {
