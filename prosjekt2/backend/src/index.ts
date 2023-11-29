@@ -4,6 +4,7 @@ import { connect } from 'mongoose';
 import { resolvers } from "./resolvers.js";
 import { typeDefs } from "./typeDefs.js";
 
+//Create a connection to the database with an ApolloServer
 
 const MONGODB = "mongodb://it2810-28.idi.ntnu.no:27017/PokeTeamBuilder";
 
