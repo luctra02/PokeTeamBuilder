@@ -9,7 +9,8 @@ const getPokemonsMock = {
         offset: 0,
         search: "",
         sort: "id",
-        type: ""
+        type: "",
+        sortOrder: "asc"
       },
     },
     result: {
