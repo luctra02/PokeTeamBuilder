@@ -108,7 +108,7 @@ function TeamDatabaseFunction({pokemon, buttonText, isButtonDisabled, changeTeam
   }
 
   return (
-    <button style={buttonText == 'Add to Team' ? {backgroundColor: "rgba(0, 255, 0, 0.5)"} : {backgroundColor: "rgba(255, 0, 0, 0.5)"}}
+    <button style={buttonText === 'Add to Team' ? { backgroundColor: 'rgba(0, 255, 0, 0.8)' } : buttonText === 'Remove from Team' ? { backgroundColor: 'rgba(255, 0, 0, 0.8)' } : { backgroundColor: 'rgba(255, 255, 0, 0.5)' }}
       className="teamButton"
       onClick={(e) => {
         e.stopPropagation();
