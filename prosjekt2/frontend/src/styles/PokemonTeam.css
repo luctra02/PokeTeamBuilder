@@ -4,13 +4,27 @@
 }
 
 .pokemonTeamDisplayBox {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 0.5rem 0.5rem;
+  max-width: 640px;
+  width: 100%;
+  /**
+   * User input values.
+   */
+   --grid-layout-gap: 10px;
+   --grid-column-count: 3;
+   --grid-item--min-width: 200px;
+ 
+   /**
+    * Calculated values.
+    */
+   --gap-count: calc(var(--grid-column-count) - 1);
+   --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+   --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+ 
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+   grid-gap: var(--grid-layout-gap);
 }
+
 
 .teamContainer {
     width: 100%;
