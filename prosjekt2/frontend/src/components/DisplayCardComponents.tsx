@@ -87,38 +87,55 @@ function DisplayCardComponents() {
   return (
     <section>
       <section className="sortButtonWrapper">
-      <Button variant="outlined" className='sortButton'
-      onClick={toggleSortOrder}
-      >{sortOrder === "asc" ? "Sort Order: Ascending" : "Sort Order: Descending"}</Button>
+        <Button
+          variant="outlined"
+          className="sortButton"
+          onClick={toggleSortOrder}
+        >
+          {sortOrder === "asc" ? "Sort Order: Ascending" : "Sort Order: Descending"}
+        </Button>
       </section>
       <section className="pokemonDisplayBox">
-        {pokemonArray.map((pokemon) => (
-          <article className="pokemonDisplayButton" tabIndex={0} key={pokemon.id} onClick={() => changeToDetailPage(pokemon)} onKeyDown={(event) => handleEnterPress(event, pokemon)}>
-            <CardComponent
-              pokemonObject={{
-                id: pokemon.id,
-                name: pokemon.name,
-                image: pokemon.image,
-                types: pokemon.types,
-                weight: pokemon.weight,
-                height: pokemon.height,
-                baseStats: pokemon.baseStats
-              }}
-            />
-          </article>
-        ))}
+        {numberOfPokemons === 0 ? (
+          <p id="noPokemonsFound">No Pokemons found</p>
+        ) : (
+          pokemonArray.map((pokemon) => (
+            <article
+              className="pokemonDisplayButton"
+              tabIndex={0}
+              key={pokemon.id}
+              onClick={() => changeToDetailPage(pokemon)}
+              onKeyDown={(event) => handleEnterPress(event, pokemon)}
+            >
+              <CardComponent
+                pokemonObject={{
+                  id: pokemon.id,
+                  name: pokemon.name,
+                  image: pokemon.image,
+                  types: pokemon.types,
+                  weight: pokemon.weight,
+                  height: pokemon.height,
+                  baseStats: pokemon.baseStats,
+                }}
+              />
+            </article>
+          ))
+        )}
       </section>
-      <div className="pageSelector">
-      <Pagination
-        count={totalPages}
-        page={pageNumber}
-        onChange={(_event, value) => changePage(value)}
-        siblingCount={3}
-        style={paginationStyle}
-    />
-      </div>
+      {numberOfPokemons > 0 && (
+        <div className="pageSelector">
+          <Pagination
+            count={totalPages}
+            page={pageNumber}
+            onChange={(_event, value) => changePage(value)}
+            siblingCount={3}
+            style={paginationStyle}
+          />
+        </div>
+      )}
     </section>
   );
+  
 }
 
 export default DisplayCardComponents;
