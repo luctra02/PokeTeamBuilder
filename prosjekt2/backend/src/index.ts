@@ -6,7 +6,7 @@ import { typeDefs } from "./typeDefs.js";
 
 //Create a connection to the database with an ApolloServer
 
-const MONGODB = "mongodb://it2810-28.idi.ntnu.no:27017/PokeTeamBuilder";
+const MONGODB = "mongodb+srv://Team28:PokeTeamBuilder@poketeambuilder.ksuiabl.mongodb.net/";
 
 
 async function main() {
