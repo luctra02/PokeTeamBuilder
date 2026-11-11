@@ -1,0 +1,3842 @@
+[{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f411"
+  },
+  "id": 12,
+  "name": "butterfree",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/butterfree.gif",
+  "types": [
+    "Bug",
+    "Flying"
+  ],
+  "weight": 32,
+  "height": 1.1,
+  "baseStats": {
+    "attack": 45,
+    "defense": 50,
+    "hp": 60,
+    "speed": 70,
+    "specialattack": 90,
+    "specialdefense": 80,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f412"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f461"
+  },
+  "id": 26,
+  "name": "raichu",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/raichu.gif",
+  "types": [
+    "Electric"
+  ],
+  "weight": 30,
+  "height": 0.8,
+  "baseStats": {
+    "attack": 90,
+    "defense": 55,
+    "hp": 60,
+    "speed": 110,
+    "specialattack": 90,
+    "specialdefense": 80,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f462"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f465"
+  },
+  "id": 27,
+  "name": "sandshrew",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/sandshrew.gif",
+  "types": [
+    "Ground"
+  ],
+  "weight": 12,
+  "height": 0.6,
+  "baseStats": {
+    "attack": 75,
+    "defense": 85,
+    "hp": 50,
+    "speed": 40,
+    "specialattack": 20,
+    "specialdefense": 30,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f466"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f486"
+  },
+  "id": 35,
+  "name": "clefairy",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/clefairy.gif",
+  "types": [
+    "Fairy"
+  ],
+  "weight": 7.5,
+  "height": 0.6,
+  "baseStats": {
+    "attack": 45,
+    "defense": 48,
+    "hp": 70,
+    "speed": 35,
+    "specialattack": 60,
+    "specialdefense": 65,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f487"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f48d"
+  },
+  "id": 36,
+  "name": "clefable",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/clefable.gif",
+  "types": [
+    "Fairy"
+  ],
+  "weight": 40,
+  "height": 1.3,
+  "baseStats": {
+    "attack": 70,
+    "defense": 73,
+    "hp": 95,
+    "speed": 60,
+    "specialattack": 95,
+    "specialdefense": 90,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f48e"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f498"
+  },
+  "id": 39,
+  "name": "jigglypuff",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/jigglypuff.gif",
+  "types": [
+    "Normal",
+    "Fairy"
+  ],
+  "weight": 5.5,
+  "height": 0.5,
+  "baseStats": {
+    "attack": 45,
+    "defense": 20,
+    "hp": 115,
+    "speed": 20,
+    "specialattack": 45,
+    "specialdefense": 25,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f499"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f49e"
+  },
+  "id": 40,
+  "name": "wigglytuff",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/wigglytuff.gif",
+  "types": [
+    "Normal",
+    "Fairy"
+  ],
+  "weight": 12,
+  "height": 1,
+  "baseStats": {
+    "attack": 70,
+    "defense": 45,
+    "hp": 140,
+    "speed": 45,
+    "specialattack": 85,
+    "specialdefense": 50,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f49f"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f4a3"
+  },
+  "id": 42,
+  "name": "golbat",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/golbat.gif",
+  "types": [
+    "Poison",
+    "Flying"
+  ],
+  "weight": 55,
+  "height": 1.6,
+  "baseStats": {
+    "attack": 80,
+    "defense": 70,
+    "hp": 75,
+    "speed": 90,
+    "specialattack": 65,
+    "specialdefense": 75,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f4a4"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4b7"
+  },
+  "id": 46,
+  "name": "paras",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/paras.gif",
+  "types": [
+    "Bug",
+    "Grass"
+  ],
+  "weight": 5.4,
+  "height": 0.3,
+  "baseStats": {
+    "attack": 70,
+    "defense": 55,
+    "hp": 35,
+    "speed": 25,
+    "specialattack": 45,
+    "specialdefense": 55,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4b8"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4cc"
+  },
+  "id": 51,
+  "name": "dugtrio",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/dugtrio.gif",
+  "types": [
+    "Ground"
+  ],
+  "weight": 33.3,
+  "height": 0.7,
+  "baseStats": {
+    "attack": 100,
+    "defense": 50,
+    "hp": 35,
+    "speed": 120,
+    "specialattack": 50,
+    "specialdefense": 70,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4cd"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4d3"
+  },
+  "id": 54,
+  "name": "psyduck",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/psyduck.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 19.6,
+  "height": 0.8,
+  "baseStats": {
+    "attack": 52,
+    "defense": 48,
+    "hp": 50,
+    "speed": 55,
+    "specialattack": 65,
+    "specialdefense": 50,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4d4"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f533"
+  },
+  "id": 78,
+  "name": "rapidash",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/rapidash.gif",
+  "types": [
+    "Fire"
+  ],
+  "weight": 95,
+  "height": 1.7,
+  "baseStats": {
+    "attack": 100,
+    "defense": 70,
+    "hp": 65,
+    "speed": 105,
+    "specialattack": 80,
+    "specialdefense": 80,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f534"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f548"
+  },
+  "id": 83,
+  "name": "farfetchd",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/farfetchd.gif",
+  "types": [
+    "Normal",
+    "Flying"
+  ],
+  "weight": 15,
+  "height": 0.8,
+  "baseStats": {
+    "attack": 90,
+    "defense": 55,
+    "hp": 52,
+    "speed": 60,
+    "specialattack": 58,
+    "specialdefense": 62,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f549"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f591"
+  },
+  "id": 101,
+  "name": "electrode",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/electrode.gif",
+  "types": [
+    "Electric"
+  ],
+  "weight": 66.6,
+  "height": 1.2,
+  "baseStats": {
+    "attack": 50,
+    "defense": 70,
+    "hp": 60,
+    "speed": 150,
+    "specialattack": 80,
+    "specialdefense": 80,
+    "_id": {
+      "$oid": "653c70402ac629948f97f592"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f451"
+  },
+  "id": 22,
+  "name": "fearow",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/fearow.gif",
+  "types": [
+    "Normal",
+    "Flying"
+  ],
+  "weight": 38,
+  "height": 1.2,
+  "baseStats": {
+    "attack": 90,
+    "defense": 65,
+    "hp": 65,
+    "speed": 100,
+    "specialattack": 61,
+    "specialdefense": 61,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f452"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f47a"
+  },
+  "id": 31,
+  "name": "nidoqueen",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/nidoqueen.gif",
+  "types": [
+    "Poison",
+    "Ground"
+  ],
+  "weight": 60,
+  "height": 1.3,
+  "baseStats": {
+    "attack": 92,
+    "defense": 87,
+    "hp": 90,
+    "speed": 76,
+    "specialattack": 75,
+    "specialdefense": 85,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f47b"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f4aa"
+  },
+  "id": 43,
+  "name": "oddish",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/oddish.gif",
+  "types": [
+    "Grass",
+    "Poison"
+  ],
+  "weight": 5.4,
+  "height": 0.5,
+  "baseStats": {
+    "attack": 50,
+    "defense": 55,
+    "hp": 45,
+    "speed": 30,
+    "specialattack": 75,
+    "specialdefense": 65,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f4ab"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4ae"
+  },
+  "id": 48,
+  "name": "venonat",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/venonat.gif",
+  "types": [
+    "Bug",
+    "Poison"
+  ],
+  "weight": 30,
+  "height": 1,
+  "baseStats": {
+    "attack": 55,
+    "defense": 50,
+    "hp": 60,
+    "speed": 45,
+    "specialattack": 40,
+    "specialdefense": 55,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4af"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4c9"
+  },
+  "id": 52,
+  "name": "meowth",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/meowth.gif",
+  "types": [
+    "Normal"
+  ],
+  "weight": 4.2,
+  "height": 0.4,
+  "baseStats": {
+    "attack": 45,
+    "defense": 35,
+    "hp": 40,
+    "speed": 90,
+    "specialattack": 40,
+    "specialdefense": 40,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4ca"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f525"
+  },
+  "id": 74,
+  "name": "geodude",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/geodude.gif",
+  "types": [
+    "Rock",
+    "Ground"
+  ],
+  "weight": 20,
+  "height": 0.4,
+  "baseStats": {
+    "attack": 80,
+    "defense": 100,
+    "hp": 40,
+    "speed": 20,
+    "specialattack": 30,
+    "specialdefense": 30,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f526"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f52f"
+  },
+  "id": 77,
+  "name": "ponyta",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/ponyta.gif",
+  "types": [
+    "Fire"
+  ],
+  "weight": 30,
+  "height": 1,
+  "baseStats": {
+    "attack": 85,
+    "defense": 55,
+    "hp": 50,
+    "speed": 90,
+    "specialattack": 65,
+    "specialdefense": 65,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f530"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f541"
+  },
+  "id": 81,
+  "name": "magnemite",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/magnemite.gif",
+  "types": [
+    "Electric",
+    "Steel"
+  ],
+  "weight": 6,
+  "height": 0.3,
+  "baseStats": {
+    "attack": 35,
+    "defense": 70,
+    "hp": 25,
+    "speed": 45,
+    "specialattack": 95,
+    "specialdefense": 55,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f542"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f594"
+  },
+  "id": 102,
+  "name": "exeggcute",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/exeggcute.gif",
+  "types": [
+    "Grass",
+    "Psychic"
+  ],
+  "weight": 2.5,
+  "height": 0.4,
+  "baseStats": {
+    "attack": 40,
+    "defense": 80,
+    "hp": 60,
+    "speed": 40,
+    "specialattack": 60,
+    "specialdefense": 45,
+    "_id": {
+      "$oid": "653c70402ac629948f97f595"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5af"
+  },
+  "id": 109,
+  "name": "koffing",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/koffing.gif",
+  "types": [
+    "Poison"
+  ],
+  "weight": 1,
+  "height": 0.6,
+  "baseStats": {
+    "attack": 65,
+    "defense": 95,
+    "hp": 40,
+    "speed": 35,
+    "specialattack": 60,
+    "specialdefense": 45,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5b0"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f60c"
+  },
+  "id": 134,
+  "name": "vaporeon",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/vaporeon.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 29,
+  "height": 1,
+  "baseStats": {
+    "attack": 65,
+    "defense": 60,
+    "hp": 130,
+    "speed": 65,
+    "specialattack": 110,
+    "specialdefense": 95,
+    "_id": {
+      "$oid": "653c70402ac629948f97f60d"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f643"
+  },
+  "id": 145,
+  "name": "zapdos",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/zapdos.gif",
+  "types": [
+    "Electric",
+    "Flying"
+  ],
+  "weight": 52.6,
+  "height": 1.6,
+  "baseStats": {
+    "attack": 90,
+    "defense": 85,
+    "hp": 90,
+    "speed": 100,
+    "specialattack": 125,
+    "specialdefense": 90,
+    "_id": {
+      "$oid": "653c70402ac629948f97f644"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70412ac629948f97f653"
+  },
+  "id": 151,
+  "name": "mew",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/mew.gif",
+  "types": [
+    "Psychic"
+  ],
+  "weight": 4,
+  "height": 0.4,
+  "baseStats": {
+    "attack": 100,
+    "defense": 100,
+    "hp": 100,
+    "speed": 100,
+    "specialattack": 100,
+    "specialdefense": 100,
+    "_id": {
+      "$oid": "653c70412ac629948f97f654"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4d7"
+  },
+  "id": 55,
+  "name": "golduck",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/golduck.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 76.6,
+  "height": 1.7,
+  "baseStats": {
+    "attack": 82,
+    "defense": 78,
+    "hp": 80,
+    "speed": 85,
+    "specialattack": 95,
+    "specialdefense": 80,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4d8"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4fc"
+  },
+  "id": 64,
+  "name": "kadabra",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/kadabra.gif",
+  "types": [
+    "Psychic"
+  ],
+  "weight": 56.5,
+  "height": 1.3,
+  "baseStats": {
+    "attack": 35,
+    "defense": 30,
+    "hp": 40,
+    "speed": 105,
+    "specialattack": 120,
+    "specialdefense": 70,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4fd"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5ee"
+  },
+  "id": 124,
+  "name": "jynx",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/jynx.gif",
+  "types": [
+    "Ice",
+    "Psychic"
+  ],
+  "weight": 40.6,
+  "height": 1.4,
+  "baseStats": {
+    "attack": 50,
+    "defense": 35,
+    "hp": 65,
+    "speed": 95,
+    "specialattack": 115,
+    "specialdefense": 95,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5ef"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f43c"
+  },
+  "id": 9,
+  "name": "blastoise",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/blastoise.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 85.5,
+  "height": 1.6,
+  "baseStats": {
+    "attack": 83,
+    "defense": 100,
+    "hp": 79,
+    "speed": 78,
+    "specialattack": 85,
+    "specialdefense": 105,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f43d"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f45d"
+  },
+  "id": 25,
+  "name": "pikachu",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/pikachu.gif",
+  "types": [
+    "Electric"
+  ],
+  "weight": 6,
+  "height": 0.4,
+  "baseStats": {
+    "attack": 55,
+    "defense": 40,
+    "hp": 35,
+    "speed": 90,
+    "specialattack": 50,
+    "specialdefense": 50,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f45e"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f46f"
+  },
+  "id": 29,
+  "name": "nidoranf",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/nidoranf.gif",
+  "types": [
+    "Poison"
+  ],
+  "weight": 7,
+  "height": 0.4,
+  "baseStats": {
+    "attack": 47,
+    "defense": 52,
+    "hp": 55,
+    "speed": 41,
+    "specialattack": 40,
+    "specialdefense": 40,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f470"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f483"
+  },
+  "id": 34,
+  "name": "nidoking",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/nidoking.gif",
+  "types": [
+    "Poison",
+    "Ground"
+  ],
+  "weight": 62,
+  "height": 1.4,
+  "baseStats": {
+    "attack": 102,
+    "defense": 77,
+    "hp": 81,
+    "speed": 85,
+    "specialattack": 85,
+    "specialdefense": 75,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f484"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f50a"
+  },
+  "id": 67,
+  "name": "machoke",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/machoke.gif",
+  "types": [
+    "Fighting"
+  ],
+  "weight": 70.5,
+  "height": 1.5,
+  "baseStats": {
+    "attack": 100,
+    "defense": 70,
+    "hp": 80,
+    "speed": 45,
+    "specialattack": 50,
+    "specialdefense": 60,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f50b"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f514"
+  },
+  "id": 70,
+  "name": "weepinbell",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/weepinbell.gif",
+  "types": [
+    "Grass",
+    "Poison"
+  ],
+  "weight": 6.4,
+  "height": 1,
+  "baseStats": {
+    "attack": 90,
+    "defense": 50,
+    "hp": 65,
+    "speed": 55,
+    "specialattack": 85,
+    "specialdefense": 45,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f515"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f424"
+  },
+  "id": 16,
+  "name": "pidgey",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/pidgey.gif",
+  "types": [
+    "Normal",
+    "Flying"
+  ],
+  "weight": 1.8,
+  "height": 0.3,
+  "baseStats": {
+    "attack": 45,
+    "defense": 40,
+    "hp": 40,
+    "speed": 56,
+    "specialattack": 35,
+    "specialdefense": 35,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f425"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f429"
+  },
+  "id": 5,
+  "name": "charmeleon",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/charmeleon.gif",
+  "types": [
+    "Fire"
+  ],
+  "weight": 19,
+  "height": 1.1,
+  "baseStats": {
+    "attack": 64,
+    "defense": 58,
+    "hp": 58,
+    "speed": 80,
+    "specialattack": 80,
+    "specialdefense": 65,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f42a"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f455"
+  },
+  "id": 23,
+  "name": "ekans",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/ekans.gif",
+  "types": [
+    "Poison"
+  ],
+  "weight": 6.9,
+  "height": 2,
+  "baseStats": {
+    "attack": 60,
+    "defense": 44,
+    "hp": 35,
+    "speed": 55,
+    "specialattack": 40,
+    "specialdefense": 54,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f456"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f480"
+  },
+  "id": 33,
+  "name": "nidorino",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/nidorino.gif",
+  "types": [
+    "Poison"
+  ],
+  "weight": 19.5,
+  "height": 0.9,
+  "baseStats": {
+    "attack": 72,
+    "defense": 57,
+    "hp": 61,
+    "speed": 65,
+    "specialattack": 55,
+    "specialdefense": 55,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f481"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4b1"
+  },
+  "id": 47,
+  "name": "parasect",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/parasect.gif",
+  "types": [
+    "Bug",
+    "Grass"
+  ],
+  "weight": 29.5,
+  "height": 1,
+  "baseStats": {
+    "attack": 95,
+    "defense": 80,
+    "hp": 60,
+    "speed": 30,
+    "specialattack": 60,
+    "specialdefense": 80,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4b2"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4f9"
+  },
+  "id": 63,
+  "name": "abra",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/abra.gif",
+  "types": [
+    "Psychic"
+  ],
+  "weight": 19.5,
+  "height": 0.9,
+  "baseStats": {
+    "attack": 20,
+    "defense": 15,
+    "hp": 25,
+    "speed": 90,
+    "specialattack": 105,
+    "specialdefense": 55,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4fa"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4ff"
+  },
+  "id": 65,
+  "name": "alakazam",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/alakazam.gif",
+  "types": [
+    "Psychic"
+  ],
+  "weight": 48,
+  "height": 1.5,
+  "baseStats": {
+    "attack": 50,
+    "defense": 45,
+    "hp": 55,
+    "speed": 120,
+    "specialattack": 135,
+    "specialdefense": 95,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f500"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f502"
+  },
+  "id": 66,
+  "name": "machop",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/machop.gif",
+  "types": [
+    "Fighting"
+  ],
+  "weight": 19.5,
+  "height": 0.8,
+  "baseStats": {
+    "attack": 80,
+    "defense": 50,
+    "hp": 70,
+    "speed": 35,
+    "specialattack": 35,
+    "specialdefense": 35,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f503"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f50d"
+  },
+  "id": 68,
+  "name": "machamp",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/machamp.gif",
+  "types": [
+    "Fighting"
+  ],
+  "weight": 130,
+  "height": 1.6,
+  "baseStats": {
+    "attack": 130,
+    "defense": 80,
+    "hp": 90,
+    "speed": 55,
+    "specialattack": 65,
+    "specialdefense": 85,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f50e"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f511"
+  },
+  "id": 69,
+  "name": "bellsprout",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/bellsprout.gif",
+  "types": [
+    "Grass",
+    "Poison"
+  ],
+  "weight": 4,
+  "height": 0.7,
+  "baseStats": {
+    "attack": 75,
+    "defense": 35,
+    "hp": 50,
+    "speed": 40,
+    "specialattack": 70,
+    "specialdefense": 30,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f512"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f522"
+  },
+  "id": 73,
+  "name": "tentacruel",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/tentacruel.gif",
+  "types": [
+    "Water",
+    "Poison"
+  ],
+  "weight": 55,
+  "height": 1.6,
+  "baseStats": {
+    "attack": 70,
+    "defense": 65,
+    "hp": 80,
+    "speed": 100,
+    "specialattack": 80,
+    "specialdefense": 120,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f523"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f539"
+  },
+  "id": 79,
+  "name": "slowpoke",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/slowpoke.gif",
+  "types": [
+    "Water",
+    "Psychic"
+  ],
+  "weight": 36,
+  "height": 1.2,
+  "baseStats": {
+    "attack": 65,
+    "defense": 65,
+    "hp": 90,
+    "speed": 15,
+    "specialattack": 40,
+    "specialdefense": 40,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f53a"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f559"
+  },
+  "id": 88,
+  "name": "grimer",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/grimer.gif",
+  "types": [
+    "Poison"
+  ],
+  "weight": 30,
+  "height": 0.9,
+  "baseStats": {
+    "attack": 80,
+    "defense": 50,
+    "hp": 80,
+    "speed": 25,
+    "specialattack": 40,
+    "specialdefense": 50,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f55a"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f575"
+  },
+  "id": 94,
+  "name": "gengar",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/gengar.gif",
+  "types": [
+    "Ghost",
+    "Poison"
+  ],
+  "weight": 40.5,
+  "height": 1.5,
+  "baseStats": {
+    "attack": 65,
+    "defense": 60,
+    "hp": 60,
+    "speed": 110,
+    "specialattack": 130,
+    "specialdefense": 75,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f576"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5d9"
+  },
+  "id": 120,
+  "name": "staryu",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/staryu.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 34.5,
+  "height": 0.8,
+  "baseStats": {
+    "attack": 45,
+    "defense": 55,
+    "hp": 30,
+    "speed": 85,
+    "specialattack": 70,
+    "specialdefense": 55,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5da"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5df"
+  },
+  "id": 122,
+  "name": "mrmime",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/mrmime.gif",
+  "types": [
+    "Psychic",
+    "Fairy"
+  ],
+  "weight": 54.5,
+  "height": 1.3,
+  "baseStats": {
+    "attack": 45,
+    "defense": 65,
+    "hp": 40,
+    "speed": 90,
+    "specialattack": 100,
+    "specialdefense": 120,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5e0"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5f1"
+  },
+  "id": 127,
+  "name": "pinsir",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/pinsir.gif",
+  "types": [
+    "Bug"
+  ],
+  "weight": 55,
+  "height": 1.5,
+  "baseStats": {
+    "attack": 125,
+    "defense": 100,
+    "hp": 65,
+    "speed": 85,
+    "specialattack": 55,
+    "specialdefense": 70,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5f2"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f603"
+  },
+  "id": 129,
+  "name": "magikarp",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/magikarp.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 10,
+  "height": 0.9,
+  "baseStats": {
+    "attack": 10,
+    "defense": 55,
+    "hp": 20,
+    "speed": 80,
+    "specialattack": 15,
+    "specialdefense": 20,
+    "_id": {
+      "$oid": "653c70402ac629948f97f604"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f609"
+  },
+  "id": 131,
+  "name": "lapras",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/lapras.gif",
+  "types": [
+    "Water",
+    "Ice"
+  ],
+  "weight": 220,
+  "height": 2.5,
+  "baseStats": {
+    "attack": 85,
+    "defense": 80,
+    "hp": 130,
+    "speed": 60,
+    "specialattack": 85,
+    "specialdefense": 95,
+    "_id": {
+      "$oid": "653c70402ac629948f97f60a"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f61e"
+  },
+  "id": 136,
+  "name": "flareon",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/flareon.gif",
+  "types": [
+    "Fire"
+  ],
+  "weight": 25,
+  "height": 0.9,
+  "baseStats": {
+    "attack": 130,
+    "defense": 60,
+    "hp": 65,
+    "speed": 65,
+    "specialattack": 95,
+    "specialdefense": 110,
+    "_id": {
+      "$oid": "653c70402ac629948f97f61f"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f624"
+  },
+  "id": 138,
+  "name": "omanyte",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/omanyte.gif",
+  "types": [
+    "Rock",
+    "Water"
+  ],
+  "weight": 7.5,
+  "height": 0.4,
+  "baseStats": {
+    "attack": 40,
+    "defense": 100,
+    "hp": 35,
+    "speed": 35,
+    "specialattack": 90,
+    "specialdefense": 55,
+    "_id": {
+      "$oid": "653c70402ac629948f97f625"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f63f"
+  },
+  "id": 144,
+  "name": "articuno",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/articuno.gif",
+  "types": [
+    "Ice",
+    "Flying"
+  ],
+  "weight": 55.4,
+  "height": 1.7,
+  "baseStats": {
+    "attack": 85,
+    "defense": 100,
+    "hp": 90,
+    "speed": 85,
+    "specialattack": 95,
+    "specialdefense": 125,
+    "_id": {
+      "$oid": "653c70402ac629948f97f640"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70412ac629948f97f656"
+  },
+  "id": 147,
+  "name": "dratini",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/dratini.gif",
+  "types": [
+    "Dragon"
+  ],
+  "weight": 3.3,
+  "height": 1.8,
+  "baseStats": {
+    "attack": 64,
+    "defense": 45,
+    "hp": 41,
+    "speed": 50,
+    "specialattack": 50,
+    "specialdefense": 50,
+    "_id": {
+      "$oid": "653c70412ac629948f97f657"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f420"
+  },
+  "id": 4,
+  "name": "charmander",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/charmander.gif",
+  "types": [
+    "Fire"
+  ],
+  "weight": 8.5,
+  "height": 0.6,
+  "baseStats": {
+    "attack": 52,
+    "defense": 43,
+    "hp": 39,
+    "speed": 65,
+    "specialattack": 60,
+    "specialdefense": 50,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f421"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f468"
+  },
+  "id": 17,
+  "name": "pidgeotto",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/pidgeotto.gif",
+  "types": [
+    "Normal",
+    "Flying"
+  ],
+  "weight": 30,
+  "height": 1.1,
+  "baseStats": {
+    "attack": 60,
+    "defense": 55,
+    "hp": 63,
+    "speed": 71,
+    "specialattack": 50,
+    "specialdefense": 50,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f469"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4b4"
+  },
+  "id": 44,
+  "name": "gloom",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/gloom.gif",
+  "types": [
+    "Grass",
+    "Poison"
+  ],
+  "weight": 8.6,
+  "height": 0.8,
+  "baseStats": {
+    "attack": 65,
+    "defense": 70,
+    "hp": 60,
+    "speed": 40,
+    "specialattack": 85,
+    "specialdefense": 75,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4b5"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4d0"
+  },
+  "id": 53,
+  "name": "persian",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/persian.gif",
+  "types": [
+    "Normal"
+  ],
+  "weight": 32,
+  "height": 1,
+  "baseStats": {
+    "attack": 70,
+    "defense": 60,
+    "hp": 65,
+    "speed": 115,
+    "specialattack": 65,
+    "specialdefense": 65,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4d1"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f57f"
+  },
+  "id": 98,
+  "name": "krabby",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/krabby.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 6.5,
+  "height": 0.4,
+  "baseStats": {
+    "attack": 105,
+    "defense": 90,
+    "hp": 30,
+    "speed": 50,
+    "specialattack": 25,
+    "specialdefense": 25,
+    "_id": {
+      "$oid": "653c70402ac629948f97f580"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5a3"
+  },
+  "id": 105,
+  "name": "marowak",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/marowak.gif",
+  "types": [
+    "Ground"
+  ],
+  "weight": 45,
+  "height": 1,
+  "baseStats": {
+    "attack": 80,
+    "defense": 110,
+    "hp": 60,
+    "speed": 45,
+    "specialattack": 50,
+    "specialdefense": 80,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5a4"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5eb"
+  },
+  "id": 123,
+  "name": "scyther",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/scyther.gif",
+  "types": [
+    "Bug",
+    "Flying"
+  ],
+  "weight": 56,
+  "height": 1.5,
+  "baseStats": {
+    "attack": 110,
+    "defense": 80,
+    "hp": 70,
+    "speed": 105,
+    "specialattack": 55,
+    "specialdefense": 80,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5ec"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f60f"
+  },
+  "id": 132,
+  "name": "ditto",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/ditto.gif",
+  "types": [
+    "Normal"
+  ],
+  "weight": 4,
+  "height": 0.3,
+  "baseStats": {
+    "attack": 48,
+    "defense": 48,
+    "hp": 48,
+    "speed": 48,
+    "specialattack": 48,
+    "specialdefense": 48,
+    "_id": {
+      "$oid": "653c70402ac629948f97f610"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f62a"
+  },
+  "id": 140,
+  "name": "kabuto",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/kabuto.gif",
+  "types": [
+    "Rock",
+    "Water"
+  ],
+  "weight": 11.5,
+  "height": 0.5,
+  "baseStats": {
+    "attack": 80,
+    "defense": 90,
+    "hp": 30,
+    "speed": 55,
+    "specialattack": 55,
+    "specialdefense": 45,
+    "_id": {
+      "$oid": "653c70402ac629948f97f62b"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f639"
+  },
+  "id": 143,
+  "name": "snorlax",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/snorlax.gif",
+  "types": [
+    "Normal"
+  ],
+  "weight": 460,
+  "height": 2.1,
+  "baseStats": {
+    "attack": 110,
+    "defense": 65,
+    "hp": 160,
+    "speed": 30,
+    "specialattack": 65,
+    "specialdefense": 110,
+    "_id": {
+      "$oid": "653c70402ac629948f97f63a"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70412ac629948f97f650"
+  },
+  "id": 150,
+  "name": "mewtwo",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/mewtwo.gif",
+  "types": [
+    "Psychic"
+  ],
+  "weight": 122,
+  "height": 2,
+  "baseStats": {
+    "attack": 110,
+    "defense": 90,
+    "hp": 106,
+    "speed": 130,
+    "specialattack": 154,
+    "specialdefense": 90,
+    "_id": {
+      "$oid": "653c70412ac629948f97f651"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f431"
+  },
+  "id": 2,
+  "name": "ivysaur",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/ivysaur.gif",
+  "types": [
+    "Grass",
+    "Poison"
+  ],
+  "weight": 13,
+  "height": 1,
+  "baseStats": {
+    "attack": 62,
+    "defense": 63,
+    "hp": 60,
+    "speed": 60,
+    "specialattack": 80,
+    "specialdefense": 80,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f432"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f495"
+  },
+  "id": 38,
+  "name": "ninetales",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/ninetales.gif",
+  "types": [
+    "Fire"
+  ],
+  "weight": 19.9,
+  "height": 1.1,
+  "baseStats": {
+    "attack": 76,
+    "defense": 75,
+    "hp": 73,
+    "speed": 100,
+    "specialattack": 81,
+    "specialdefense": 100,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f496"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4c6"
+  },
+  "id": 50,
+  "name": "diglett",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/diglett.gif",
+  "types": [
+    "Ground"
+  ],
+  "weight": 0.8,
+  "height": 0.2,
+  "baseStats": {
+    "attack": 55,
+    "defense": 25,
+    "hp": 10,
+    "speed": 95,
+    "specialattack": 35,
+    "specialdefense": 45,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4c7"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f555"
+  },
+  "id": 86,
+  "name": "seel",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/seel.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 90,
+  "height": 1.1,
+  "baseStats": {
+    "attack": 45,
+    "defense": 55,
+    "hp": 65,
+    "speed": 45,
+    "specialattack": 45,
+    "specialdefense": 70,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f556"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f567"
+  },
+  "id": 91,
+  "name": "cloyster",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/cloyster.gif",
+  "types": [
+    "Water",
+    "Ice"
+  ],
+  "weight": 132.5,
+  "height": 1.5,
+  "baseStats": {
+    "attack": 95,
+    "defense": 180,
+    "hp": 50,
+    "speed": 70,
+    "specialattack": 85,
+    "specialdefense": 45,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f568"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5e2"
+  },
+  "id": 121,
+  "name": "starmie",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/starmie.gif",
+  "types": [
+    "Water",
+    "Psychic"
+  ],
+  "weight": 80,
+  "height": 1.1,
+  "baseStats": {
+    "attack": 75,
+    "defense": 85,
+    "hp": 60,
+    "speed": 115,
+    "specialattack": 100,
+    "specialdefense": 85,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5e3"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70412ac629948f97f64d"
+  },
+  "id": 149,
+  "name": "dragonite",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/dragonite.gif",
+  "types": [
+    "Dragon",
+    "Flying"
+  ],
+  "weight": 210,
+  "height": 2.2,
+  "baseStats": {
+    "attack": 134,
+    "defense": 95,
+    "hp": 91,
+    "speed": 80,
+    "specialattack": 100,
+    "specialdefense": 100,
+    "_id": {
+      "$oid": "653c70412ac629948f97f64e"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f409"
+  },
+  "id": 13,
+  "name": "weedle",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/weedle.gif",
+  "types": [
+    "Bug",
+    "Poison"
+  ],
+  "weight": 3.2,
+  "height": 0.3,
+  "baseStats": {
+    "attack": 35,
+    "defense": 30,
+    "hp": 40,
+    "speed": 50,
+    "specialattack": 20,
+    "specialdefense": 20,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f40a"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f435"
+  },
+  "id": 18,
+  "name": "pidgeot",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/pidgeot.gif",
+  "types": [
+    "Normal",
+    "Flying"
+  ],
+  "weight": 39.5,
+  "height": 1.5,
+  "baseStats": {
+    "attack": 80,
+    "defense": 75,
+    "hp": 83,
+    "speed": 101,
+    "specialattack": 70,
+    "specialdefense": 70,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f436"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f441"
+  },
+  "id": 10,
+  "name": "caterpie",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/caterpie.gif",
+  "types": [
+    "Bug"
+  ],
+  "weight": 2.9,
+  "height": 0.3,
+  "baseStats": {
+    "attack": 30,
+    "defense": 35,
+    "hp": 45,
+    "speed": 45,
+    "specialattack": 20,
+    "specialdefense": 20,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f442"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f44c"
+  },
+  "id": 21,
+  "name": "spearow",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/spearow.gif",
+  "types": [
+    "Normal",
+    "Flying"
+  ],
+  "weight": 2,
+  "height": 0.3,
+  "baseStats": {
+    "attack": 60,
+    "defense": 30,
+    "hp": 40,
+    "speed": 70,
+    "specialattack": 31,
+    "specialdefense": 31,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f44d"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4bf"
+  },
+  "id": 49,
+  "name": "venomoth",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/venomoth.gif",
+  "types": [
+    "Bug",
+    "Poison"
+  ],
+  "weight": 12.5,
+  "height": 1.5,
+  "baseStats": {
+    "attack": 65,
+    "defense": 60,
+    "hp": 70,
+    "speed": 90,
+    "specialattack": 90,
+    "specialdefense": 75,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4c0"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4e4"
+  },
+  "id": 57,
+  "name": "primeape",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/primeape.gif",
+  "types": [
+    "Fighting"
+  ],
+  "weight": 32,
+  "height": 1,
+  "baseStats": {
+    "attack": 105,
+    "defense": 60,
+    "hp": 65,
+    "speed": 95,
+    "specialattack": 60,
+    "specialdefense": 70,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4e5"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f51b"
+  },
+  "id": 72,
+  "name": "tentacool",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/tentacool.gif",
+  "types": [
+    "Water",
+    "Poison"
+  ],
+  "weight": 45.5,
+  "height": 0.9,
+  "baseStats": {
+    "attack": 40,
+    "defense": 35,
+    "hp": 40,
+    "speed": 70,
+    "specialattack": 50,
+    "specialdefense": 100,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f51c"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f54b"
+  },
+  "id": 84,
+  "name": "doduo",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/doduo.gif",
+  "types": [
+    "Normal",
+    "Flying"
+  ],
+  "weight": 39.2,
+  "height": 1.4,
+  "baseStats": {
+    "attack": 85,
+    "defense": 45,
+    "hp": 35,
+    "speed": 75,
+    "specialattack": 35,
+    "specialdefense": 35,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f54c"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f55c"
+  },
+  "id": 87,
+  "name": "dewgong",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/dewgong.gif",
+  "types": [
+    "Water",
+    "Ice"
+  ],
+  "weight": 120,
+  "height": 1.7,
+  "baseStats": {
+    "attack": 70,
+    "defense": 80,
+    "hp": 90,
+    "speed": 70,
+    "specialattack": 70,
+    "specialdefense": 95,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f55d"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f56d"
+  },
+  "id": 92,
+  "name": "gastly",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/gastly.gif",
+  "types": [
+    "Ghost",
+    "Poison"
+  ],
+  "weight": 0.1,
+  "height": 1.3,
+  "baseStats": {
+    "attack": 35,
+    "defense": 30,
+    "hp": 30,
+    "speed": 80,
+    "specialattack": 100,
+    "specialdefense": 35,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f56e"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f58a"
+  },
+  "id": 99,
+  "name": "kingler",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/kingler.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 60,
+  "height": 1.3,
+  "baseStats": {
+    "attack": 130,
+    "defense": 115,
+    "hp": 55,
+    "speed": 75,
+    "specialattack": 50,
+    "specialdefense": 50,
+    "_id": {
+      "$oid": "653c70402ac629948f97f58b"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5a9"
+  },
+  "id": 107,
+  "name": "hitmonchan",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/hitmonchan.gif",
+  "types": [
+    "Fighting"
+  ],
+  "weight": 50.2,
+  "height": 1.4,
+  "baseStats": {
+    "attack": 105,
+    "defense": 79,
+    "hp": 50,
+    "speed": 76,
+    "specialattack": 35,
+    "specialdefense": 110,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5aa"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5bb"
+  },
+  "id": 111,
+  "name": "rhyhorn",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/rhyhorn.gif",
+  "types": [
+    "Ground",
+    "Rock"
+  ],
+  "weight": 115,
+  "height": 1,
+  "baseStats": {
+    "attack": 85,
+    "defense": 95,
+    "hp": 80,
+    "speed": 25,
+    "specialattack": 30,
+    "specialdefense": 30,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5bc"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5c1"
+  },
+  "id": 112,
+  "name": "rhydon",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/rhydon.gif",
+  "types": [
+    "Ground",
+    "Rock"
+  ],
+  "weight": 120,
+  "height": 1.9,
+  "baseStats": {
+    "attack": 130,
+    "defense": 120,
+    "hp": 105,
+    "speed": 40,
+    "specialattack": 45,
+    "specialdefense": 45,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5c2"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5f7"
+  },
+  "id": 126,
+  "name": "magmar",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/magmar.gif",
+  "types": [
+    "Fire"
+  ],
+  "weight": 44.5,
+  "height": 1.3,
+  "baseStats": {
+    "attack": 95,
+    "defense": 57,
+    "hp": 65,
+    "speed": 93,
+    "specialattack": 100,
+    "specialdefense": 85,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5f8"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f627"
+  },
+  "id": 139,
+  "name": "omastar",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/omastar.gif",
+  "types": [
+    "Rock",
+    "Water"
+  ],
+  "weight": 35,
+  "height": 1,
+  "baseStats": {
+    "attack": 60,
+    "defense": 125,
+    "hp": 70,
+    "speed": 55,
+    "specialattack": 115,
+    "specialdefense": 70,
+    "_id": {
+      "$oid": "653c70402ac629948f97f628"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f63c"
+  },
+  "id": 146,
+  "name": "moltres",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/moltres.gif",
+  "types": [
+    "Fire",
+    "Flying"
+  ],
+  "weight": 60,
+  "height": 2,
+  "baseStats": {
+    "attack": 100,
+    "defense": 90,
+    "hp": 90,
+    "speed": 90,
+    "specialattack": 125,
+    "specialdefense": 85,
+    "_id": {
+      "$oid": "653c70402ac629948f97f63d"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f403"
+  },
+  "id": 1,
+  "name": "bulbasaur",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/bulbasaur.gif",
+  "types": [
+    "Grass",
+    "Poison"
+  ],
+  "weight": 6.9,
+  "height": 0.7,
+  "baseStats": {
+    "attack": 49,
+    "defense": 49,
+    "hp": 45,
+    "speed": 45,
+    "specialattack": 65,
+    "specialdefense": 65,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f404"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f40c"
+  },
+  "id": 14,
+  "name": "kakuna",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/kakuna.gif",
+  "types": [
+    "Bug",
+    "Poison"
+  ],
+  "weight": 10,
+  "height": 0.6,
+  "baseStats": {
+    "attack": 25,
+    "defense": 50,
+    "hp": 45,
+    "speed": 35,
+    "specialattack": 25,
+    "specialdefense": 25,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f40d"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f418"
+  },
+  "id": 15,
+  "name": "beedrill",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/beedrill.gif",
+  "types": [
+    "Bug",
+    "Poison"
+  ],
+  "weight": 29.5,
+  "height": 1,
+  "baseStats": {
+    "attack": 90,
+    "defense": 40,
+    "hp": 65,
+    "speed": 75,
+    "specialattack": 45,
+    "specialdefense": 80,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f419"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f445"
+  },
+  "id": 19,
+  "name": "rattata",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/rattata.gif",
+  "types": [
+    "Normal"
+  ],
+  "weight": 3.5,
+  "height": 0.3,
+  "baseStats": {
+    "attack": 56,
+    "defense": 35,
+    "hp": 30,
+    "speed": 72,
+    "specialattack": 25,
+    "specialdefense": 35,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f446"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f449"
+  },
+  "id": 20,
+  "name": "raticate",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/raticate.gif",
+  "types": [
+    "Normal"
+  ],
+  "weight": 18.5,
+  "height": 0.7,
+  "baseStats": {
+    "attack": 81,
+    "defense": 60,
+    "hp": 55,
+    "speed": 97,
+    "specialattack": 50,
+    "specialdefense": 70,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f44a"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f47d"
+  },
+  "id": 32,
+  "name": "nidoranm",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/nidoranm.gif",
+  "types": [
+    "Poison"
+  ],
+  "weight": 9,
+  "height": 0.5,
+  "baseStats": {
+    "attack": 57,
+    "defense": 40,
+    "hp": 46,
+    "speed": 50,
+    "specialattack": 40,
+    "specialdefense": 40,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f47e"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4e7"
+  },
+  "id": 60,
+  "name": "poliwag",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/poliwag.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 12.4,
+  "height": 0.6,
+  "baseStats": {
+    "attack": 50,
+    "defense": 40,
+    "hp": 40,
+    "speed": 90,
+    "specialattack": 40,
+    "specialdefense": 40,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4e8"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4f4"
+  },
+  "id": 61,
+  "name": "poliwhirl",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/poliwhirl.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 20,
+  "height": 1,
+  "baseStats": {
+    "attack": 65,
+    "defense": 65,
+    "hp": 65,
+    "speed": 90,
+    "specialattack": 50,
+    "specialdefense": 50,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4f5"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f560"
+  },
+  "id": 89,
+  "name": "muk",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/muk.gif",
+  "types": [
+    "Poison"
+  ],
+  "weight": 30,
+  "height": 1.2,
+  "baseStats": {
+    "attack": 105,
+    "defense": 75,
+    "hp": 105,
+    "speed": 50,
+    "specialattack": 65,
+    "specialdefense": 100,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f561"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f571"
+  },
+  "id": 93,
+  "name": "haunter",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/haunter.gif",
+  "types": [
+    "Ghost",
+    "Poison"
+  ],
+  "weight": 0.1,
+  "height": 1.6,
+  "baseStats": {
+    "attack": 50,
+    "defense": 45,
+    "hp": 45,
+    "speed": 95,
+    "specialattack": 115,
+    "specialdefense": 55,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f572"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5b2"
+  },
+  "id": 110,
+  "name": "weezing",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/weezing.gif",
+  "types": [
+    "Poison"
+  ],
+  "weight": 9.5,
+  "height": 1.2,
+  "baseStats": {
+    "attack": 90,
+    "defense": 120,
+    "hp": 65,
+    "speed": 60,
+    "specialattack": 85,
+    "specialdefense": 70,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5b3"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5be"
+  },
+  "id": 114,
+  "name": "tangela",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/tangela.gif",
+  "types": [
+    "Grass"
+  ],
+  "weight": 35,
+  "height": 1,
+  "baseStats": {
+    "attack": 55,
+    "defense": 115,
+    "hp": 65,
+    "speed": 60,
+    "specialattack": 100,
+    "specialdefense": 40,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5bf"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5ca"
+  },
+  "id": 115,
+  "name": "kangaskhan",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/kangaskhan.gif",
+  "types": [
+    "Normal"
+  ],
+  "weight": 80,
+  "height": 2.2,
+  "baseStats": {
+    "attack": 95,
+    "defense": 80,
+    "hp": 105,
+    "speed": 90,
+    "specialattack": 40,
+    "specialdefense": 80,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5cb"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5c4"
+  },
+  "id": 113,
+  "name": "chansey",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/chansey.gif",
+  "types": [
+    "Normal"
+  ],
+  "weight": 34.6,
+  "height": 1.1,
+  "baseStats": {
+    "attack": 5,
+    "defense": 5,
+    "hp": 250,
+    "speed": 50,
+    "specialattack": 35,
+    "specialdefense": 105,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5c5"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f578"
+  },
+  "id": 95,
+  "name": "onix",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/onix.gif",
+  "types": [
+    "Rock",
+    "Ground"
+  ],
+  "weight": 210,
+  "height": 8.8,
+  "baseStats": {
+    "attack": 45,
+    "defense": 160,
+    "hp": 35,
+    "speed": 70,
+    "specialattack": 30,
+    "specialdefense": 45,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f579"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5d3"
+  },
+  "id": 117,
+  "name": "seadra",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/seadra.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 25,
+  "height": 1.2,
+  "baseStats": {
+    "attack": 65,
+    "defense": 95,
+    "hp": 55,
+    "speed": 85,
+    "specialattack": 95,
+    "specialdefense": 45,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5d4"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5d6"
+  },
+  "id": 118,
+  "name": "goldeen",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/goldeen.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 15,
+  "height": 0.6,
+  "baseStats": {
+    "attack": 67,
+    "defense": 60,
+    "hp": 45,
+    "speed": 63,
+    "specialattack": 35,
+    "specialdefense": 50,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5d7"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5dc"
+  },
+  "id": 119,
+  "name": "seaking",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/seaking.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 39,
+  "height": 1.3,
+  "baseStats": {
+    "attack": 92,
+    "defense": 65,
+    "hp": 80,
+    "speed": 68,
+    "specialattack": 65,
+    "specialdefense": 80,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5dd"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f59a"
+  },
+  "id": 104,
+  "name": "cubone",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/cubone.gif",
+  "types": [
+    "Ground"
+  ],
+  "weight": 6.5,
+  "height": 0.4,
+  "baseStats": {
+    "attack": 50,
+    "defense": 95,
+    "hp": 50,
+    "speed": 35,
+    "specialattack": 40,
+    "specialdefense": 50,
+    "_id": {
+      "$oid": "653c70402ac629948f97f59b"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f606"
+  },
+  "id": 130,
+  "name": "gyarados",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/gyarados.gif",
+  "types": [
+    "Water",
+    "Flying"
+  ],
+  "weight": 235,
+  "height": 6.5,
+  "baseStats": {
+    "attack": 125,
+    "defense": 79,
+    "hp": 95,
+    "speed": 81,
+    "specialattack": 60,
+    "specialdefense": 100,
+    "_id": {
+      "$oid": "653c70402ac629948f97f607"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f612"
+  },
+  "id": 133,
+  "name": "eevee",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/eevee.gif",
+  "types": [
+    "Normal"
+  ],
+  "weight": 6.5,
+  "height": 0.3,
+  "baseStats": {
+    "attack": 55,
+    "defense": 50,
+    "hp": 55,
+    "speed": 55,
+    "specialattack": 45,
+    "specialdefense": 65,
+    "_id": {
+      "$oid": "653c70402ac629948f97f613"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f633"
+  },
+  "id": 142,
+  "name": "aerodactyl",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/aerodactyl.gif",
+  "types": [
+    "Rock",
+    "Flying"
+  ],
+  "weight": 59,
+  "height": 1.8,
+  "baseStats": {
+    "attack": 105,
+    "defense": 65,
+    "hp": 80,
+    "speed": 130,
+    "specialattack": 60,
+    "specialdefense": 75,
+    "_id": {
+      "$oid": "653c70402ac629948f97f634"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f406"
+  },
+  "id": 7,
+  "name": "squirtle",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/squirtle.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 9,
+  "height": 0.5,
+  "baseStats": {
+    "attack": 48,
+    "defense": 65,
+    "hp": 44,
+    "speed": 43,
+    "specialattack": 50,
+    "specialdefense": 64,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f407"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f41d"
+  },
+  "id": 3,
+  "name": "venusaur",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/venusaur.gif",
+  "types": [
+    "Grass",
+    "Poison"
+  ],
+  "weight": 100,
+  "height": 2,
+  "baseStats": {
+    "attack": 82,
+    "defense": 83,
+    "hp": 80,
+    "speed": 80,
+    "specialattack": 100,
+    "specialdefense": 100,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f41e"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f438"
+  },
+  "id": 8,
+  "name": "wartortle",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/wartortle.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 22.5,
+  "height": 1,
+  "baseStats": {
+    "attack": 63,
+    "defense": 80,
+    "hp": 59,
+    "speed": 58,
+    "specialattack": 65,
+    "specialdefense": 80,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f439"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f46b"
+  },
+  "id": 28,
+  "name": "sandslash",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/sandslash.gif",
+  "types": [
+    "Ground"
+  ],
+  "weight": 29.5,
+  "height": 1,
+  "baseStats": {
+    "attack": 100,
+    "defense": 110,
+    "hp": 75,
+    "speed": 65,
+    "specialattack": 45,
+    "specialdefense": 55,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f46c"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f475"
+  },
+  "id": 30,
+  "name": "nidorina",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/nidorina.gif",
+  "types": [
+    "Poison"
+  ],
+  "weight": 20,
+  "height": 0.8,
+  "baseStats": {
+    "attack": 62,
+    "defense": 67,
+    "hp": 70,
+    "speed": 56,
+    "specialattack": 55,
+    "specialdefense": 55,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f476"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f492"
+  },
+  "id": 37,
+  "name": "vulpix",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/vulpix.gif",
+  "types": [
+    "Fire"
+  ],
+  "weight": 9.9,
+  "height": 0.6,
+  "baseStats": {
+    "attack": 41,
+    "defense": 40,
+    "hp": 38,
+    "speed": 65,
+    "specialattack": 50,
+    "specialdefense": 65,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f493"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4de"
+  },
+  "id": 56,
+  "name": "mankey",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/mankey.gif",
+  "types": [
+    "Fighting"
+  ],
+  "weight": 28,
+  "height": 0.5,
+  "baseStats": {
+    "attack": 80,
+    "defense": 35,
+    "hp": 40,
+    "speed": 70,
+    "specialattack": 35,
+    "specialdefense": 45,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4df"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f517"
+  },
+  "id": 71,
+  "name": "victreebel",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/victreebel.gif",
+  "types": [
+    "Grass",
+    "Poison"
+  ],
+  "weight": 15.5,
+  "height": 1.7,
+  "baseStats": {
+    "attack": 105,
+    "defense": 65,
+    "hp": 80,
+    "speed": 70,
+    "specialattack": 100,
+    "specialdefense": 70,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f518"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f529"
+  },
+  "id": 75,
+  "name": "graveler",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/graveler.gif",
+  "types": [
+    "Rock",
+    "Ground"
+  ],
+  "weight": 105,
+  "height": 1,
+  "baseStats": {
+    "attack": 95,
+    "defense": 115,
+    "hp": 55,
+    "speed": 35,
+    "specialattack": 45,
+    "specialdefense": 45,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f52a"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f52c"
+  },
+  "id": 76,
+  "name": "golem",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/golem.gif",
+  "types": [
+    "Rock",
+    "Ground"
+  ],
+  "weight": 300,
+  "height": 1.4,
+  "baseStats": {
+    "attack": 120,
+    "defense": 130,
+    "hp": 80,
+    "speed": 45,
+    "specialattack": 55,
+    "specialdefense": 65,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f52d"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f53d"
+  },
+  "id": 80,
+  "name": "slowbro",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/slowbro.gif",
+  "types": [
+    "Water",
+    "Psychic"
+  ],
+  "weight": 78.5,
+  "height": 1.6,
+  "baseStats": {
+    "attack": 75,
+    "defense": 110,
+    "hp": 95,
+    "speed": 30,
+    "specialattack": 100,
+    "specialdefense": 80,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f53e"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f544"
+  },
+  "id": 82,
+  "name": "magneton",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/magneton.gif",
+  "types": [
+    "Electric",
+    "Steel"
+  ],
+  "weight": 60,
+  "height": 1,
+  "baseStats": {
+    "attack": 60,
+    "defense": 95,
+    "hp": 50,
+    "speed": 70,
+    "specialattack": 120,
+    "specialdefense": 70,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f545"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f54f"
+  },
+  "id": 85,
+  "name": "dodrio",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/dodrio.gif",
+  "types": [
+    "Normal",
+    "Flying"
+  ],
+  "weight": 85.2,
+  "height": 1.8,
+  "baseStats": {
+    "attack": 110,
+    "defense": 70,
+    "hp": 60,
+    "speed": 110,
+    "specialattack": 60,
+    "specialdefense": 60,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f550"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f57b"
+  },
+  "id": 96,
+  "name": "drowzee",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/drowzee.gif",
+  "types": [
+    "Psychic"
+  ],
+  "weight": 32.4,
+  "height": 1,
+  "baseStats": {
+    "attack": 48,
+    "defense": 45,
+    "hp": 60,
+    "speed": 42,
+    "specialattack": 43,
+    "specialdefense": 90,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f57c"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f597"
+  },
+  "id": 103,
+  "name": "exeggutor",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/exeggutor.gif",
+  "types": [
+    "Grass",
+    "Psychic"
+  ],
+  "weight": 120,
+  "height": 2,
+  "baseStats": {
+    "attack": 95,
+    "defense": 85,
+    "hp": 95,
+    "speed": 55,
+    "specialattack": 125,
+    "specialdefense": 75,
+    "_id": {
+      "$oid": "653c70402ac629948f97f598"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5ac"
+  },
+  "id": 108,
+  "name": "lickitung",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/lickitung.gif",
+  "types": [
+    "Normal"
+  ],
+  "weight": 65.5,
+  "height": 1.2,
+  "baseStats": {
+    "attack": 55,
+    "defense": 75,
+    "hp": 90,
+    "speed": 30,
+    "specialattack": 60,
+    "specialdefense": 75,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5ad"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5fa"
+  },
+  "id": 128,
+  "name": "tauros",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/tauros.gif",
+  "types": [
+    "Normal"
+  ],
+  "weight": 88.4,
+  "height": 1.4,
+  "baseStats": {
+    "attack": 100,
+    "defense": 95,
+    "hp": 75,
+    "speed": 110,
+    "specialattack": 40,
+    "specialdefense": 70,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5fb"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f62f"
+  },
+  "id": 141,
+  "name": "kabutops",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/kabutops.gif",
+  "types": [
+    "Rock",
+    "Water"
+  ],
+  "weight": 40.5,
+  "height": 1.3,
+  "baseStats": {
+    "attack": 115,
+    "defense": 105,
+    "hp": 60,
+    "speed": 80,
+    "specialattack": 65,
+    "specialdefense": 70,
+    "_id": {
+      "$oid": "653c70402ac629948f97f630"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70412ac629948f97f64a"
+  },
+  "id": 148,
+  "name": "dragonair",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/dragonair.gif",
+  "types": [
+    "Dragon"
+  ],
+  "weight": 16.5,
+  "height": 4,
+  "baseStats": {
+    "attack": 84,
+    "defense": 65,
+    "hp": 61,
+    "speed": 70,
+    "specialattack": 70,
+    "specialdefense": 70,
+    "_id": {
+      "$oid": "653c70412ac629948f97f64b"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5f4"
+  },
+  "id": 125,
+  "name": "electabuzz",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/electabuzz.gif",
+  "types": [
+    "Electric"
+  ],
+  "weight": 30,
+  "height": 1.1,
+  "baseStats": {
+    "attack": 83,
+    "defense": 57,
+    "hp": 65,
+    "speed": 105,
+    "specialattack": 95,
+    "specialdefense": 85,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5f5"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f414"
+  },
+  "id": 11,
+  "name": "metapod",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/metapod.gif",
+  "types": [
+    "Bug"
+  ],
+  "weight": 9.9,
+  "height": 0.7,
+  "baseStats": {
+    "attack": 20,
+    "defense": 55,
+    "hp": 50,
+    "speed": 30,
+    "specialattack": 25,
+    "specialdefense": 25,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f415"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f42c"
+  },
+  "id": 6,
+  "name": "charizard",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/charizard.gif",
+  "types": [
+    "Fire",
+    "Flying"
+  ],
+  "weight": 90.5,
+  "height": 1.7,
+  "baseStats": {
+    "attack": 84,
+    "defense": 78,
+    "hp": 78,
+    "speed": 100,
+    "specialattack": 109,
+    "specialdefense": 85,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f42d"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f458"
+  },
+  "id": 24,
+  "name": "arbok",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/arbok.gif",
+  "types": [
+    "Poison"
+  ],
+  "weight": 65,
+  "height": 3.5,
+  "baseStats": {
+    "attack": 95,
+    "defense": 69,
+    "hp": 60,
+    "speed": 80,
+    "specialattack": 65,
+    "specialdefense": 79,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f459"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703e2ac629948f97f49b"
+  },
+  "id": 41,
+  "name": "zubat",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/zubat.gif",
+  "types": [
+    "Poison",
+    "Flying"
+  ],
+  "weight": 7.5,
+  "height": 0.8,
+  "baseStats": {
+    "attack": 45,
+    "defense": 35,
+    "hp": 40,
+    "speed": 55,
+    "specialattack": 30,
+    "specialdefense": 40,
+    "_id": {
+      "$oid": "653c703e2ac629948f97f49c"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4ba"
+  },
+  "id": 45,
+  "name": "vileplume",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/vileplume.gif",
+  "types": [
+    "Grass",
+    "Poison"
+  ],
+  "weight": 18.6,
+  "height": 1.2,
+  "baseStats": {
+    "attack": 80,
+    "defense": 85,
+    "hp": 75,
+    "speed": 50,
+    "specialattack": 110,
+    "specialdefense": 90,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4bb"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4e1"
+  },
+  "id": 58,
+  "name": "growlithe",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/growlithe.gif",
+  "types": [
+    "Fire"
+  ],
+  "weight": 19,
+  "height": 0.7,
+  "baseStats": {
+    "attack": 70,
+    "defense": 45,
+    "hp": 55,
+    "speed": 60,
+    "specialattack": 70,
+    "specialdefense": 50,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4e2"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4ea"
+  },
+  "id": 59,
+  "name": "arcanine",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/arcanine.gif",
+  "types": [
+    "Fire"
+  ],
+  "weight": 155,
+  "height": 1.9,
+  "baseStats": {
+    "attack": 110,
+    "defense": 80,
+    "hp": 90,
+    "speed": 95,
+    "specialattack": 100,
+    "specialdefense": 80,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4eb"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f4f1"
+  },
+  "id": 62,
+  "name": "poliwrath",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/poliwrath.gif",
+  "types": [
+    "Water",
+    "Fighting"
+  ],
+  "weight": 54,
+  "height": 1.3,
+  "baseStats": {
+    "attack": 95,
+    "defense": 95,
+    "hp": 90,
+    "speed": 70,
+    "specialattack": 70,
+    "specialdefense": 90,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f4f2"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c703f2ac629948f97f563"
+  },
+  "id": 90,
+  "name": "shellder",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/shellder.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 4,
+  "height": 0.3,
+  "baseStats": {
+    "attack": 65,
+    "defense": 100,
+    "hp": 30,
+    "speed": 40,
+    "specialattack": 45,
+    "specialdefense": 25,
+    "_id": {
+      "$oid": "653c703f2ac629948f97f564"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f582"
+  },
+  "id": 97,
+  "name": "hypno",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/hypno.gif",
+  "types": [
+    "Psychic"
+  ],
+  "weight": 75.6,
+  "height": 1.6,
+  "baseStats": {
+    "attack": 73,
+    "defense": 70,
+    "hp": 85,
+    "speed": 67,
+    "specialattack": 73,
+    "specialdefense": 115,
+    "_id": {
+      "$oid": "653c70402ac629948f97f583"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f58e"
+  },
+  "id": 100,
+  "name": "voltorb",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/voltorb.gif",
+  "types": [
+    "Electric"
+  ],
+  "weight": 10.4,
+  "height": 0.5,
+  "baseStats": {
+    "attack": 30,
+    "defense": 50,
+    "hp": 40,
+    "speed": 100,
+    "specialattack": 55,
+    "specialdefense": 55,
+    "_id": {
+      "$oid": "653c70402ac629948f97f58f"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5a6"
+  },
+  "id": 106,
+  "name": "hitmonlee",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/hitmonlee.gif",
+  "types": [
+    "Fighting"
+  ],
+  "weight": 49.8,
+  "height": 1.5,
+  "baseStats": {
+    "attack": 120,
+    "defense": 53,
+    "hp": 50,
+    "speed": 87,
+    "specialattack": 35,
+    "specialdefense": 110,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5a7"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f5c7"
+  },
+  "id": 116,
+  "name": "horsea",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/horsea.gif",
+  "types": [
+    "Water"
+  ],
+  "weight": 8,
+  "height": 0.4,
+  "baseStats": {
+    "attack": 40,
+    "defense": 70,
+    "hp": 30,
+    "speed": 60,
+    "specialattack": 70,
+    "specialdefense": 25,
+    "_id": {
+      "$oid": "653c70402ac629948f97f5c8"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f61b"
+  },
+  "id": 135,
+  "name": "jolteon",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/jolteon.gif",
+  "types": [
+    "Electric"
+  ],
+  "weight": 24.5,
+  "height": 0.8,
+  "baseStats": {
+    "attack": 65,
+    "defense": 60,
+    "hp": 65,
+    "speed": 130,
+    "specialattack": 110,
+    "specialdefense": 95,
+    "_id": {
+      "$oid": "653c70402ac629948f97f61c"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "653c70402ac629948f97f621"
+  },
+  "id": 137,
+  "name": "porygon",
+  "image": "https://play.pokemonshowdown.com/sprites/ani/porygon.gif",
+  "types": [
+    "Normal"
+  ],
+  "weight": 36.5,
+  "height": 0.8,
+  "baseStats": {
+    "attack": 60,
+    "defense": 70,
+    "hp": 65,
+    "speed": 40,
+    "specialattack": 85,
+    "specialdefense": 75,
+    "_id": {
+      "$oid": "653c70402ac629948f97f622"
+    }
+  },
+  "__v": 0
+}]
